@@ -34,7 +34,7 @@ Cada tipo responde a diferentes necesidades de seguridad, y su elección depende
 
 ---
 
-### Criptografía Simétrica
+# Criptografía Simétrica
 
 En criptografía simétrica, **la misma clave** se utiliza para cifrar y descifrar el mensaje:
 
@@ -170,13 +170,7 @@ if __name__ == "__main__":
 * **Seguridad de la clave:** Si la clave se ve comprometida, toda la comunicación cifrada con esa clave también se verá comprometida.
 * **Escalabilidad:** En sistemas con muchos participantes, gestionar una clave secreta única para cada par de comunicantes puede volverse complejo.
 
-
-
-
-
-
-
-### Criptografía Asimétrica
+# Criptografía Asimétrica
 
 En criptografía asimétrica se utiliza un **par de claves**: una clave pública \( K_{pub} \) para cifrar y una clave privada \( K_{priv} \) para descifrar:
 
@@ -195,10 +189,256 @@ M = D_{K_{priv}}(C)
 - \( K_{priv} \): clave privada del receptor
 - \( E_{K_{pub}} \): función de cifrado con clave pública
 - \( D_{K_{priv}} \): función de descifrado con clave privada
-______________________________
 
+En la práctica, a menudo se utiliza una combinación de criptografía simétrica y asimétrica. Por ejemplo, se puede usar la criptografía asimétrica para intercambiar de forma segura una clave de sesión simétrica, y luego usar esa clave simétrica para cifrar la mayor parte de la comunicación debido a su mayor eficiencia.
 
+```python
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.asymmetric import rsa, padding
+from cryptography.hazmat.primitives import serialization
 
+def generar_claves_rsa():
+    """Genera un par de claves RSA (pública y privada)."""
+    private_key = rsa.generate_private_key(
+        public_exponent=65537,
+        key_size=2048,
+    )
+    public_key = private_key.public_key()
+    return private_key, public_key
+
+def cifrar_mensaje_publico(mensaje, public_key):
+    """Cifra un mensaje utilizando la clave pública del receptor."""
+    mensaje_bytes = mensaje.encode('utf-8')
+    ciphertext = public_key.encrypt(
+        mensaje_bytes,
+        padding.OAEP(
+            mgf=padding.MGF1(algorithm=hashes.SHA256()),
+            algorithm=hashes.SHA256(),
+            label=None
+        )
+    )
+    return ciphertext
+
+def descifrar_mensaje_privado(ciphertext, private_key):
+    """Descifra un mensaje utilizando la clave privada del receptor."""
+    plaintext_bytes = private_key.decrypt(
+        ciphertext,
+        padding.OAEP(
+            mgf=padding.MGF1(algorithm=hashes.SHA256()),
+            algorithm=hashes.SHA256(),
+            label=None
+        )
+    )
+    plaintext = plaintext_bytes.decode('utf-8')
+    return plaintext
+
+def serializar_clave_publica(public_key):
+    """Serializa la clave pública a formato PEM para su almacenamiento o envío."""
+    public_pem = public_key.public_bytes(
+        encoding=serialization.Encoding.PEM,
+        format=serialization.PublicFormat.SubjectPublicKeyInfo
+    )
+    return public_pem
+
+def cargar_clave_publica_serializada(public_pem):
+    """Carga una clave pública desde su representación serializada en formato PEM."""
+    public_key = serialization.load_pem_public_key(
+        public_pem,
+    )
+    return public_key
+
+if __name__ == "__main__":
+    # 1. Generar un par de claves RSA (clave privada y clave pública)
+    private_key_alice, public_key_alice = generar_claves_rsa()
+    print("Par de claves RSA de Alicia generado.")
+
+    # 2. Alicia quiere enviar un mensaje secreto a Bob. Primero, Bob le envía su clave pública.
+    # (Simulamos la clave pública de Bob)
+    private_key_bob, public_key_bob = generar_claves_rsa()
+    print("\nPar de claves RSA de Bob generado (simulado).")
+    public_key_bob_serializada = serializar_clave_publica(public_key_bob)
+    print("\nClave pública de Bob (serializada):\n", public_key_bob_serializada.decode())
+
+    # 3. Alicia recibe la clave pública de Bob y la carga (si estuviera serializada)
+    clave_publica_bob_cargada = cargar_clave_publica_serializada(public_key_bob_serializada)
+
+    # 4. Alicia escribe su mensaje
+    mensaje_secreto = "Hola Bob, este es un mensaje confidencial de Alicia."
+    print(f"\nMensaje de Alicia: {mensaje_secreto}")
+
+    # 5. Alicia cifra el mensaje utilizando la clave pública de Bob
+    mensaje_cifrado = cifrar_mensaje_publico(mensaje_secreto, clave_publica_bob_cargada)
+    print(f"\nMensaje cifrado por Alicia para Bob: {mensaje_cifrado}")
+
+    # 6. Alicia envía el mensaje cifrado a Bob.
+
+    # 7. Bob recibe el mensaje cifrado y lo descifra utilizando su clave privada
+    mensaje_descifrado = descifrar_mensaje_privado(mensaje_cifrado, private_key_bob)
+    print(f"\nMensaje descifrado por Bob: {mensaje_descifrado}")
+
+    # 8. Verificar que el mensaje original y el mensaje descifrado son iguales
+    if mensaje_secreto == mensaje_descifrado:
+        print("\n¡El cifrado y descifrado asimétrico se realizaron correctamente!")
+    else:
+        print("\n¡Hubo un error en el cifrado o descifrado asimétrico!")
+
+    # Ejemplo de cómo Alicia podría firmar un mensaje (esto va más allá del cifrado, pero es importante en asimétrica)
+    from cryptography.hazmat.primitives.asymmetric import signature
+    signer = private_key_alice.signer(
+        signature.PSS(
+            mgf=signature.MGF1(hashes.SHA256()),
+            salt_length=signature.PSS.MAX_LENGTH
+        ),
+        hashes.SHA256()
+    )
+    mensaje_a_firmar = "Este mensaje está firmado por Alicia."
+    mensaje_a_firmar_bytes = mensaje_a_firmar.encode('utf-8')
+    signer.update(mensaje_a_firmar_bytes)
+    firma = signer.finalize()
+    print(f"\nFirma de Alicia: {firma}")
+
+    # Bob (o cualquier persona con la clave pública de Alicia) puede verificar la firma
+    verifier = public_key_alice.verifier(
+        signature.PSS(
+            mgf=signature.MGF1(hashes.SHA256()),
+            salt_length=signature.PSS.MAX_LENGTH
+        ),
+        hashes.SHA256()
+    )
+    verifier.update(mensaje_a_firmar_bytes)
+    try:
+        verifier.verify(firma)
+        print("\n¡La firma de Alicia es válida!")
+    except Exception as e:
+        print("\n¡La firma NO es válida!")
+```
+
+**Explicación**
+
+1.  **Importación de módulos:**
+    ```python
+    from cryptography.hazmat.primitives import hashes
+    from cryptography.hazmat.primitives.asymmetric import rsa, padding
+    from cryptography.hazmat.primitives import serialization, asymmetric
+    ```
+    * Importamos los módulos necesarios de la biblioteca `cryptography` para realizar operaciones de hashing (SHA256), generación de claves RSA, esquemas de relleno (OAEP), y serialización de claves.
+
+2.  **Función `generar_claves_rsa()`:**
+    ```python
+    def generar_claves_rsa():
+        """Genera un par de claves RSA (pública y privada)."""
+        private_key = rsa.generate_private_key(
+            public_exponent=65537,
+            key_size=2048,
+        )
+        public_key = private_key.public_key()
+        return private_key, public_key
+    ```
+    * Esta función genera un par de claves RSA.
+    * `rsa.generate_private_key()` crea la clave privada. Los parámetros son:
+        * `public_exponent`: Un número entero público utilizado en el algoritmo RSA (generalmente se usa 65537).
+        * `key_size`: El tamaño de la clave en bits. 2048 bits es un tamaño común y considerado seguro para muchas aplicaciones. Claves más grandes son más seguras pero también más lentas.
+    * `private_key.public_key()` deriva la clave pública correspondiente a la clave privada generada.
+    * La función devuelve ambos objetos de clave.
+
+3.  **Función `cifrar_mensaje_publico(mensaje, public_key)`:**
+    ```python
+    def cifrar_mensaje_publico(mensaje, public_key):
+        """Cifra un mensaje utilizando la clave pública del receptor."""
+        mensaje_bytes = mensaje.encode('utf-8')
+        ciphertext = public_key.encrypt(
+            mensaje_bytes,
+            padding.OAEP(
+                mgf=padding.MGF1(algorithm=hashes.SHA256()),
+                algorithm=hashes.SHA256(),
+                label=None
+            )
+        )
+        return ciphertext
+    ```
+    * Esta función cifra un mensaje utilizando la clave pública del destinatario.
+    * Primero, el mensaje se codifica a bytes.
+    * `public_key.encrypt()` realiza el cifrado. Los parámetros son:
+        * El mensaje en bytes.
+        * Un esquema de relleno (`padding`). **Es crucial utilizar un esquema de relleno seguro en la criptografía asimétrica para prevenir ciertos tipos de ataques.** Aquí se utiliza `padding.OAEP` (Optimal Asymmetric Encryption Padding), que es un esquema recomendado.
+            * `mgf`: Mask Generation Function (función de generación de máscara). `MGF1` es una función basada en un hash.
+            * `algorithm`: El algoritmo hash utilizado por MGF1 y para el propio OAEP (en este caso, SHA256).
+            * `label`: Un parámetro opcional que puede ser utilizado para contextos específicos. Aquí se establece en `None`.
+    * La función devuelve el `ciphertext` (texto cifrado) en formato de bytes.
+
+4.  **Función `descifrar_mensaje_privado(ciphertext, private_key)`:**
+    ```python
+    def descifrar_mensaje_privado(ciphertext, private_key):
+        """Descifra un mensaje utilizando la clave privada del receptor."""
+        plaintext_bytes = private_key.decrypt(
+            ciphertext,
+            padding.OAEP(
+                mgf=padding.MGF1(algorithm=hashes.SHA256()),
+                algorithm=hashes.SHA256(),
+                label=None
+            )
+        )
+        plaintext = plaintext_bytes.decode('utf-8')
+        return plaintext
+    ```
+    * Esta función descifra el mensaje cifrado utilizando la clave privada correspondiente.
+    * `private_key.decrypt()` realiza el descifrado. **Es importante utilizar el mismo esquema de relleno (`padding.OAEP` con los mismos parámetros) que se usó durante el cifrado.**
+    * El resultado es el `plaintext_bytes` (texto plano en bytes), que luego se decodifica a una cadena de texto.
+
+5.  **Funciones para serializar y cargar la clave pública:**
+    ```python
+    def serializar_clave_publica(public_key):
+        """Serializa la clave pública a formato PEM para su almacenamiento o envío."""
+        public_pem = public_key.public_bytes(
+            encoding=serialization.Encoding.PEM,
+            format=serialization.PublicFormat.SubjectPublicKeyInfo
+        )
+        return public_pem
+
+    def cargar_clave_publica_serializada(public_pem):
+        """Carga una clave pública desde su representación serializada en formato PEM."""
+        public_key = serialization.load_pem_public_key(
+            public_pem,
+        )
+        return public_key
+    ```
+    * En la criptografía asimétrica, la clave pública a menudo necesita ser compartida. Para esto, se serializa a un formato estándar. El formato PEM (Privacy-Enhanced Mail) es un formato común que codifica la clave en Base64 y la envuelve con encabezados y pies de página (e.g., `-----BEGIN PUBLIC KEY-----`).
+    * `public_key.public_bytes()` serializa la clave pública.
+        * `encoding=serialization.Encoding.PEM`: Especifica el formato PEM.
+        * `format=serialization.PublicFormat.SubjectPublicKeyInfo`: Especifica la estructura de la información de la clave pública.
+    * `serialization.load_pem_public_key()` carga una clave pública desde su representación PEM.
+
+6.  **Bloque `if __name__ == "__main__":`:**
+    * Este bloque simula un escenario donde Alicia quiere enviar un mensaje secreto a Bob.
+    * **Generación de claves:** Se genera un par de claves para Alicia y un par (simulado) para Bob. En un escenario real, cada persona generaría su propio par de claves.
+    * **Intercambio de clave pública:** Se simula el envío de la clave pública de Bob a Alicia (a través de un canal que no necesita ser secreto). La clave pública puede compartirse libremente.
+    * **Cifrado:** Alicia cifra su mensaje utilizando la clave pública de Bob.
+    * **Envío:** El mensaje cifrado se envía a Bob (este mensaje no puede ser leído por nadie más que tenga la clave privada de Bob).
+    * **Descifrado:** Bob recibe el mensaje cifrado y lo descifra utilizando su clave privada.
+    * **Verificación:** Se comprueba si el mensaje original y el descifrado coinciden.
+
+7.  **Ejemplo de Firma Digital (opcional pero importante en asimétrica):**
+    * Se incluye un ejemplo básico de cómo Alicia podría firmar un mensaje utilizando su clave privada y cómo Bob (o cualquier persona con la clave pública de Alicia) podría verificar esa firma.
+    * La firma digital proporciona autenticidad (prueba de que el mensaje proviene de Alicia) e integridad (prueba de que el mensaje no ha sido alterado).
+    * Se utiliza el esquema de firma PSS (Probabilistic Signature Scheme) con SHA256.
+
+**Conceptos Clave de Criptografía Asimétrica Ilustrados:**
+
+* **Par de claves:** Se utilizan dos claves relacionadas pero diferentes: una clave pública y una clave privada.
+* **Clave pública:** Se puede compartir libremente con cualquier persona. Se utiliza para cifrar mensajes destinados al propietario de la clave privada correspondiente.
+* **Clave privada:** Debe mantenerse en secreto por su propietario. Se utiliza para descifrar los mensajes que fueron cifrados con su clave pública.
+* **Relación matemática:** Existe una relación matemática compleja entre la clave pública y la privada, de tal manera que es computacionalmente inviable derivar la clave privada a partir de la pública.
+* **Cifrado:** Para enviar un mensaje confidencial a alguien, el remitente cifra el mensaje con la *clave pública* del destinatario.
+* **Descifrado:** Solo el propietario de la *clave privada* correspondiente puede descifrar el mensaje.
+
+**Ventajas de la Criptografía Asimétrica:**
+
+* **No se requiere un secreto compartido previo:** Las partes pueden comunicarse de forma segura sin haber intercambiado una clave secreta previamente. La clave pública se puede compartir a través de canales no seguros.
+* **Habilita la firma digital:** La clave privada se puede usar para firmar digitalmente documentos, proporcionando autenticidad e integridad.
+
+**Desventajas de la Criptografía Asimétrica:**
+* **Más lenta que la criptografía simétrica:** Las operaciones de cifrado y descifrado suelen ser significativamente más lentas que las de los algoritmos simétricos.
+* **Tamaño de clave más grande:** Las claves asimétricas suelen ser mucho más grandes que las claves simétricas para lograr un nivel de seguridad comparable.
 
 _______________________
 > Stallings, W. (2023). *Cryptography and network security: Principles and practice* (8th ed.). Pearson.  
