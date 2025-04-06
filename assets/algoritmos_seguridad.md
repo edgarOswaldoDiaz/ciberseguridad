@@ -105,13 +105,13 @@ if __name__ == "__main__":
 
 **Explicación**
 
-1.  **Importación de la biblioteca `cryptography`:**
+**Importación de la biblioteca `cryptography`:**
     ```python
     from cryptography.fernet import Fernet
     ```
     * Importamos la clase `Fernet` del módulo `fernet` dentro de la biblioteca `cryptography`. `Fernet` es una implementación de cifrado simétrico autenticado. Esto significa que no solo cifra los datos, sino que también asegura su integridad (que no han sido alterados). Utiliza el algoritmo de cifrado AES (Advanced Encryption Standard) en modo CBC (Cipher Block Chaining) con un HMAC (Hash-based Message Authentication Code) para la autenticación.
 
-2.  **Función `generar_clave()`:**
+**Función `generar_clave()`:**
     ```python
     def generar_clave():
         """Genera una clave secreta para el cifrado simétrico."""
@@ -122,7 +122,7 @@ if __name__ == "__main__":
     * **Importante:** Esta clave debe mantenerse en secreto y compartirse de forma segura entre las partes que necesitan cifrar y descifrar mensajes. Generar una nueva clave para cada comunicación o sesión sensible es una buena práctica de seguridad.
     * La clave generada es una secuencia de bytes.
 
-3.  **Función `cifrar_mensaje(mensaje, clave)`:**
+**Función `cifrar_mensaje(mensaje, clave)`:**
     ```python
     def cifrar_mensaje(mensaje, clave):
         """Cifra un mensaje utilizando la clave proporcionada."""
@@ -135,7 +135,7 @@ if __name__ == "__main__":
     * El mensaje original (`mensaje`) es una cadena de texto (string). Para que `Fernet` pueda cifrarlo, primero debemos convertirlo a una secuencia de bytes utilizando la codificación `utf-8`.
     * El método `f.encrypt(mensaje_bytes)` realiza el cifrado del mensaje en bytes y devuelve el `mensaje_cifrado` también en formato de bytes.
 
-4.  **Función `descifrar_mensaje(mensaje_cifrado, clave)`:**
+**Función `descifrar_mensaje(mensaje_cifrado, clave)`:**
     ```python
     def descifrar_mensaje(mensaje_cifrado, clave):
         """Descifra un mensaje cifrado utilizando la clave proporcionada."""
@@ -148,7 +148,7 @@ if __name__ == "__main__":
     * El método `f.decrypt(mensaje_cifrado)` toma el mensaje cifrado en bytes y lo descifra, devolviendo el resultado también en bytes (`mensaje_descifrado_bytes`).
     * Finalmente, decodificamos la secuencia de bytes resultante a una cadena de texto utilizando `decode('utf-8')` para obtener el mensaje original.
 
-5.  **Bloque `if __name__ == "__main__":`:**
+**Bloque `if __name__ == "__main__":`:**
     * Este bloque de código se ejecuta solo cuando el script se ejecuta directamente (no cuando se importa como un módulo).
     * **Generación de la clave:** Se llama a `generar_clave()` para obtener una clave secreta. En un escenario real, esta clave se generaría una vez y se almacenaría de forma segura.
     * **Definición del mensaje original:** Se define un mensaje de ejemplo que queremos cifrar.
