@@ -228,6 +228,135 @@ int main() {
     return 0;
 }
 ```
+
+Este ejemplo proporciona una introducción básica al concepto de hashing y su aplicación en la seguridad de contraseñas. En un curso de ciberseguridad, se profundizaría en diferentes algoritmos hash, sus fortalezas y debilidades, ataques comunes (como ataques de diccionario y rainbow tables), y técnicas para fortalecer la seguridad de las contraseñas (como el uso de "salt").
+
+
+```python
+import hashlib
+
+def generar_hash(texto):
+  """
+  Genera un hash SHA-256 para el texto proporcionado.
+
+  Args:
+    texto: La cadena de texto para la que se generará el hash.
+
+  Returns:
+    Una cadena hexadecimal que representa el hash del texto.
+    Devuelve None si el texto no es una cadena.
+  """
+  if not isinstance(texto, str):
+    print("Error: El input debe ser una cadena de texto.")
+    return None
+
+  # Codificamos el texto a bytes, ya que las funciones hash trabajan con bytes.
+  texto_bytes = texto.encode('utf-8')
+
+  # Creamos un objeto hash utilizando el algoritmo SHA-256.
+  hasher = hashlib.sha256()
+
+  # Actualizamos el objeto hash con los bytes del texto.
+  hasher.update(texto_bytes)
+
+  # Obtenemos el hash resultante en formato hexadecimal.
+  hash_hexadecimal = hasher.hexdigest()
+
+  return hash_hexadecimal
+
+def verificar_password(password_ingresada, hash_almacenado):
+  """
+  Verifica si el hash de la contraseña ingresada coincide con el hash almacenado.
+
+  Args:
+    password_ingresada: La contraseña que el usuario ha ingresado.
+    hash_almacenado: El hash previamente calculado y almacenado de la contraseña correcta.
+
+  Returns:
+    True si los hashes coinciden, False en caso contrario.
+  """
+  hash_ingresado = generar_hash(password_ingresada)
+  if hash_ingresado is None:
+    return False  # Indica un error al generar el hash
+
+  return hash_ingresado == hash_almacenado
+
+# Ejemplo de uso:
+password_secreta = "MiPasswordSeguro123"
+
+# Generamos el hash de la contraseña secreta y lo almacenamos (simuladamente).
+hash_almacenado = generar_hash(password_secreta)
+print(f"El hash de la contraseña '{password_secreta}' es: {hash_almacenado}")
+print("-" * 30)
+
+# Simulación de un intento de inicio de sesión:
+password_intento1 = "MiPasswordSeguro123"
+if verificar_password(password_intento1, hash_almacenado):
+  print(f"La contraseña '{password_intento1}' es correcta.")
+else:
+  print(f"La contraseña '{password_intento1}' es incorrecta.")
+
+password_intento2 = "MiPasswordFalsa"
+if verificar_password(password_intento2, hash_almacenado):
+  print(f"La contraseña '{password_intento2}' es correcta.")
+else:
+  print(f"La contraseña '{password_intento2}' es incorrecta.")
+```
+
+**Explicación:**
+
+1.  **`import hashlib`:**
+    * Esta línea importa el módulo `hashlib` de Python. Este módulo proporciona varias funciones para realizar operaciones de hashing seguro (funciones resumen).
+
+2.  **`def generar_hash(texto):`:**
+    * Define una función llamada `generar_hash` que toma un argumento `texto` (la cadena de la cual queremos obtener el hash).
+    * **`if not isinstance(texto, str):`**: Realiza una verificación de tipo para asegurarse de que la entrada sea una cadena de texto. Si no lo es, imprime un mensaje de error y devuelve `None`. Esto es importante para la robustez del código.
+    * **`texto_bytes = texto.encode('utf-8')`:**
+        * Las funciones hash en `hashlib` trabajan con datos binarios (bytes), no directamente con cadenas de texto.
+        * `texto.encode('utf-8')` convierte la cadena de texto `texto` a una secuencia de bytes utilizando la codificación UTF-8, que es una codificación de caracteres ampliamente utilizada y compatible.
+    * **`hasher = hashlib.sha256()`:**
+        * Crea un objeto hash utilizando el algoritmo SHA-256. SHA-256 es una función hash criptográfica que produce un hash de 256 bits (64 caracteres hexadecimales). Es considerada segura para muchas aplicaciones.
+        * Existen otros algoritmos hash disponibles en `hashlib` como `md5`, `sha1`, `sha512`, etc., pero SHA-256 es una buena opción por su equilibrio entre seguridad y rendimiento.
+    * **`hasher.update(texto_bytes)`:**
+        * Alimenta los datos (en forma de bytes) al objeto hash. Puedes llamar a `update()` varias veces para procesar grandes cantidades de datos en bloques.
+    * **`hash_hexadecimal = hasher.hexdigest()`:**
+        * `hasher.hexdigest()` calcula el hash final de los datos proporcionados y lo devuelve como una cadena de caracteres hexadecimales. Esta representación hexadecimal es común para mostrar y almacenar hashes.
+    * **`return hash_hexadecimal`:**
+        * La función devuelve la cadena hexadecimal que representa el hash del texto de entrada.
+
+3.  **`def verificar_password(password_ingresada, hash_almacenado):`:**
+    * Define una función llamada `verificar_password` que toma dos argumentos:
+        * `password_ingresada`: La contraseña que el usuario está intentando ingresar.
+        * `hash_almacenado`: El hash de la contraseña correcta que se ha guardado previamente (por ejemplo, en una base de datos).
+    * **`hash_ingresado = generar_hash(password_ingresada)`:**
+        * Llama a la función `generar_hash` para calcular el hash de la contraseña que el usuario ha ingresado.
+    * **`if hash_ingresado is None:`**: Verifica si hubo un error al generar el hash (por ejemplo, si la `password_ingresada` no era una cadena). Si hay un error, devuelve `False`.
+    * **`return hash_ingresado == hash_almacenado`:**
+        * Compara el `hash_ingresado` (el hash de la contraseña que el usuario proporcionó) con el `hash_almacenado`.
+        * Si los dos hashes son idénticos, significa que la contraseña ingresada coincide con la contraseña original (o al menos produce el mismo hash), y la función devuelve `True`.
+        * Si los hashes no coinciden, la función devuelve `False`.
+
+4.  **Ejemplo de Uso:**
+    * **`password_secreta = "MiPasswordSeguro123"`:** Define una variable que representa una contraseña secreta.
+    * **`hash_almacenado = generar_hash(password_secreta)`:** Genera el hash de esta contraseña secreta y lo guarda en la variable `hash_almacenado`. En un sistema real, este `hash_almacenado` se guardaría en una base de datos, no la contraseña en texto plano.
+    * **`print(...)`:** Imprime el hash generado para mostrarlo.
+    * **`print("-" * 30)`:** Imprime una línea separadora para mejorar la legibilidad.
+    * **Simulación de intentos de inicio de sesión:**
+        * Se definen dos intentos de contraseña (`password_intento1` y `password_intento2`).
+        * Se llama a la función `verificar_password` para cada intento, comparando el hash del intento con el `hash_almacenado`.
+        * Se imprime un mensaje indicando si la contraseña es correcta o incorrecta basándose en el resultado de la comparación de hashes.
+
+* **Almacenamiento Seguro de Contraseñas:** En lugar de almacenar las contraseñas de los usuarios en texto plano (lo cual sería extremadamente peligroso), los sistemas seguros almacenan los hashes de las contraseñas. Cuando un usuario intenta iniciar sesión, el sistema calcula el hash de la contraseña ingresada y lo compara con el hash almacenado. Si coinciden, la contraseña es considerada correcta sin que el sistema nunca haya necesitado conocer la contraseña en texto plano.
+* **Integridad de Datos:** Las funciones hash también se utilizan para verificar la integridad de los datos. Si se calcula el hash de un archivo y luego se modifica el archivo, al volver a calcular el hash, el valor será diferente. Esto permite detectar si un archivo ha sido alterado.
+* **Firmas Digitales:** Las funciones hash son un componente clave en las firmas digitales, donde se utiliza el hash de un documento para crear una firma única que puede ser verificada.
+
+**Conceptos Clave en Hashing Criptográfico:**
+
+* **Unidireccionalidad:** Es computacionalmente inviable (prácticamente imposible) obtener el texto original (la "preimagen") a partir de su hash.
+* **Resistencia a Colisiones:** Es difícil encontrar dos entradas diferentes que produzcan el mismo valor hash. Aunque las colisiones teóricamente existen para todas las funciones hash, para las funciones hash criptográficas fuertes, encontrarlas es extremadamente difícil.
+* **Determinismo:** Para una misma entrada, la función hash siempre producirá la misma salida.
+
+
 ______________________________
 
 > Susilo Yuda Irawan, Agung & Pratama, Adi & Antono, Ryan. (2021). RC4 Cryptography Implementation Analysis on Text Data. JURNAL SISFOTEK GLOBAL. 11. 115. 10.38101/sisfotek.v11i2.408. 
