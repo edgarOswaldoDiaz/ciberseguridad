@@ -507,15 +507,15 @@ if __name__ == "__main__":
     verificar_integridad(mensaje_alterado, hash_esperado_sha256, 'sha256')
 ```
 
-**Explicación Detallada:**
+**Explicación:**
 
-1.  **Importación de la biblioteca `hashlib`:**
+- **Importación de la biblioteca `hashlib`:**
     ```python
     import hashlib
     ```
     * Importamos la biblioteca `hashlib`, que proporciona acceso a varios algoritmos de hashing seguros (como SHA-256, SHA-1, MD5, etc.).
 
-2.  **Función `calcular_hash(mensaje, algoritmo='sha256')`:**
+- **Función `calcular_hash(mensaje, algoritmo='sha256')`:**
     ```python
     def calcular_hash(mensaje, algoritmo='sha256'):
         """Calcula el hash de un mensaje utilizando el algoritmo especificado."""
@@ -542,7 +542,7 @@ if __name__ == "__main__":
     * **Representación hexadecimal:** El método `hash_object.hexdigest()` convierte el valor hash binario en una cadena de caracteres hexadecimal, que es una representación más común y legible de un hash.
     * La función devuelve la cadena hexadecimal del hash.
 
-3.  **Función `verificar_integridad(mensaje, hash_esperado, algoritmo='sha256')`:**
+- **Función `verificar_integridad(mensaje, hash_esperado, algoritmo='sha256')`:**
     ```python
     def verificar_integridad(mensaje, hash_esperado, algoritmo='sha256'):
         """Calcula el hash del mensaje y lo compara con el hash esperado."""
@@ -563,7 +563,7 @@ if __name__ == "__main__":
     * Si los hashes coinciden, significa que el mensaje probablemente no ha sido modificado, y la función imprime un mensaje de verificación y devuelve `True`.
     * Si los hashes no coinciden, indica que el mensaje ha sido alterado, y la función imprime una alerta, muestra ambos hashes para comparación, y devuelve `False`.
 
-4.  **Bloque `if __name__ == "__main__":`:**
+- **Bloque `if __name__ == "__main__":`:**
     * Este bloque de código se ejecuta cuando el script se ejecuta directamente.
     * **Mensaje original:** Se define un mensaje de ejemplo.
     * **Cálculo de hashes:** Se llama a la función `calcular_hash()` para obtener los hashes del mensaje original utilizando diferentes algoritmos (SHA-256, SHA-1, MD5). Se imprimen los resultados.
