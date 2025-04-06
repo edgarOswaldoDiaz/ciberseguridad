@@ -1,4 +1,4 @@
-#### Leyes y regulaciones de seguridad en México
+# Leyes y regulaciones de seguridad en México
 
 En México, las leyes y regulaciones relacionadas con la seguridad informática se han ido desarrollando y actualizando en los últimos años. 
 
