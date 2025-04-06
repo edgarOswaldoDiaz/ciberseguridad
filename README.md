@@ -4,7 +4,7 @@ Objetivo de la unidad: Comprender los conceptos básicos de ciberseguridad y apr
 - [Introducción a la ciberseguridad](assets/introduccion.md)
 - [Principios de protección de datos](assets/proteccion_datos.md)
 - [Leyes y regulaciones](assets/leyes_y_regulaciones.md)
-- Conceptos básicos de criptografía 
+- [Conceptos básicos de criptografía](/assets/criptografia.md) 
 - Diseño de algoritmos de seguridad 
 - Programación de scripts para solución de problemas de seguridad 
 
