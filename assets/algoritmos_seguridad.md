@@ -36,7 +36,7 @@ Claro, Shamara. A continuación te presento las fórmulas en **LaTeX** que repre
 
 ---
 
-###Criptografía Simétrica**
+### Criptografía Simétrica
 
 En criptografía simétrica, **la misma clave** se utiliza para cifrar y descifrar el mensaje:
 
@@ -58,7 +58,7 @@ M = D_K(C)
 - \( D_K \): función de descifrado usando la clave \( K \)
 
 
-### Criptografía Asimétrica**
+### Criptografía Asimétrica
 
 En criptografía asimétrica se utiliza un **par de claves**: una clave pública \( K_{pub} \) para cifrar y una clave privada \( K_{priv} \) para descifrar:
 
