@@ -77,6 +77,59 @@ M = D_{K_{priv}}(C)
 - \( K_{priv} \): clave privada del receptor
 - \( E_{K_{pub}} \): función de cifrado con clave pública
 - \( D_{K_{priv}} \): función de descifrado con clave privada
+______________________________
+
+El código proporcionado describe el proceso básico de un **cifrado simétrico**, donde se utiliza la misma clave \( K \) tanto para cifrar como para descifrar. Aquí está la explicación detallada:
+
+---
+
+### **Ecuaciones y componentes**
+1. **Cifrado**:  
+   \[
+   C = E_K(M)
+   \]  
+   - \( M \): Mensaje original (texto plano).  
+   - \( K \): Clave secreta compartida entre emisor y receptor.  
+   - \( E \): Algoritmo de cifrado (ej: AES, ChaCha20).  
+   - \( C \): Texto cifrado resultante.  
+
+   El algoritmo \( E \) transforma \( M \) en un texto ilegible (\( C \)) usando la clave \( K \).
+
+2. **Descifrado**:  
+   \[
+   M = D_K(C)
+   \]  
+   - \( D \): Algoritmo de descifrado (inverso de \( E \)).  
+   - \( C \): Texto cifrado recibido.  
+
+   Con la misma clave \( K \), el algoritmo \( D \) recupera el mensaje original \( M \) desde \( C \).
+
+---
+
+### **Propiedades clave**
+1. **Simetría**: La misma clave \( K \) se usa en ambas operaciones.  
+2. **Correctitud**: Si el cifrado es correcto, se cumple \( D_K(E_K(M)) = M \).  
+3. **Seguridad**: Depende de:  
+   - La fortaleza del algoritmo \( E \) (ej: resistencia a ataques criptográficos).  
+   - La confidencialidad de \( K \). Si \( K \) se expone, el sistema se rompe.  
+
+---
+
+### **Ejemplo en la práctica**
+Si Alice cifra un mensaje con \( K \) usando AES (\( E_K \)), Bob necesitará \( K \) para descifrarlo con AES (\( D_K \)). Sin \( K \), un atacante no puede obtener \( M \) desde \( C \), asumiendo que el algoritmo es seguro.
+
+---
+
+### **Limitaciones**
+- **Gestión de claves**: Distribuir \( K \) de forma segura entre emisor y receptor es un desafío.  
+- **Escalabilidad**: En sistemas con muchos usuarios, gestionar claves únicas y secretas se complica (aquí se usa cifrado asimétrico como complemento).
+
+--- 
+
+Este esquema es la base de sistemas como AES (Advanced Encryption Standard), ampliamente usado en HTTPS, VPNs, y protección de datos.
+
+
+
 
 
 
