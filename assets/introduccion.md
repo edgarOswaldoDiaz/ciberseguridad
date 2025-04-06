@@ -15,6 +15,30 @@ Retos actuales y perspectivas de futuro**
 Hoy en día, la ciberseguridad no solo es una cuestión tecnológica, sino también de gobernanza, ética y derechos humanos. La protección de datos personales, la privacidad, la soberanía digital y la regulación de la inteligencia artificial son temas que se encuentran en el centro del debate. Asimismo, los actores de las amenazas se han diversificado: ya no son solamente individuos o grupos criminales, sino también actores estatales con capacidades sofisticadas para realizar ciberataques. Ante esta situación, se requiere una respuesta integral. Esto incluye el fortalecimiento de marcos normativos internacionales, la educación y concienciación del usuario final, el desarrollo de infraestructuras cibernéticas resilientes, y el fomento de la cooperación entre sectores público y privado. La ciberseguridad del futuro será predictiva, impulsada por la inteligencia artificial y el análisis de datos masivos, pero también deberá ser ética, inclusiva y centrada en el ser humano.
 
 La ciberseguridad ha recorrido un largo camino desde sus humildes comienzos hasta convertirse en un campo estratégico para la estabilidad global. Su historia es testimonio de la evolución de las amenazas y de la capacidad humana para responder a ellas. En la actualidad, proteger los entornos digitales no es opcional: es una necesidad imperativa para garantizar la continuidad operativa, la confianza pública y el respeto a los derechos fundamentales. Comprender su evolución histórica nos permite no solo valorar su importancia, sino también prepararnos mejor para los desafíos venideros en un mundo digital cada vez más complejo.
+
+
+Consideraciones
+
+- **Conciencia y Educación Continua:** La base de toda estrategia es la comprensión de los riesgos. Mantente informado sobre las últimas amenazas, técnicas de phishing, ingeniería social y buenas prácticas de seguridad. Realiza capacitaciones periódicas en el entorno laboral y busca recursos educativos para tu vida personal.
+
+- **Contraseñas Robustas y Gestión Segura:** Utiliza contraseñas únicas, complejas (combinando mayúsculas, minúsculas, números y símbolos) y de longitud adecuada para cada cuenta. Considera el uso de un gestor de contraseñas seguro para almacenarlas y generarlas de forma segura. Activa la autenticación de dos factores (2FA) siempre que esté disponible.
+
+- **Protección de Dispositivos:** Asegura todos tus dispositivos (ordenadores, portátiles, smartphones, tablets) con contraseñas o métodos biométricos. Mantén tus sistemas operativos y aplicaciones actualizados con los últimos parches de seguridad. Utiliza software antivirus y antimalware confiable y mantenlo activo y actualizado.
+
+- **Redes Seguras:** Ten precaución al conectarte a redes Wi-Fi públicas. Considera el uso de una Red Privada Virtual (VPN) para cifrar tu conexión y proteger tus datos. En el entorno laboral, asegúrate de comprender y seguir las políticas de seguridad de la red corporativa. En casa, configura contraseñas robustas para tu router Wi-Fi y considera desactivar la difusión del SSID.
+
+- **Gestión de la Información y Datos:** Sé consciente de la información que compartes en línea y a través de correo electrónico. Evita compartir información sensible o confidencial a través de canales no seguros. En el ámbito laboral, sigue las políticas de clasificación y manejo de datos de la empresa. Realiza copias de seguridad periódicas de tus datos importantes tanto personales como laborales en ubicaciones seguras y separadas.
+
+- **Cuidado con el Phishing y la Ingeniería Social:** Desconfía de correos electrónicos, mensajes de texto, llamadas o mensajes en redes sociales sospechosos o inesperados, especialmente aquellos que solicitan información personal, credenciales o que contienen enlaces o archivos adjuntos no solicitados. Verifica la autenticidad de las comunicaciones antes de responder o hacer clic en enlaces.
+
+- **Seguridad en Línea y Redes Sociales:** Ajusta la configuración de privacidad en tus cuentas de redes sociales para limitar la información que compartes públicamente. Ten cuidado con la información que publicas y con quién interactúas en línea. Evita hacer clic en enlaces sospechosos o participar en encuestas dudosas.
+
+- **Respuesta a Incidentes:** Ten un plan básico en caso de un incidente de seguridad (pérdida o robo de dispositivo, sospecha de acceso no autorizado, etc.). En el ámbito laboral, conoce los protocolos de reporte de incidentes de la empresa. Cambia las contraseñas comprometidas inmediatamente y notifica a las autoridades o al departamento de TI correspondiente.
+
+- **Seguridad Física de los Dispositivos:** Protege físicamente tus dispositivos para evitar robos o accesos no autorizados. No dejes dispositivos desbloqueados en lugares públicos. En el entorno laboral, sigue las políticas de seguridad física de la empresa.
+
+- **Revisión y Adaptación Continua:** La ciberseguridad es un proceso dinámico. Revisa periódicamente tus prácticas de seguridad y adapta tu estrategia a las nuevas amenazas y tecnologías. Mantente al día con las recomendaciones de seguridad de expertos y organizaciones relevantes.
+
 __________________
 > Anderson, R. (2020). *Security Engineering: A Guide to Building Dependable Distributed Systems* (3rd ed.). Wiley.  
 > Schneier, B. (2015). *Data and Goliath: The Hidden Battles to Collect Your Data and Control Your World*. W. W. Norton & Company.  
