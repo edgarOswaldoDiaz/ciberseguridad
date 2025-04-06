@@ -19,7 +19,11 @@ Nota: Los principios de protección de datos son la base ética y legal sobre la
 __________________
 
 > Autoridad Española de Protección de Datos (AEPD). (2020). *Guía para el cumplimiento del principio de responsabilidad proactiva*. 
+
 > European Union. (2016). *Regulation (EU) 2016/679 of the European Parliament and of the Council (General Data Protection Regulation - GDPR)*. Official Journal of the European Union.
+
 > Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI). (2020). *Guía de implementación de medidas de seguridad para la protección de datos personales*.
+
 > Solove, D. J., & Schwartz, P. M. (2020). *Information privacy law* (6th ed.). Wolters Kluwer.
+
 > National Institute of Standards and Technology (NIST). (2020). *Security and Privacy Controls for Information Systems and Organizations* (NIST SP 800-53 Rev. 5).
