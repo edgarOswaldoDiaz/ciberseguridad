@@ -1,5 +1,53 @@
 # Leyes y regulaciones de seguridad en México
 
+Como Inicia – DELITO –
+
+- Falsificación de documentos informáticos: Este delito implica la creación, alteración o manipulación de documentos informáticos con el propósito de engañar o defraudar. Puede incluir la creación de firmas falsas, documentos electrónicos falsificados o la manipulación de información digital.
+
+- Violación a la intimidad: La violación a la intimidad se refiere a la intrusión no autorizada en la privacidad de una persona. En el contexto digital, esto puede incluir el acceso no autorizado a información personal, hackeo de cuentas o la difusión de información confidencial sin consentimiento.
+
+- Daños: Este término se refiere a la destrucción, deterioro o perjuicio causado a sistemas informáticos, redes o datos. Puede manifestarse a través de virus, malware, ataques de denegación de servicio (DDoS) u otras acciones que causen daño a la infraestructura digital.
+
+- Hurto: En el ámbito digital, el hurto se relaciona con la apropiación no autorizada de información o recursos electrónicos. Esto puede incluir el robo de datos personales, información financiera o propiedad intelectual.
+
+- Contra los derechos de autor: Se refiere a la violación de los derechos de propiedad intelectual, como la reproducción, distribución o uso no autorizado de material protegido por derechos de autor en línea.
+
+- Fraude a la administración de personas jurídicas: Implica engaños o manipulaciones con el propósito de perjudicar a una entidad legal. En el ámbito digital, esto podría incluir actividades fraudulentas en línea que afectan la gestión y funcionamiento de una empresa.
+
+- Espionaje: La obtención no autorizada de información confidencial, generalmente con motivos políticos, económicos o militares. En el contexto digital, esto puede incluir el espionaje cibernético para obtener información estratégica.
+
+- Violación del secreto de las comunicaciones: Implica la interceptación no autorizada de comunicaciones privadas, como mensajes electrónicos o llamadas telefónicas. Esto atenta contra la confidencialidad de las comunicaciones.
+
+- Terrorismo: En el ámbito digital, el terrorismo puede manifestarse a través de ataques cibernéticos con el objetivo de causar daño significativo a sistemas críticos, infraestructuras o para promover agendas políticas extremistas.
+
+- Pornografía: La referencia aquí puede ser a la pornografía ilegal, que involucra la producción, distribución o posesión de material pornográfico que viola las leyes locales.
+
+- Narcotráfico: En el contexto digital, esto podría implicar la utilización de plataformas en línea para facilitar la venta, distribución o tráfico de sustancias ilegales.
+
+- Homicidio: En el ámbito digital, podría referirse a casos en los que la manipulación de sistemas informáticos o la interferencia con tecnologías críticas resultan en daño humano directo, aunque este tipo de casos son extremadamente raros.
+
+Decálogo de los delitos informáticos en México:
+
+- Acceso ilícito a sistemas y equipos de informática: Se refiere a la acción de entrar de manera no autorizada a sistemas informáticos, redes o equipos. Esto puede involucrar la vulneración de contraseñas, eludir medidas de seguridad o cualquier otra actividad que permita el acceso no permitido a información sensible.
+
+- Daño a sistemas y equipos de informática: Implica la destrucción, modificación no autorizada o interrupción del funcionamiento normal de sistemas informáticos o equipos. Esto puede resultar en la pérdida de datos, el mal funcionamiento de software o hardware, y otros problemas relacionados con la integridad de la tecnología.
+
+- Sabotaje informático: Similar al daño a sistemas, pero con la intención de perjudicar actividades específicas o causar un impacto negativo en una organización o entidad a través de acciones deliberadas de sabotaje en sistemas informáticos.
+
+- Fraude informático: Incluye actividades fraudulentas realizadas mediante el uso de tecnologías de la información. Esto puede abarcar desde estafas en línea, robo de identidad, hasta engaños a través de correos electrónicos o sitios web falsos con el propósito de obtener información confidencial o dinero de manera fraudulenta.
+
+- Espionaje informático: Se refiere a la obtención no autorizada de información confidencial de sistemas informáticos, redes o dispositivos con el propósito de obtener ventajas políticas, económicas, militares o de cualquier otra índole.
+
+- Pornografía infantil y explotación sexual infantil en línea:Implica la producción, distribución o consumo de material pornográfico que involucra a menores de edad. Este delito puede ocurrir a través de internet, donde se comparten, distribuyen o consumen dichos contenidos de manera ilegal.
+
+- Amenazas y hostigamiento en línea:Incluye comportamientos que tienen como objetivo intimidar, acosar o amenazar a personas a través de plataformas en línea. Esto puede incluir mensajes ofensivos, difamación, stalking virtual, entre otras formas de acoso digital.
+
+- Delitos contra la propiedad intelectual en línea: Se refiere a la violación de derechos de propiedad intelectual, como la piratería de software, la distribución ilegal de contenido protegido por derechos de autor o la falsificación de marcas registradas a través de medios electrónicos.
+
+- Delitos electorales en línea: Implica actividades ilegales destinadas a influir en procesos electorales a través de la manipulación de información en línea, el hackeo de sistemas electorales o cualquier otra acción que comprometa la integridad del proceso democrático.
+
+- Delitos fiscales en línea: Refiere a la comisión de fraudes fiscales mediante el uso de tecnologías de la información. Esto puede incluir la evasión fiscal a través de transacciones en línea, la manipulación de registros electrónicos, entre otras prácticas ilegales relacionadas con asuntos fiscales.
+
 En México, las leyes y regulaciones relacionadas con la seguridad informática se han ido desarrollando y actualizando en los últimos años. 
 
 - Ley Federal de Protección de Datos Personales en Posesión de Particulares (LFPDPPP): Esta ley regula el tratamiento de datos personales por parte de entidades privadas y establece los principios de privacidad y seguridad de la información.
