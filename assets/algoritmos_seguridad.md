@@ -32,7 +32,16 @@ Los algoritmos de seguridad pueden clasificarse principalmente en tres categorí
 
 Cada tipo responde a diferentes necesidades de seguridad, y su elección depende del entorno operativo, la sensibilidad de los datos y las amenazas predominantes.
 
+_______________________
+> Stallings, W. (2023). *Cryptography and network security: Principles and practice* (8th ed.). Pearson.  
 
+> Paar, C., & Pelzl, J. (2010). *Understanding cryptography: A textbook for students and practitioners*. Springer.  
+
+> Schneier, B. (2015). *Applied cryptography: Protocols, algorithms, and source code in C* (20th Anniversary ed.). Wiley.  
+
+> National Institute of Standards and Technology (NIST). (2022). *Post-Quantum Cryptography: NIST's Approach and Evaluation Criteria*. U.S. Department of Commerce.  
+
+> Menezes, A. J., van Oorschot, P. C., & Vanstone, S. A. (2018). *Handbook of applied cryptography*. CRC Press.  
 
 
 
