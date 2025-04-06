@@ -105,13 +105,13 @@ if __name__ == "__main__":
 
 **Explicación**
 
-**Importación de la biblioteca `cryptography`:**
+- **Importación de la biblioteca `cryptography`:**
     ```python
     from cryptography.fernet import Fernet
     ```
     * Importamos la clase `Fernet` del módulo `fernet` dentro de la biblioteca `cryptography`. `Fernet` es una implementación de cifrado simétrico autenticado. Esto significa que no solo cifra los datos, sino que también asegura su integridad (que no han sido alterados). Utiliza el algoritmo de cifrado AES (Advanced Encryption Standard) en modo CBC (Cipher Block Chaining) con un HMAC (Hash-based Message Authentication Code) para la autenticación.
 
-**Función `generar_clave()`:**
+- **Función `generar_clave()`:**
     ```python
     def generar_clave():
         """Genera una clave secreta para el cifrado simétrico."""
@@ -122,7 +122,7 @@ if __name__ == "__main__":
     * **Importante:** Esta clave debe mantenerse en secreto y compartirse de forma segura entre las partes que necesitan cifrar y descifrar mensajes. Generar una nueva clave para cada comunicación o sesión sensible es una buena práctica de seguridad.
     * La clave generada es una secuencia de bytes.
 
-**Función `cifrar_mensaje(mensaje, clave)`:**
+- **Función `cifrar_mensaje(mensaje, clave)`:**
     ```python
     def cifrar_mensaje(mensaje, clave):
         """Cifra un mensaje utilizando la clave proporcionada."""
@@ -135,7 +135,7 @@ if __name__ == "__main__":
     * El mensaje original (`mensaje`) es una cadena de texto (string). Para que `Fernet` pueda cifrarlo, primero debemos convertirlo a una secuencia de bytes utilizando la codificación `utf-8`.
     * El método `f.encrypt(mensaje_bytes)` realiza el cifrado del mensaje en bytes y devuelve el `mensaje_cifrado` también en formato de bytes.
 
-**Función `descifrar_mensaje(mensaje_cifrado, clave)`:**
+- **Función `descifrar_mensaje(mensaje_cifrado, clave)`:**
     ```python
     def descifrar_mensaje(mensaje_cifrado, clave):
         """Descifra un mensaje cifrado utilizando la clave proporcionada."""
@@ -148,7 +148,7 @@ if __name__ == "__main__":
     * El método `f.decrypt(mensaje_cifrado)` toma el mensaje cifrado en bytes y lo descifra, devolviendo el resultado también en bytes (`mensaje_descifrado_bytes`).
     * Finalmente, decodificamos la secuencia de bytes resultante a una cadena de texto utilizando `decode('utf-8')` para obtener el mensaje original.
 
-**Bloque `if __name__ == "__main__":`:**
+- **Bloque `if __name__ == "__main__":`:**
     * Este bloque de código se ejecuta solo cuando el script se ejecuta directamente (no cuando se importa como un módulo).
     * **Generación de la clave:** Se llama a `generar_clave()` para obtener una clave secreta. En un escenario real, esta clave se generaría una vez y se almacenaría de forma segura.
     * **Definición del mensaje original:** Se define un mensaje de ejemplo que queremos cifrar.
@@ -315,7 +315,7 @@ if __name__ == "__main__":
 
 **Explicación**
 
-1.  **Importación de módulos:**
+- **Importación de módulos:**
     ```python
     from cryptography.hazmat.primitives import hashes
     from cryptography.hazmat.primitives.asymmetric import rsa, padding
@@ -323,7 +323,7 @@ if __name__ == "__main__":
     ```
     * Importamos los módulos necesarios de la biblioteca `cryptography` para realizar operaciones de hashing (SHA256), generación de claves RSA, esquemas de relleno (OAEP), y serialización de claves.
 
-2.  **Función `generar_claves_rsa()`:**
+- **Función `generar_claves_rsa()`:**
     ```python
     def generar_claves_rsa():
         """Genera un par de claves RSA (pública y privada)."""
@@ -341,7 +341,7 @@ if __name__ == "__main__":
     * `private_key.public_key()` deriva la clave pública correspondiente a la clave privada generada.
     * La función devuelve ambos objetos de clave.
 
-3.  **Función `cifrar_mensaje_publico(mensaje, public_key)`:**
+- **Función `cifrar_mensaje_publico(mensaje, public_key)`:**
     ```python
     def cifrar_mensaje_publico(mensaje, public_key):
         """Cifra un mensaje utilizando la clave pública del receptor."""
@@ -366,7 +366,7 @@ if __name__ == "__main__":
             * `label`: Un parámetro opcional que puede ser utilizado para contextos específicos. Aquí se establece en `None`.
     * La función devuelve el `ciphertext` (texto cifrado) en formato de bytes.
 
-4.  **Función `descifrar_mensaje_privado(ciphertext, private_key)`:**
+- **Función `descifrar_mensaje_privado(ciphertext, private_key)`:**
     ```python
     def descifrar_mensaje_privado(ciphertext, private_key):
         """Descifra un mensaje utilizando la clave privada del receptor."""
@@ -385,7 +385,7 @@ if __name__ == "__main__":
     * `private_key.decrypt()` realiza el descifrado. **Es importante utilizar el mismo esquema de relleno (`padding.OAEP` con los mismos parámetros) que se usó durante el cifrado.**
     * El resultado es el `plaintext_bytes` (texto plano en bytes), que luego se decodifica a una cadena de texto.
 
-5.  **Funciones para serializar y cargar la clave pública:**
+- **Funciones para serializar y cargar la clave pública:**
     ```python
     def serializar_clave_publica(public_key):
         """Serializa la clave pública a formato PEM para su almacenamiento o envío."""
@@ -408,7 +408,7 @@ if __name__ == "__main__":
         * `format=serialization.PublicFormat.SubjectPublicKeyInfo`: Especifica la estructura de la información de la clave pública.
     * `serialization.load_pem_public_key()` carga una clave pública desde su representación PEM.
 
-6.  **Bloque `if __name__ == "__main__":`:**
+- **Bloque `if __name__ == "__main__":`:**
     * Este bloque simula un escenario donde Alicia quiere enviar un mensaje secreto a Bob.
     * **Generación de claves:** Se genera un par de claves para Alicia y un par (simulado) para Bob. En un escenario real, cada persona generaría su propio par de claves.
     * **Intercambio de clave pública:** Se simula el envío de la clave pública de Bob a Alicia (a través de un canal que no necesita ser secreto). La clave pública puede compartirse libremente.
@@ -417,12 +417,12 @@ if __name__ == "__main__":
     * **Descifrado:** Bob recibe el mensaje cifrado y lo descifra utilizando su clave privada.
     * **Verificación:** Se comprueba si el mensaje original y el descifrado coinciden.
 
-7.  **Ejemplo de Firma Digital (opcional pero importante en asimétrica):**
+- **Ejemplo de Firma Digital (opcional pero importante en asimétrica):**
     * Se incluye un ejemplo básico de cómo Alicia podría firmar un mensaje utilizando su clave privada y cómo Bob (o cualquier persona con la clave pública de Alicia) podría verificar esa firma.
     * La firma digital proporciona autenticidad (prueba de que el mensaje proviene de Alicia) e integridad (prueba de que el mensaje no ha sido alterado).
     * Se utiliza el esquema de firma PSS (Probabilistic Signature Scheme) con SHA256.
 
-**Conceptos Clave de Criptografía Asimétrica Ilustrados:**
+**Conceptos Clave de Criptografía Asimétrica:**
 
 * **Par de claves:** Se utilizan dos claves relacionadas pero diferentes: una clave pública y una clave privada.
 * **Clave pública:** Se puede compartir libremente con cualquier persona. Se utiliza para cifrar mensajes destinados al propietario de la clave privada correspondiente.
