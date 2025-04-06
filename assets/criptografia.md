@@ -1,4 +1,24 @@
-### Introducción
+# Conceptos básicos de criptografía
+
+Las características y diferencias entre criptografía y encriptación:
+
+| Característica/Aspecto        | Criptografía                                                                                                                               | Encriptación (Cifrado)                                                                                                                               |
+| :----------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Naturaleza** | Ciencia y arte de proteger la información mediante códigos. Disciplina teórica y práctica.                                                  | Proceso específico dentro de la criptografía. Acción de transformar datos legibles a ilegibles.                                                    |
+| **Alcance** | Amplio. Incluye el diseño y análisis de algoritmos para confidencialidad, integridad, autenticación, no repudio y más.                      | Limitado a la transformación de datos para asegurar la confidencialidad.                                                                           |
+| **Objetivo Principal** | Seguridad integral de la información, abordando diversos aspectos como secreto, autenticidad, integridad y disponibilidad.                  | Ocultar el contenido de la información para que solo pueda ser comprendida por quienes poseen la clave correcta.                                  |
+| **Procesos Involucrados** | Diseño de algoritmos (cifrado, hash, firma digital, etc.), análisis de seguridad, gestión de claves, protocolos criptográficos.             | Aplicación de un algoritmo de cifrado específico utilizando una clave para transformar el texto plano en texto cifrado.                               |
+| **Resultados/Productos** | Algoritmos criptográficos, protocolos de seguridad (TLS/SSL, IPsec), sistemas de gestión de claves, firmas digitales, funciones hash, etc. | Texto cifrado (ciphertext) que resulta de la aplicación del algoritmo de cifrado al texto plano.                                                     |
+| **Funciones Clave** | Confidencialidad, integridad, autenticación, no repudio, control de acceso.                                                               | Principalmente confidencialidad (ocultar la información).                                                                                             |
+| **Nivel de Abstracción** | Nivel conceptual y teórico, abarcando los fundamentos matemáticos y los principios de seguridad.                                         | Nivel práctico y operativo, la implementación concreta de un algoritmo para cifrar datos.                                                             |
+| **Analogía** | El campo de la "seguridad informática".                                                                                                     | Una "cerradura" o un "candado" que protege un objeto o información.                                                                                 |
+| **Ejemplos de Técnicas/Áreas** | Cifrado simétrico y asimétrico, funciones hash, firmas digitales, criptografía cuántica, esteganografía (aunque relacionada, no es puramente criptografía). | AES, DES, RSA (para cifrado), cifrado de disco, cifrado de comunicaciones (HTTPS).                                                                 |
+| **Dependencia** | La encriptación es una herramienta *dentro* del campo de la criptografía.                                                                 | La encriptación se basa en los principios y algoritmos desarrollados por la criptografía.                                                              |
+
+En resumen, la **criptografía** es el paraguas que engloba todas las técnicas y principios para la seguridad de la información, mientras que la **encriptación** es una técnica específica dentro de la criptografía que se enfoca en hacer que la información sea ininteligible sin la clave adecuada.
+
+
+## Encriptación
 
 La encriptación de datos es una técnica esencial en la seguridad de la información, que consiste en transformar la información de manera que solo pueda ser interpretada por aquellos que tienen la clave de desencriptación adecuada. Este proceso es crucial en la actualidad debido a la creciente cantidad de datos sensibles que se almacenan y transmiten a través de medios electrónicos. En este ensayo, exploraremos los fundamentos de la encriptación de datos, su importancia y algunos de los métodos comunes de encriptación.
 
@@ -83,7 +103,7 @@ Los cifrados en las funciones hash están optimizados para el hash, usan claves 
 Los sistemas de cifrado de uso general utilizados para el cifrado tienden a tener diferentes objetivos de diseño. 
 Por ejemplo, el cifrado AES de bloque de clave simétrica también podría usarse para generar valores hash, pero sus tamaños de clave y bloque lo hacen no trivial e ineficiente.
 
-#### Cryptography Algorithms
+#### Algoritmos criptográficos 
 
 - RC4: Es un algoritmo de cifrado de flujo simétrico que se utiliza en protocolos de seguridad como TLS. Fue diseñado por Ron Rivest en 1987.
 
