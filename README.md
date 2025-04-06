@@ -1,7 +1,7 @@
 # Ciberseguridad 
 ## Módulo 1: Fundamentos de ciberseguridad y programación
 Objetivo de la unidad: Comprender los conceptos básicos de ciberseguridad y aprender a desarrollar algoritmos para proteger información. 
-- Introducción a la ciberseguridad 
+- [Introducción a la ciberseguridad](assets/introduccion.md)
 - Principios de protección de datos 
 - Conceptos básicos de criptografía 
 - Diseño de algoritmos de seguridad 
