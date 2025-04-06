@@ -32,8 +32,6 @@ Los algoritmos de seguridad pueden clasificarse principalmente en tres categorí
 
 Cada tipo responde a diferentes necesidades de seguridad, y su elección depende del entorno operativo, la sensibilidad de los datos y las amenazas predominantes.
 
-Claro, Shamara. A continuación te presento las fórmulas en **LaTeX** que representan los conceptos básicos de **criptografía simétrica** y **criptografía asimétrica**.
-
 ---
 
 ### Criptografía Simétrica
@@ -57,6 +55,126 @@ M = D_K(C)
 - \( E_K \): función de cifrado usando la clave \( K \)
 - \( D_K \): función de descifrado usando la clave \( K \)
 
+Este ejemplo proporciona una introducción básica a la criptografía simétrica utilizando Python y la biblioteca `cryptography`. En aplicaciones del mundo real, se deben considerar aspectos más avanzados como la rotación de claves, el almacenamiento seguro de claves y la elección de algoritmos y modos de operación apropiados para las necesidades específicas de seguridad.
+
+```python
+from cryptography.fernet import Fernet
+
+def generar_clave():
+    """Genera una clave secreta para el cifrado simétrico."""
+    clave = Fernet.generate_key()
+    return clave
+
+def cifrar_mensaje(mensaje, clave):
+    """Cifra un mensaje utilizando la clave proporcionada."""
+    f = Fernet(clave)
+    mensaje_bytes = mensaje.encode('utf-8')  # Codificar el mensaje a bytes
+    mensaje_cifrado = f.encrypt(mensaje_bytes)
+    return mensaje_cifrado
+
+def descifrar_mensaje(mensaje_cifrado, clave):
+    """Descifra un mensaje cifrado utilizando la clave proporcionada."""
+    f = Fernet(clave)
+    mensaje_descifrado_bytes = f.decrypt(mensaje_cifrado)
+    mensaje_descifrado = mensaje_descifrado_bytes.decode('utf-8')  # Decodificar los bytes a string
+    return mensaje_descifrado
+
+if __name__ == "__main__":
+    # 1. Generar una clave secreta (esto se haría una sola vez y se guardaría de forma segura)
+    clave_secreta = generar_clave()
+    print(f"Clave secreta generada: {clave_secreta.decode()}") # ¡Importante! No mostrar la clave en un entorno real
+
+    # 2. Mensaje que queremos cifrar
+    mensaje_original = "Este es un mensaje secreto."
+    print(f"\nMensaje original: {mensaje_original}")
+
+    # 3. Cifrar el mensaje utilizando la clave secreta
+    mensaje_cifrado = cifrar_mensaje(mensaje_original, clave_secreta)
+    print(f"Mensaje cifrado: {mensaje_cifrado}")
+
+    # 4. Descifrar el mensaje cifrado utilizando la misma clave secreta
+    mensaje_descifrado = descifrar_mensaje(mensaje_cifrado, clave_secreta)
+    print(f"Mensaje descifrado: {mensaje_descifrado}")
+
+    # 5. Verificar que el mensaje original y el mensaje descifrado son iguales
+    if mensaje_original == mensaje_descifrado:
+        print("\n¡El cifrado y descifrado se realizaron correctamente!")
+    else:
+        print("\n¡Hubo un error en el cifrado o descifrado!")
+```
+
+**Explicación**
+
+1.  **Importación de la biblioteca `cryptography`:**
+    ```python
+    from cryptography.fernet import Fernet
+    ```
+    * Importamos la clase `Fernet` del módulo `fernet` dentro de la biblioteca `cryptography`. `Fernet` es una implementación de cifrado simétrico autenticado. Esto significa que no solo cifra los datos, sino que también asegura su integridad (que no han sido alterados). Utiliza el algoritmo de cifrado AES (Advanced Encryption Standard) en modo CBC (Cipher Block Chaining) con un HMAC (Hash-based Message Authentication Code) para la autenticación.
+
+2.  **Función `generar_clave()`:**
+    ```python
+    def generar_clave():
+        """Genera una clave secreta para el cifrado simétrico."""
+        clave = Fernet.generate_key()
+        return clave
+    ```
+    * Esta función utiliza el método estático `Fernet.generate_key()` para crear una nueva clave secreta.
+    * **Importante:** Esta clave debe mantenerse en secreto y compartirse de forma segura entre las partes que necesitan cifrar y descifrar mensajes. Generar una nueva clave para cada comunicación o sesión sensible es una buena práctica de seguridad.
+    * La clave generada es una secuencia de bytes.
+
+3.  **Función `cifrar_mensaje(mensaje, clave)`:**
+    ```python
+    def cifrar_mensaje(mensaje, clave):
+        """Cifra un mensaje utilizando la clave proporcionada."""
+        f = Fernet(clave)
+        mensaje_bytes = mensaje.encode('utf-8')  # Codificar el mensaje a bytes
+        mensaje_cifrado = f.encrypt(mensaje_bytes)
+        return mensaje_cifrado
+    ```
+    * Creamos una instancia de la clase `Fernet` pasando la `clave` generada. Esta instancia (`f`) es la que se utilizará para las operaciones de cifrado y descifrado con esa clave específica.
+    * El mensaje original (`mensaje`) es una cadena de texto (string). Para que `Fernet` pueda cifrarlo, primero debemos convertirlo a una secuencia de bytes utilizando la codificación `utf-8`.
+    * El método `f.encrypt(mensaje_bytes)` realiza el cifrado del mensaje en bytes y devuelve el `mensaje_cifrado` también en formato de bytes.
+
+4.  **Función `descifrar_mensaje(mensaje_cifrado, clave)`:**
+    ```python
+    def descifrar_mensaje(mensaje_cifrado, clave):
+        """Descifra un mensaje cifrado utilizando la clave proporcionada."""
+        f = Fernet(clave)
+        mensaje_descifrado_bytes = f.decrypt(mensaje_cifrado)
+        mensaje_descifrado = mensaje_descifrado_bytes.decode('utf-8')  # Decodificar los bytes a string
+        return mensaje_descifrado
+    ```
+    * Al igual que en el cifrado, creamos una instancia de `Fernet` con la misma `clave` utilizada para cifrar. **Es crucial usar la misma clave para descifrar.**
+    * El método `f.decrypt(mensaje_cifrado)` toma el mensaje cifrado en bytes y lo descifra, devolviendo el resultado también en bytes (`mensaje_descifrado_bytes`).
+    * Finalmente, decodificamos la secuencia de bytes resultante a una cadena de texto utilizando `decode('utf-8')` para obtener el mensaje original.
+
+5.  **Bloque `if __name__ == "__main__":`:**
+    * Este bloque de código se ejecuta solo cuando el script se ejecuta directamente (no cuando se importa como un módulo).
+    * **Generación de la clave:** Se llama a `generar_clave()` para obtener una clave secreta. En un escenario real, esta clave se generaría una vez y se almacenaría de forma segura.
+    * **Definición del mensaje original:** Se define un mensaje de ejemplo que queremos cifrar.
+    * **Cifrado del mensaje:** Se llama a `cifrar_mensaje()` para cifrar el mensaje original utilizando la clave generada.
+    * **Descifrado del mensaje:** Se llama a `descifrar_mensaje()` para intentar descifrar el mensaje cifrado utilizando la misma clave.
+    * **Verificación:** Se compara el mensaje original con el mensaje descifrado para asegurar que el proceso de cifrado y descifrado fue exitoso.
+
+**Conceptos Clave de Criptografía Simétrica:**
+
+* **Una única clave:** La misma clave (`clave_secreta`) se utiliza tanto para cifrar como para descifrar el mensaje. Esta es la característica fundamental de la criptografía simétrica.
+* **Secreto compartido:** Para que la comunicación sea segura, la clave secreta debe ser conocida únicamente por las partes que se comunican. Si un tercero obtiene la clave, podrá cifrar y descifrar los mensajes.
+* **Algoritmo de cifrado:** En este ejemplo, la biblioteca `Fernet` internamente utiliza un algoritmo de cifrado simétrico fuerte (AES) junto con mecanismos de autenticación.
+* **Proceso de cifrado:** El mensaje original se transforma en un formato ilegible (el mensaje cifrado) utilizando la clave y el algoritmo.
+* **Proceso de descifrado:** El mensaje cifrado se revierte a su forma original (el mensaje descifrado) utilizando la misma clave y el algoritmo inverso.
+
+**Consideraciones Importantes en la Criptografía Simétrica:**
+
+* **Gestión de claves:** El mayor desafío en la criptografía simétrica es la gestión segura de las claves. ¿Cómo se genera, almacena y comparte la clave de forma segura entre las partes?
+* **Seguridad de la clave:** Si la clave se ve comprometida, toda la comunicación cifrada con esa clave también se verá comprometida.
+* **Escalabilidad:** En sistemas con muchos participantes, gestionar una clave secreta única para cada par de comunicantes puede volverse complejo.
+
+
+
+
+
+
 
 ### Criptografía Asimétrica
 
@@ -78,57 +196,6 @@ M = D_{K_{priv}}(C)
 - \( E_{K_{pub}} \): función de cifrado con clave pública
 - \( D_{K_{priv}} \): función de descifrado con clave privada
 ______________________________
-
-El código proporcionado describe el proceso básico de un **cifrado simétrico**, donde se utiliza la misma clave \( K \) tanto para cifrar como para descifrar. Aquí está la explicación detallada:
-
----
-
-### **Ecuaciones y componentes**
-1. **Cifrado**:  
-   \[
-   C = E_K(M)
-   \]  
-   - \( M \): Mensaje original (texto plano).  
-   - \( K \): Clave secreta compartida entre emisor y receptor.  
-   - \( E \): Algoritmo de cifrado (ej: AES, ChaCha20).  
-   - \( C \): Texto cifrado resultante.  
-
-   El algoritmo \( E \) transforma \( M \) en un texto ilegible (\( C \)) usando la clave \( K \).
-
-2. **Descifrado**:  
-   \[
-   M = D_K(C)
-   \]  
-   - \( D \): Algoritmo de descifrado (inverso de \( E \)).  
-   - \( C \): Texto cifrado recibido.  
-
-   Con la misma clave \( K \), el algoritmo \( D \) recupera el mensaje original \( M \) desde \( C \).
-
----
-
-### **Propiedades clave**
-1. **Simetría**: La misma clave \( K \) se usa en ambas operaciones.  
-2. **Correctitud**: Si el cifrado es correcto, se cumple \( D_K(E_K(M)) = M \).  
-3. **Seguridad**: Depende de:  
-   - La fortaleza del algoritmo \( E \) (ej: resistencia a ataques criptográficos).  
-   - La confidencialidad de \( K \). Si \( K \) se expone, el sistema se rompe.  
-
----
-
-### **Ejemplo en la práctica**
-Si Alice cifra un mensaje con \( K \) usando AES (\( E_K \)), Bob necesitará \( K \) para descifrarlo con AES (\( D_K \)). Sin \( K \), un atacante no puede obtener \( M \) desde \( C \), asumiendo que el algoritmo es seguro.
-
----
-
-### **Limitaciones**
-- **Gestión de claves**: Distribuir ( K ) de forma segura entre emisor y receptor es un desafío.  
-- **Escalabilidad**: En sistemas con muchos usuarios, gestionar claves únicas y secretas se complica (aquí se usa cifrado asimétrico como complemento).
-
---- 
-
-Este esquema es la base de sistemas como AES (Advanced Encryption Standard), ampliamente usado en HTTPS, VPNs, y protección de datos.
-
-
 
 
 
