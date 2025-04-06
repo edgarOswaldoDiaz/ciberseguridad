@@ -20,5 +20,5 @@ __________________
 > Schneier, B. (2015). *Data and Goliath: The Hidden Battles to Collect Your Data and Control Your World*. W. W. Norton & Company.  
 > Singer, P. W., & Friedman, A. (2014). *Cybersecurity and Cyberwar: What Everyone Needs to Know*. Oxford University Press.  
 > Kaspersky Lab. (2017). *The WannaCry Ransomware Attack*. Kaspersky Global Research and Analysis Team.
-> Solms, R. von, & van Niekerk, J. (2013). From information security to cyber security. *Computers & Security, 38*, 97–102. https://doi.org/10.1016/j.cose.2013.04.004
+> Solms, R. von, & van Niekerk, J. (2013). From information security to cyber security. *Computers & Security, 38*, 97–102.
 
