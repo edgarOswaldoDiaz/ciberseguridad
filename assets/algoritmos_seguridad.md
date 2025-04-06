@@ -440,6 +440,163 @@ if __name__ == "__main__":
 * **Más lenta que la criptografía simétrica:** Las operaciones de cifrado y descifrado suelen ser significativamente más lentas que las de los algoritmos simétricos.
 * **Tamaño de clave más grande:** Las claves asimétricas suelen ser mucho más grandes que las claves simétricas para lograr un nivel de seguridad comparable.
 
+
+# Algoritmos de hashing
+
+Este ejemplo proporciona una comprensión fundamental de los algoritmos de hashing y cómo se pueden utilizar en Python para verificar la integridad de los datos.
+
+
+```python
+import hashlib
+
+def calcular_hash(mensaje, algoritmo='sha256'):
+    """Calcula el hash de un mensaje utilizando el algoritmo especificado."""
+    mensaje_bytes = mensaje.encode('utf-8')  # Codificar el mensaje a bytes
+    if algoritmo == 'sha256':
+        hash_object = hashlib.sha256(mensaje_bytes)
+    elif algoritmo == 'sha1':
+        hash_object = hashlib.sha1(mensaje_bytes)
+    elif algoritmo == 'md5':
+        hash_object = hashlib.md5(mensaje_bytes)
+    else:
+        raise ValueError(f"Algoritmo de hash no soportado: {algoritmo}")
+    hash_hex = hash_object.hexdigest()
+    return hash_hex
+
+def verificar_integridad(mensaje, hash_esperado, algoritmo='sha256'):
+    """Calcula el hash del mensaje y lo compara con el hash esperado."""
+    hash_calculado = calcular_hash(mensaje, algoritmo)
+    if hash_calculado == hash_esperado:
+        print("¡Integridad verificada! El mensaje no ha sido alterado.")
+        return True
+    else:
+        print("¡Alerta! El mensaje ha sido alterado.")
+        print(f"Hash calculado: {hash_calculado}")
+        print(f"Hash esperado: {hash_esperado}")
+        return False
+
+if __name__ == "__main__":
+    mensaje_original = "Este es un mensaje importante."
+
+    # 1. Calcular el hash SHA-256 del mensaje original
+    hash_sha256 = calcular_hash(mensaje_original, 'sha256')
+    print(f"Mensaje original: {mensaje_original}")
+    print(f"Hash SHA-256: {hash_sha256}")
+
+    # 2. Calcular el hash SHA-1 del mensaje original
+    hash_sha1 = calcular_hash(mensaje_original, 'sha1')
+    print(f"Hash SHA-1: {hash_sha1}")
+
+    # 3. Calcular el hash MD5 del mensaje original
+    hash_md5 = calcular_hash(mensaje_original, 'md5')
+    print(f"Hash MD5: {hash_md5}")
+
+    print("\n--- Verificación de Integridad ---")
+
+    # 4. Simular la recepción del mensaje y su hash esperado
+    mensaje_recibido = "Este es un mensaje importante."
+    hash_esperado_sha256 = hash_sha256
+
+    # 5. Verificar la integridad del mensaje recibido
+    verificar_integridad(mensaje_recibido, hash_esperado_sha256, 'sha256')
+
+    # 6. Simular la alteración del mensaje
+    mensaje_alterado = "Este es un mensaje importante, con un cambio."
+
+    # 7. Verificar la integridad del mensaje alterado con el hash original
+    verificar_integridad(mensaje_alterado, hash_esperado_sha256, 'sha256')
+```
+
+**Explicación Detallada:**
+
+1.  **Importación de la biblioteca `hashlib`:**
+    ```python
+    import hashlib
+    ```
+    * Importamos la biblioteca `hashlib`, que proporciona acceso a varios algoritmos de hashing seguros (como SHA-256, SHA-1, MD5, etc.).
+
+2.  **Función `calcular_hash(mensaje, algoritmo='sha256')`:**
+    ```python
+    def calcular_hash(mensaje, algoritmo='sha256'):
+        """Calcula el hash de un mensaje utilizando el algoritmo especificado."""
+        mensaje_bytes = mensaje.encode('utf-8')  # Codificar el mensaje a bytes
+        if algoritmo == 'sha256':
+            hash_object = hashlib.sha256(mensaje_bytes)
+        elif algoritmo == 'sha1':
+            hash_object = hashlib.sha1(mensaje_bytes)
+        elif algoritmo == 'md5':
+            hash_object = hashlib.md5(mensaje_bytes)
+        else:
+            raise ValueError(f"Algoritmo de hash no soportado: {algoritmo}")
+        hash_hex = hash_object.hexdigest()
+        return hash_hex
+    ```
+    * Esta función toma un `mensaje` (string) y un `algoritmo` de hashing (por defecto 'sha256') como entrada.
+    * **Codificación a bytes:** Primero, el `mensaje` se codifica a una secuencia de bytes utilizando `mensaje.encode('utf-8')`. Los algoritmos de hashing operan sobre datos binarios.
+    * **Selección del algoritmo:** Se utiliza una estructura `if-elif-else` para seleccionar el algoritmo de hashing deseado de la biblioteca `hashlib` basándose en el parámetro `algoritmo`.
+        * `hashlib.sha256(mensaje_bytes)`: Crea un objeto hash utilizando el algoritmo SHA-256.
+        * `hashlib.sha1(mensaje_bytes)`: Crea un objeto hash utilizando el algoritmo SHA-1.
+        * `hashlib.md5(mensaje_bytes)`: Crea un objeto hash utilizando el algoritmo MD5.
+        * Si se proporciona un algoritmo no soportado, se levanta una excepción `ValueError`.
+    * **Cálculo del hash:** El método `hash_object.update(mensaje_bytes)` (aunque no se usa explícitamente aquí, es la forma general de procesar datos en bloques) procesa los bytes del mensaje. Luego, `hash_object.digest()` devuelve el valor hash en formato de bytes (binario).
+    * **Representación hexadecimal:** El método `hash_object.hexdigest()` convierte el valor hash binario en una cadena de caracteres hexadecimal, que es una representación más común y legible de un hash.
+    * La función devuelve la cadena hexadecimal del hash.
+
+3.  **Función `verificar_integridad(mensaje, hash_esperado, algoritmo='sha256')`:**
+    ```python
+    def verificar_integridad(mensaje, hash_esperado, algoritmo='sha256'):
+        """Calcula el hash del mensaje y lo compara con el hash esperado."""
+        hash_calculado = calcular_hash(mensaje, algoritmo)
+        if hash_calculado == hash_esperado:
+            print("¡Integridad verificada! El mensaje no ha sido alterado.")
+            return True
+        else:
+            print("¡Alerta! El mensaje ha sido alterado.")
+            print(f"Hash calculado: {hash_calculado}")
+            print(f"Hash esperado: {hash_esperado}")
+            return False
+    ```
+    * Esta función se utiliza para verificar si un mensaje recibido ha sido alterado durante la transmisión o el almacenamiento.
+    * Toma el `mensaje` recibido, el `hash_esperado` (calculado previamente del mensaje original), y el `algoritmo` de hashing utilizado.
+    * Calcula el hash del `mensaje` recibido utilizando la misma función `calcular_hash()` y el mismo algoritmo.
+    * Compara el `hash_calculado` con el `hash_esperado`.
+    * Si los hashes coinciden, significa que el mensaje probablemente no ha sido modificado, y la función imprime un mensaje de verificación y devuelve `True`.
+    * Si los hashes no coinciden, indica que el mensaje ha sido alterado, y la función imprime una alerta, muestra ambos hashes para comparación, y devuelve `False`.
+
+4.  **Bloque `if __name__ == "__main__":`:**
+    * Este bloque de código se ejecuta cuando el script se ejecuta directamente.
+    * **Mensaje original:** Se define un mensaje de ejemplo.
+    * **Cálculo de hashes:** Se llama a la función `calcular_hash()` para obtener los hashes del mensaje original utilizando diferentes algoritmos (SHA-256, SHA-1, MD5). Se imprimen los resultados.
+    * **Verificación de integridad:**
+        * Se simula la recepción del mismo mensaje original y se utiliza el hash SHA-256 calculado previamente como el `hash_esperado`. Se llama a `verificar_integridad()` para confirmar que el mensaje no ha sido alterado.
+        * Se simula la recepción de un mensaje ligeramente alterado. Se utiliza el mismo `hash_esperado` (del mensaje original) para verificar la integridad. En este caso, los hashes no coincidirán, indicando la alteración.
+
+**Conceptos Clave de Algoritmos de Hashing Ilustrados:**
+
+* **Función unidireccional (One-way function):** Los algoritmos de hashing están diseñados para ser funciones unidireccionales. Esto significa que es fácil calcular el hash de un mensaje, pero es computacionalmente extremadamente difícil (prácticamente imposible) realizar el proceso inverso: encontrar el mensaje original a partir de su hash.
+* **Tamaño fijo de salida:** Independientemente del tamaño del mensaje de entrada, el valor hash resultante siempre tendrá una longitud fija para un algoritmo específico. Por ejemplo, un hash SHA-256 siempre tendrá 256 bits (64 caracteres hexadecimales).
+* **Determinismo:** Para un mismo mensaje de entrada y el mismo algoritmo de hashing, el valor hash resultante siempre será el mismo.
+* **Resistencia a colisiones:** Un buen algoritmo de hashing debe ser resistente a colisiones. Una colisión ocurre cuando dos mensajes diferentes producen el mismo valor hash. Idealmente, la probabilidad de encontrar una colisión debe ser extremadamente baja.
+
+**Algoritmos de Hashing Comunes (ejemplificados):**
+
+* **SHA-256 (Secure Hash Algorithm 256-bit):** Es un algoritmo de hashing criptográfico ampliamente utilizado y considerado seguro para muchas aplicaciones. Produce un hash de 256 bits.
+* **SHA-1 (Secure Hash Algorithm 1):** Es un algoritmo más antiguo que SHA-256. Si bien fue ampliamente utilizado, se ha demostrado que es vulnerable a ataques de colisión y ya no se recomienda para nuevas aplicaciones donde la resistencia a colisiones es crítica. Produce un hash de 160 bits.
+* **MD5 (Message Digest Algorithm 5):** Es otro algoritmo de hashing más antiguo. También se ha demostrado que es vulnerable a ataques de colisión y no se recomienda para aplicaciones de seguridad donde la integridad es primordial. Produce un hash de 128 bits.
+
+**Usos Comunes de los Algoritmos de Hashing:**
+
+* **Verificación de integridad de datos:** Asegurar que un archivo no ha sido modificado durante la descarga, la transmisión o el almacenamiento.
+* **Almacenamiento seguro de contraseñas:** En lugar de almacenar las contraseñas en texto plano, se almacenan sus hashes. Cuando un usuario intenta iniciar sesión, se calcula el hash de la contraseña ingresada y se compara con el hash almacenado.
+* **Firmas digitales:** Los hashes se utilizan para crear firmas digitales eficientes. En lugar de firmar un documento completo, se firma su hash.
+* **Tablas hash:** En estructuras de datos para una búsqueda eficiente.
+* **Criptomonedas:** Muchos sistemas de criptomonedas utilizan algoritmos de hashing para diversas operaciones, como la creación de nuevos bloques (minería).
+
+**Consideraciones Importantes:**
+
+* **Elección del algoritmo:** La elección del algoritmo de hashing depende de los requisitos de seguridad de la aplicación. Para aplicaciones donde la resistencia a colisiones es crítica, se deben utilizar algoritmos más seguros como SHA-256 (o incluso SHA-3).
+* **Salting (para contraseñas):** Cuando se utiliza hashing para almacenar contraseñas, es crucial utilizar "salts" (valores aleatorios únicos para cada contraseña) para dificultar los ataques de diccionario y las tablas rainbow. El salt se concatena con la contraseña antes de aplicar el hash.
+
 _______________________
 > Stallings, W. (2023). *Cryptography and network security: Principles and practice* (8th ed.). Pearson.  
 
