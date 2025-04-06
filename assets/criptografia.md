@@ -15,8 +15,7 @@ Las características y diferencias entre criptografía y encriptación:
 | **Ejemplos de Técnicas/Áreas** | Cifrado simétrico y asimétrico, funciones hash, firmas digitales, criptografía cuántica, esteganografía (aunque relacionada, no es puramente criptografía). | AES, DES, RSA (para cifrado), cifrado de disco, cifrado de comunicaciones (HTTPS).                                                                 |
 | **Dependencia** | La encriptación es una herramienta *dentro* del campo de la criptografía.                                                                 | La encriptación se basa en los principios y algoritmos desarrollados por la criptografía.                                                              |
 
-En resumen, la **criptografía** es el paraguas que engloba todas las técnicas y principios para la seguridad de la información, mientras que la **encriptación** es una técnica específica dentro de la criptografía que se enfoca en hacer que la información sea ininteligible sin la clave adecuada.
-
+Nota: la **criptografía** es el paraguas que engloba todas las técnicas y principios para la seguridad de la información, mientras que la **encriptación** es una técnica específica dentro de la criptografía que se enfoca en hacer que la información sea ininteligible sin la clave adecuada.
 
 ## Encriptación
 
