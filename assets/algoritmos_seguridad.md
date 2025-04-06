@@ -32,6 +32,54 @@ Los algoritmos de seguridad pueden clasificarse principalmente en tres categorí
 
 Cada tipo responde a diferentes necesidades de seguridad, y su elección depende del entorno operativo, la sensibilidad de los datos y las amenazas predominantes.
 
+Claro, Shamara. A continuación te presento las fórmulas en **LaTeX** que representan los conceptos básicos de **criptografía simétrica** y **criptografía asimétrica**.
+
+---
+
+###Criptografía Simétrica**
+
+En criptografía simétrica, **la misma clave** se utiliza para cifrar y descifrar el mensaje:
+
+#### Fórmulas en LaTeX:
+
+```latex
+% Cifrado simétrico
+C = E_K(M)
+
+% Descifrado simétrico
+M = D_K(C)
+```
+
+#### Donde:
+- \( M \): mensaje original (plaintext)
+- \( C \): mensaje cifrado (ciphertext)
+- \( K \): clave secreta compartida
+- \( E_K \): función de cifrado usando la clave \( K \)
+- \( D_K \): función de descifrado usando la clave \( K \)
+
+
+### Criptografía Asimétrica**
+
+En criptografía asimétrica se utiliza un **par de claves**: una clave pública \( K_{pub} \) para cifrar y una clave privada \( K_{priv} \) para descifrar:
+
+#### Fórmulas en LaTeX:
+
+```latex
+% Cifrado asimétrico
+C = E_{K_{pub}}(M)
+
+% Descifrado asimétrico
+M = D_{K_{priv}}(C)
+```
+
+#### Donde:
+- \( K_{pub} \): clave pública del receptor
+- \( K_{priv} \): clave privada del receptor
+- \( E_{K_{pub}} \): función de cifrado con clave pública
+- \( D_{K_{priv}} \): función de descifrado con clave privada
+
+
+
 _______________________
 > Stallings, W. (2023). *Cryptography and network security: Principles and practice* (8th ed.). Pearson.  
 
