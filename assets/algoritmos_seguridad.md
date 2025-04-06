@@ -121,7 +121,7 @@ Si Alice cifra un mensaje con \( K \) usando AES (\( E_K \)), Bob necesitará \(
 ---
 
 ### **Limitaciones**
-- **Gestión de claves**: Distribuir \( K \) de forma segura entre emisor y receptor es un desafío.  
+- **Gestión de claves**: Distribuir ( K ) de forma segura entre emisor y receptor es un desafío.  
 - **Escalabilidad**: En sistemas con muchos usuarios, gestionar claves únicas y secretas se complica (aquí se usa cifrado asimétrico como complemento).
 
 --- 
