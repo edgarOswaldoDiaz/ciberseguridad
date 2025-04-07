@@ -6,7 +6,7 @@ En operaciones de seguridad cotidianas, muchas tareas son repetitivas, críticas
 
 La programación de scripts para solución de problemas de seguridad se refiere al uso de lenguajes de programación ligeros (como Python, Bash, PowerShell, entre otros) para automatizar tareas, detectar vulnerabilidades, monitorear sistemas, responder ante incidentes y fortalecer la postura de seguridad de una organización o sistema informático. Es una práctica fundamental en el ámbito de la ciberseguridad, ya que permite realizar acciones repetitivas o complejas de forma rápida, eficiente y con menor margen de error humano.
 
-¡Claro! Aquí tienes una tabla que describe las características de los lenguajes de programación Python, Bash, PowerShell y Perl, y cómo ayudan en mecanismos de ciberseguridad:
+Tabla que describe las características de los lenguajes de programación Python, Bash, PowerShell y Perl.
 
 | **Lenguaje de Programación** | **Características** | **Aplicaciones en Ciberseguridad** |
 |------------------------------|---------------------|------------------------------------|
@@ -14,8 +14,6 @@ La programación de scripts para solución de problemas de seguridad se refiere 
 | **Bash**                     | - Interfaz de línea de comandos<br>- Lenguaje de scripting<br>- Compatible con POSIX<br>- Historial de comandos<br>- Autocompletado | - Automatización de auditorías de seguridad<br>- Análisis de registros<br>- Gestión de permisos y configuraciones de red<br>- Desarrollo de herramientas personalizadas para pruebas de penetración[ |
 | **PowerShell**               | - Shell de línea de comandos<br>- Lenguaje de scripting<br>- Devuelve objetos .NET<br>- Extensible mediante módulos<br>- Compatible con múltiples plataformas | - Pentesting<br>- Hardening de sistemas<br>- Automatización de tareas administrativas<br>- Gestión de configuraciones<br>- Respuesta a incidentes |
 | **Perl**                     | - Multiparadigma<br>- Multiplataforma<br>- Dinámico<br>- Sintaxis intuitiva<br>- Amplia gama de bibliotecas | - Análisis forense<br>- Automatización de tareas repetitivas<br>- Procesamiento de texto<br>- Desarrollo de scripts de seguridad<br>- Gestión de logs
-
-¿Te gustaría profundizar en alguna de estas aplicaciones o características?
 
 ____________________________
 > Scarfone, K., & Mell, P. (2007). *Guide to Intrusion Detection and Prevention Systems (IDPS)* (NIST Special Publication 800-94). National Institute of Standards and Technology. 
