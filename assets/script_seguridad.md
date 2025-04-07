@@ -2,6 +2,8 @@
 
 La ciberseguridad ha dejado de ser una responsabilidad exclusiva del área de tecnología para convertirse en un componente estratégico de toda organización. Entre las múltiples herramientas y habilidades que un profesional de la ciberseguridad debe dominar, la programación de scripts se ha consolidado como una competencia esencial para automatizar tareas, detectar vulnerabilidades, responder ante incidentes y fortalecer la postura de seguridad en infraestructuras digitales. Este ensayo analiza la importancia de la programación de scripts como solución práctica, ágil y efectiva frente a los desafíos de seguridad informática.
 
+La programación de scripts constituye una habilidad esencial en el arsenal del profesional de ciberseguridad moderno. Su capacidad para automatizar procesos, detectar amenazas, ejecutar pruebas y responder rápidamente ante incidentes la convierte en una herramienta estratégica para mantener la integridad, confidencialidad y disponibilidad de los sistemas. En el marco de un diplomado en ciberseguridad, adquirir esta competencia no solo empodera a los estudiantes con soluciones prácticas, sino que también los prepara para enfrentar un panorama digital cada vez más complejo, dinámico y hostil.
+
 En operaciones de seguridad cotidianas, muchas tareas son repetitivas, críticas y requieren respuestas rápidas. Acciones como análisis de logs, escaneo de puertos, monitoreo de tráfico de red o verificación de integridad de archivos pueden consumir recursos importantes si se ejecutan de forma manual. La programación de scripts —especialmente mediante lenguajes como Python, Bash, PowerShell o Perl— permite automatizar estos procesos, reduciendo errores humanos y mejorando significativamente la eficiencia operativa.
 
 Por ejemplo, un script en Python puede integrarse con APIs de servicios como VirusTotal para escanear automáticamente archivos sospechosos, mientras que scripts en PowerShell son ampliamente utilizados en entornos Windows para auditar configuraciones de seguridad o detectar cambios anómalos en políticas del sistema.
@@ -30,7 +32,6 @@ Si bien los scripts representan una herramienta poderosa, también implican ries
 
 Además, es importante fomentar una cultura de **desarrollo seguro (Secure Coding)** entre los profesionales de ciberseguridad, donde la programación de scripts no solo sea funcional, sino también resiliente frente a ataques.
 
-La programación de scripts constituye una habilidad esencial en el arsenal del profesional de ciberseguridad moderno. Su capacidad para automatizar procesos, detectar amenazas, ejecutar pruebas y responder rápidamente ante incidentes la convierte en una herramienta estratégica para mantener la integridad, confidencialidad y disponibilidad de los sistemas. En el marco de un diplomado en ciberseguridad, adquirir esta competencia no solo empodera a los estudiantes con soluciones prácticas, sino que también los prepara para enfrentar un panorama digital cada vez más complejo, dinámico y hostil.
 ____________________________
 > Scarfone, K., & Mell, P. (2007). *Guide to Intrusion Detection and Prevention Systems (IDPS)* (NIST Special Publication 800-94). National Institute of Standards and Technology. 
 
