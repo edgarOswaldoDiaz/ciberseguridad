@@ -6,7 +6,7 @@ Objetivo: Comprender los conceptos básicos de ciberseguridad y aprender a desar
 - [Leyes y regulaciones](assets/leyes_y_regulaciones.md)
 - [Conceptos básicos de criptografía](/assets/criptografia.md) 
 - [Diseño de algoritmos de seguridad](/assets/algoritmos_seguridad.md) 
-- Programación de scripts para solución de problemas de seguridad 
+- [Programación de scripts para solución de problemas de seguridad](assets/script_seguridad.md) 
 
 ## Módulo 2: Instalación y configuración de sistemas operativos 
 Objetivo: Instalar, configurar y asegurar sistemas operativos en entornos físicos y en la nube, protegiendo la información. 
