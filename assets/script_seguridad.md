@@ -1,28 +1,10 @@
 # Programación de scripts para solución de problemas de seguridad
 
-La ciberseguridad ha dejado de ser una responsabilidad exclusiva del área de tecnología para convertirse en un componente estratégico de toda organización. Entre las múltiples herramientas y habilidades que un profesional de la ciberseguridad debe dominar, la programación de scripts se ha consolidado como una competencia esencial para automatizar tareas, detectar vulnerabilidades, responder ante incidentes y fortalecer la postura de seguridad en infraestructuras digitales. Este ensayo analiza la importancia de la programación de scripts como solución práctica, ágil y efectiva frente a los desafíos de seguridad informática.
+La ciberseguridad ha dejado de ser una responsabilidad exclusiva del área de tecnología para convertirse en un componente estratégico de toda organización. Entre las múltiples herramientas y habilidades que un profesional de la ciberseguridad debe dominar, la programación de scripts se ha consolidado como una competencia esencial para automatizar tareas, detectar vulnerabilidades, responder ante incidentes y fortalecer la postura de seguridad en infraestructuras digitales. La programación de scripts constituye una habilidad esencial en el arsenal del profesional de ciberseguridad moderno. Su capacidad para automatizar procesos, detectar amenazas, ejecutar pruebas y responder rápidamente ante incidentes la convierte en una herramienta estratégica para mantener la integridad, confidencialidad y disponibilidad de los sistemas. En el marco de un diplomado en ciberseguridad, adquirir esta competencia no solo empodera a los estudiantes con soluciones prácticas, sino que también los prepara para enfrentar un panorama digital cada vez más complejo, dinámico y hostil.
 
-La programación de scripts constituye una habilidad esencial en el arsenal del profesional de ciberseguridad moderno. Su capacidad para automatizar procesos, detectar amenazas, ejecutar pruebas y responder rápidamente ante incidentes la convierte en una herramienta estratégica para mantener la integridad, confidencialidad y disponibilidad de los sistemas. En el marco de un diplomado en ciberseguridad, adquirir esta competencia no solo empodera a los estudiantes con soluciones prácticas, sino que también los prepara para enfrentar un panorama digital cada vez más complejo, dinámico y hostil.
+En operaciones de seguridad cotidianas, muchas tareas son repetitivas, críticas y requieren respuestas rápidas. Acciones como análisis de logs, escaneo de puertos, monitoreo de tráfico de red o verificación de integridad de archivos pueden consumir recursos importantes si se ejecutan de forma manual. La programación de scripts —especialmente mediante lenguajes como Python, Bash, PowerShell o Perl— permite automatizar estos procesos, reduciendo errores humanos y mejorando significativamente la eficiencia operativa. Herramientas como **Nmap**, **Metasploit** y **Burp Suite** ofrecen interfaces que pueden ser extendidas con scripts para realizar escaneos avanzados y automatizar tareas específicas del proceso de pentesting, adaptándose a cada entorno y necesidad particular.
 
-En operaciones de seguridad cotidianas, muchas tareas son repetitivas, críticas y requieren respuestas rápidas. Acciones como análisis de logs, escaneo de puertos, monitoreo de tráfico de red o verificación de integridad de archivos pueden consumir recursos importantes si se ejecutan de forma manual. La programación de scripts —especialmente mediante lenguajes como Python, Bash, PowerShell o Perl— permite automatizar estos procesos, reduciendo errores humanos y mejorando significativamente la eficiencia operativa.
-
-Por ejemplo, un script en Python puede integrarse con APIs de servicios como VirusTotal para escanear automáticamente archivos sospechosos, mientras que scripts en PowerShell son ampliamente utilizados en entornos Windows para auditar configuraciones de seguridad o detectar cambios anómalos en políticas del sistema.
-
-**Análisis de vulnerabilidades y pruebas de penetración**
-
-Otro campo donde los scripts resultan fundamentales es en el análisis de vulnerabilidades y pruebas de penetración (pentesting). Profesionales de seguridad pueden desarrollar scripts personalizados para realizar fuzzing (envío de entradas maliciosas o inesperadas), recolectar información de sistemas, o explotar vulnerabilidades conocidas, simulando así el comportamiento de un atacante con el fin de identificar brechas antes de que sean explotadas.
-
-Herramientas como **Nmap**, **Metasploit** y **Burp Suite** ofrecen interfaces que pueden ser extendidas con scripts para realizar escaneos avanzados y automatizar tareas específicas del proceso de pentesting, adaptándose a cada entorno y necesidad particular.
-
-**Respuesta a incidentes y análisis forense**
-
-Durante la gestión de incidentes, el tiempo de respuesta es crítico. La programación de scripts permite a los equipos de respuesta actuar rápidamente al recopilar evidencia digital, aislar sistemas comprometidos o eliminar procesos sospechosos. Scripts diseñados para realizar análisis forense pueden automatizar la extracción de registros de eventos, la identificación de artefactos maliciosos o la reconstrucción de la línea temporal de un ataque.
-
-Por ejemplo, en un entorno Linux comprometido, un script en Bash puede recolectar archivos de configuración, procesos activos, conexiones de red y eventos recientes, almacenando toda esta información para su posterior análisis sin comprometer la evidencia original.
-
-**Desafíos y mejores prácticas**
-
-Si bien los scripts representan una herramienta poderosa, también implican riesgos si no se desarrollan bajo principios seguros. Scripts mal diseñados pueden abrir nuevas vulnerabilidades, ejecutar comandos peligrosos o dejar registros sensibles expuestos. Por ello, se recomienda aplicar buenas prácticas como:
+Los scripts representan una herramienta poderosa, también implican riesgos si no se desarrollan bajo principios seguros. Scripts mal diseñados pueden abrir nuevas vulnerabilidades, ejecutar comandos peligrosos o dejar registros sensibles expuestos. Por ello, se recomienda aplicar buenas prácticas como:
 
 - Validar siempre las entradas de usuario.
 - Utilizar principios de menor privilegio.
@@ -30,7 +12,6 @@ Si bien los scripts representan una herramienta poderosa, también implican ries
 - Versionar el código y almacenarlo en repositorios seguros.
 - Probar en entornos controlados antes de implementarlos en producción.
 
-Además, es importante fomentar una cultura de **desarrollo seguro (Secure Coding)** entre los profesionales de ciberseguridad, donde la programación de scripts no solo sea funcional, sino también resiliente frente a ataques.
 
 ____________________________
 > Scarfone, K., & Mell, P. (2007). *Guide to Intrusion Detection and Prevention Systems (IDPS)* (NIST Special Publication 800-94). National Institute of Standards and Technology. 
