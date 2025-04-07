@@ -1,14 +1,6 @@
-¡Claro, Shamara! Aquí tienes un ensayo con enfoque académico, útil para el contexto de un diplomado en **Ciberseguridad**, sobre el tema: **"Programación de scripts para solución de problemas de seguridad"**.
+# Programación de scripts para solución de problemas de seguridad
 
----
-
-### **Programación de Scripts para Solución de Problemas de Seguridad**
-
-**Introducción**
-
-En un entorno tecnológico en constante evolución, la ciberseguridad ha dejado de ser una responsabilidad exclusiva del área de tecnología para convertirse en un componente estratégico de toda organización. Entre las múltiples herramientas y habilidades que un profesional de la ciberseguridad debe dominar, la programación de scripts se ha consolidado como una competencia esencial para automatizar tareas, detectar vulnerabilidades, responder ante incidentes y fortalecer la postura de seguridad en infraestructuras digitales. Este ensayo analiza la importancia de la programación de scripts como solución práctica, ágil y efectiva frente a los desafíos de seguridad informática.
-
-**Automatización como piedra angular de la defensa cibernética**
+La ciberseguridad ha dejado de ser una responsabilidad exclusiva del área de tecnología para convertirse en un componente estratégico de toda organización. Entre las múltiples herramientas y habilidades que un profesional de la ciberseguridad debe dominar, la programación de scripts se ha consolidado como una competencia esencial para automatizar tareas, detectar vulnerabilidades, responder ante incidentes y fortalecer la postura de seguridad en infraestructuras digitales. Este ensayo analiza la importancia de la programación de scripts como solución práctica, ágil y efectiva frente a los desafíos de seguridad informática.
 
 En operaciones de seguridad cotidianas, muchas tareas son repetitivas, críticas y requieren respuestas rápidas. Acciones como análisis de logs, escaneo de puertos, monitoreo de tráfico de red o verificación de integridad de archivos pueden consumir recursos importantes si se ejecutan de forma manual. La programación de scripts —especialmente mediante lenguajes como Python, Bash, PowerShell o Perl— permite automatizar estos procesos, reduciendo errores humanos y mejorando significativamente la eficiencia operativa.
 
@@ -38,28 +30,15 @@ Si bien los scripts representan una herramienta poderosa, también implican ries
 
 Además, es importante fomentar una cultura de **desarrollo seguro (Secure Coding)** entre los profesionales de ciberseguridad, donde la programación de scripts no solo sea funcional, sino también resiliente frente a ataques.
 
-**Conclusión**
-
 La programación de scripts constituye una habilidad esencial en el arsenal del profesional de ciberseguridad moderno. Su capacidad para automatizar procesos, detectar amenazas, ejecutar pruebas y responder rápidamente ante incidentes la convierte en una herramienta estratégica para mantener la integridad, confidencialidad y disponibilidad de los sistemas. En el marco de un diplomado en ciberseguridad, adquirir esta competencia no solo empodera a los estudiantes con soluciones prácticas, sino que también los prepara para enfrentar un panorama digital cada vez más complejo, dinámico y hostil.
+____________________________
+> Scarfone, K., & Mell, P. (2007). *Guide to Intrusion Detection and Prevention Systems (IDPS)* (NIST Special Publication 800-94). National Institute of Standards and Technology. 
 
----
+> Engebretson, P. (2013). *The Basics of Hacking and Penetration Testing: Ethical Hacking and Penetration Testing Made Easy* (2nd ed.). Syngress.
 
-¿Te gustaría que lo adaptara para presentación, infografía o un ejercicio práctico para complementar el tema en clase?
+> Seitz, J. C. (2016). *Python for Cybersecurity: Using Python for Cyber Offense and Defense*. Packt Publishing.
 
-¡Por supuesto, Shamara! Aquí tienes cinco referencias bibliográficas en **formato APA (7.ª edición)** que sustentan el contenido del ensayo sobre *"Programación de scripts para solución de problemas de seguridad"*. Incluyen fuentes académicas y técnicas relevantes y actualizadas:
+> SANS Institute. (2020). *Incident Handler's Handbook*. SANS Institute Reading Room. 
 
----
+> Alasmary, W., Alhaidari, F., Alhassan, M., & Alghazzawi, D. (2021). Automation in Cybersecurity: A Systematic Literature Review. *IEEE Access, 9*, 93636–93656. 
 
-1. Scarfone, K., & Mell, P. (2007). *Guide to Intrusion Detection and Prevention Systems (IDPS)* (NIST Special Publication 800-94). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.SP.800-94
-
-2. Engebretson, P. (2013). *The Basics of Hacking and Penetration Testing: Ethical Hacking and Penetration Testing Made Easy* (2nd ed.). Syngress.
-
-3. Seitz, J. C. (2016). *Python for Cybersecurity: Using Python for Cyber Offense and Defense*. Packt Publishing.
-
-4. SANS Institute. (2020). *Incident Handler's Handbook*. SANS Institute Reading Room. https://www.sans.org/white-papers/incident-handlers-handbook/
-
-5. Alasmary, W., Alhaidari, F., Alhassan, M., & Alghazzawi, D. (2021). Automation in Cybersecurity: A Systematic Literature Review. *IEEE Access, 9*, 93636–93656. https://doi.org/10.1109/ACCESS.2021.3093195
-
----
-
-Si necesitas que las referencias se ajusten a un tema más específico (por ejemplo: solo análisis forense, scripting en Bash, automatización con PowerShell, etc.), puedo adaptarlas sin problema. ¿Te gustaría también incluir referencias en español o de organismos latinoamericanos?
