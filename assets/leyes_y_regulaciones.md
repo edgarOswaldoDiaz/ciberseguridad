@@ -88,12 +88,14 @@ Esta ley fue promulgada el 27 de enero de 2017, para establecer un marco legal p
 #### CERT-MX
 El Equipo de Respuesta a Incidentes de Seguridad Informática del país, CERT-MX, es un miembro del Foro Mundial de Respuesta a Incidentes y Equipos de Seguridad (FIRST) y sigue un Protocolo de Colaboración con otras entidades gubernamentales. En todas las agencias gubernamentales, las tecnologías se actualizan regularmente, se realizan copias de seguridad y se adhiere a las disposiciones del Manual Administrativo de Aplicación General de Tecnologías de Información y Comunicaciones y de Seguridad de la Información (MAAGTICSI), el cual se desarrolló con base a normas internacionales como ISO 27001, y COBIT, entre otras. Por otra parte, están en marcha planes de redundancia digital.
 
-#### Policía Federal
-La División Científica de la Policía Federal de México investiga los delitos cibernéticos nacionales. Trabaja en estrecha colaboración con el CERT-MX y ha recibido capacitación por parte de organizaciones sin ánimo de lucro y de varias organizaciones internacionales. Además, Los fiscales públicos en México están a cargo de investigar las actividades cibernéticas y para resolverlas, se ha creado una policía cibernética para dar seguimiento a los delitos o actividades ilegales cometidas a través de Internet. Las quejas dirigidas a la policía cibernética pueden enviarse a través de su sitio web, por teléfono o mediante una cuenta de Twitter o correo electrónico.
-
 #### INAI
 El INAI es la autoridad federal encargada de supervisar el debido cumplimiento de la legislación de protección de datos en México y está facultada para evaluar si el incidente que originó una violación de datos fue causado por un incumplimiento o negligencia. El INAI está a cargo de: garantizar a las personas el derecho de acceso a la información del gobierno público;
 proteger los datos personales en posesión del gobierno federal y las personas; y resolver denegaciones de acceso a la información que las dependencias o entidades del gobierno federal han formulado.
+
+#### Policía Federal
+La División Científica de la Policía Federal de México investiga los delitos cibernéticos nacionales. Trabaja en estrecha colaboración con el CERT-MX y ha recibido capacitación por parte de organizaciones sin ánimo de lucro y de varias organizaciones internacionales. Además, Los fiscales públicos en México están a cargo de investigar las actividades cibernéticas y para resolverlas, se ha creado una policía cibernética para dar seguimiento a los delitos o actividades ilegales cometidas a través de Internet. Las quejas dirigidas a la policía cibernética pueden enviarse a través de su sitio web, por teléfono o mediante una cuenta de Twitter o correo electrónico.
+
+https://www.ssc.cdmx.gob.mx/organizacion-policial/subsecretaria-de-inteligencia-e-investigacion-policial/policia-cibernetica 
 
 __________________________
 > Instituto de investigaciones legislativas del congreso de la ciudad de México - "Ciberseguridad"
