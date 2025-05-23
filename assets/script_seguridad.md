@@ -2,7 +2,7 @@
 
 La ciberseguridad ha dejado de ser una responsabilidad exclusiva del área de tecnología para convertirse en un componente estratégico de toda organización. Entre las múltiples herramientas y habilidades que un profesional de la ciberseguridad debe dominar, la programación de scripts se ha consolidado como una competencia esencial para automatizar tareas, detectar vulnerabilidades, responder ante incidentes y fortalecer la postura de seguridad en infraestructuras digitales. La programación de scripts constituye una habilidad esencial en el arsenal del profesional de ciberseguridad moderno. Su capacidad para automatizar procesos, detectar amenazas, ejecutar pruebas y responder rápidamente ante incidentes la convierte en una herramienta estratégica para mantener la integridad, confidencialidad y disponibilidad de los sistemas. En el marco de un diplomado en ciberseguridad, adquirir esta competencia no solo empodera a los estudiantes con soluciones prácticas, sino que también los prepara para enfrentar un panorama digital cada vez más complejo, dinámico y hostil.
 
-En operaciones de seguridad cotidianas, muchas tareas son repetitivas, críticas y requieren respuestas rápidas. Acciones como análisis de logs, escaneo de puertos, monitoreo de tráfico de red o verificación de integridad de archivos pueden consumir recursos importantes si se ejecutan de forma manual. La programación de scripts —especialmente mediante lenguajes como Python, Bash, PowerShell o Perl— permite automatizar estos procesos, reduciendo errores humanos y mejorando significativamente la eficiencia operativa. Herramientas como **Nmap**, **Metasploit** y **Burp Suite** ofrecen interfaces que pueden ser extendidas con scripts para realizar escaneos avanzados y automatizar tareas específicas del proceso de pentesting, adaptándose a cada entorno y necesidad particular. Los scripts representan una herramienta poderosa, también implican riesgos si no se desarrollan bajo principios seguros. Scripts mal diseñados pueden abrir nuevas vulnerabilidades, ejecutar comandos peligrosos o dejar registros sensibles expuestos. 
+En operaciones de seguridad cotidianas, varias tareas son repetitivas, críticas y requieren respuestas rápidas. Acciones como análisis de logs, escaneo de puertos, monitoreo de tráfico de red o verificación de integridad de archivos pueden consumir recursos importantes si se ejecutan de forma manual. La programación de scripts —especialmente mediante lenguajes como Python, Bash, PowerShell o Perl— permite automatizar estos procesos, reduciendo errores humanos y mejorando significativamente la eficiencia operativa. Herramientas como **Nmap**, **Metasploit** y **Burp Suite** ofrecen interfaces que pueden ser extendidas con scripts para realizar escaneos avanzados y automatizar tareas específicas del proceso de pentesting, adaptándose a cada entorno y necesidad particular. Los scripts representan una herramienta poderosa, también implican riesgos si no se desarrollan bajo principios seguros. Scripts mal diseñados pueden abrir nuevas vulnerabilidades, ejecutar comandos peligrosos o dejar registros sensibles expuestos. 
 
 La programación de scripts para solución de problemas de seguridad se refiere al uso de lenguajes de programación ligeros (como Python, Bash, PowerShell, entre otros) para automatizar tareas, detectar vulnerabilidades, monitorear sistemas, responder ante incidentes y fortalecer la postura de seguridad de una organización o sistema informático. Es una práctica fundamental en el ámbito de la ciberseguridad, ya que permite realizar acciones repetitivas o complejas de forma rápida, eficiente y con menor margen de error humano.
 
@@ -15,7 +15,7 @@ Tabla que describe las características de los lenguajes de programación Python
 | **PowerShell**               | - Shell de línea de comandos<br>- Lenguaje de scripting<br>- Devuelve objetos .NET<br>- Extensible mediante módulos<br>- Compatible con múltiples plataformas | - Pentesting<br>- Hardening de sistemas<br>- Automatización de tareas administrativas<br>- Gestión de configuraciones<br>- Respuesta a incidentes |
 | **Perl**                     | - Multiparadigma<br>- Multiplataforma<br>- Dinámico<br>- Sintaxis intuitiva<br>- Amplia gama de bibliotecas | - Análisis forense<br>- Automatización de tareas repetitivas<br>- Procesamiento de texto<br>- Desarrollo de scripts de seguridad<br>- Gestión de logs
 
-¡Claro que sí! Aquí tienes un ejemplo de código en Python que ilustra un mecanismo de ciberseguridad común: el **hashing seguro de contraseñas**. Este ejemplo detalla cómo se puede implementar una función para almacenar contraseñas de forma segura en lugar de guardarlas en texto plano.
+Ejemplo de código en Python que ilustra un mecanismo de ciberseguridad común: el **hashing seguro de contraseñas**. Este ejemplo detalla cómo se puede implementar una función para almacenar contraseñas de forma segura en lugar de guardarlas en texto plano.
 
 ```python
 import hashlib
@@ -143,7 +143,7 @@ Este ejemplo proporciona una base sólida para comprender cómo funciona el hash
 
 ____________________________
 
-¡Claro! Aquí tienes un ejemplo de un script en Bash que ilustra un mecanismo de ciberseguridad: la **detección de intentos de inicio de sesión fallidos y el bloqueo temporal de direcciones IP**. Este script simula la monitorización de un archivo de registro (como el `/var/log/auth.log` en sistemas Linux) para identificar múltiples intentos de inicio de sesión fallidos desde una misma dirección IP y bloquearla utilizando `iptables`.
+Ejemplo de un script en Bash que ilustra un mecanismo de ciberseguridad: la **detección de intentos de inicio de sesión fallidos y el bloqueo temporal de direcciones IP**. Este script simula la monitorización de un archivo de registro (como el `/var/log/auth.log` en sistemas Linux) para identificar múltiples intentos de inicio de sesión fallidos desde una misma dirección IP y bloquearla utilizando `iptables`.
 
 ```bash
 #!/bin/bash
@@ -297,11 +297,9 @@ echo "Script finalizado."
 * **Seguridad del Script:** Asegúrate de que el propio script tenga permisos adecuados para evitar modificaciones no autorizadas.
 * **Alternativas:** Existen herramientas más especializadas para la detección de intrusiones y la prevención de ataques de fuerza bruta, como `fail2ban`, que son mucho más configurables y robustas. Este script es principalmente para ilustrar los conceptos subyacentes.
 
-Este ejemplo te proporciona una idea de cómo se pueden utilizar las herramientas de línea de comandos de Bash para implementar mecanismos básicos de ciberseguridad. Recuerda siempre adaptar y probar los scripts en un entorno seguro antes de utilizarlos en producción.
-
 ____________________________
 
-¡Claro que sí! Aquí tienes un ejemplo de un script en PowerShell que ilustra un mecanismo de ciberseguridad: la **monitorización de intentos de inicio de sesión fallidos en el registro de eventos de Windows y el bloqueo temporal de direcciones IP utilizando el Firewall de Windows**. Este script simula la detección de múltiples eventos de inicio de sesión fallidos desde una misma dirección IP y la creación de una regla de bloqueo en el Firewall de Windows.
+Ejemplo de un script en PowerShell que ilustra un mecanismo de ciberseguridad: la **monitorización de intentos de inicio de sesión fallidos en el registro de eventos de Windows y el bloqueo temporal de direcciones IP utilizando el Firewall de Windows**. Este script simula la detección de múltiples eventos de inicio de sesión fallidos desde una misma dirección IP y la creación de una regla de bloqueo en el Firewall de Windows.
 
 ```powershell
 <#
@@ -526,7 +524,7 @@ Este ejemplo te proporciona una base sólida para comprender cómo se pueden uti
 
 ____________________________
 
-¡Claro que sí! Aquí tienes un ejemplo de un script en Perl que ilustra un mecanismo de ciberseguridad: la **validación robusta de entradas de usuario para prevenir ataques de inyección de comandos**. Este script simula un escenario donde un usuario ingresa un nombre de archivo, y el script realiza una acción basada en ese nombre. La validación de entrada se implementa para evitar que un atacante inyecte comandos maliciosos a través de la entrada del usuario.
+Ejemplo de un script en Perl que ilustra un mecanismo de ciberseguridad: la **validación robusta de entradas de usuario para prevenir ataques de inyección de comandos**. Este script simula un escenario donde un usuario ingresa un nombre de archivo, y el script realiza una acción basada en ese nombre. La validación de entrada se implementa para evitar que un atacante inyecte comandos maliciosos a través de la entrada del usuario.
 
 ```perl
 #!/usr/bin/perl
