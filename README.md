@@ -10,11 +10,11 @@ Objetivo: Comprender los conceptos básicos de ciberseguridad y aprender a desar
 
 ## Módulo 2: Instalación y configuración de sistemas operativos 
 Objetivo: Instalar, configurar y asegurar sistemas operativos en entornos físicos y en la nube, protegiendo la información. 
-- Instalación de sistemas operativos en entornos físicos 
-- Instalación y configuración de sistemas operativos en la nube 
-- Configuración de políticas de seguridad 
-- Instalación de software de seguridad y controladores (drivers) 
-- Registro y gestión de usuarios en sistemas operativos 
+- [Instalación de sistemas operativos en entornos físicos](assets/instalacion_so.md)
+- [Instalación y configuración de sistemas operativos en la nube] 
+- [Configuración de políticas de seguridad] 
+- [Instalación de software de seguridad y controladores (drivers)] 
+- [Registro y gestión de usuarios en sistemas operativos] 
 
 ## Módulo 3: Mitigación de riesgos en sistemas informáticos 
 Objetivo: Identificar vulnerabilidades en sistemas informáticos y aplicar medidas correctivas para mitigar riesgos. 
