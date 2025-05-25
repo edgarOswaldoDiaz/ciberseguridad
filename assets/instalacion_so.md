@@ -128,6 +128,43 @@ Claro, Shamara. A continuación te presento una **tabla de requisitos previos** 
 * Instalación del gestor de arranque (GRUB, Windows Boot Manager)
 * Reinicio y verificación del arranque correcto
 
+
+Claro, Shamara. A continuación te presento una **tabla comparativa detallada del proceso de instalación paso a paso** para los sistemas operativos **Microsoft Windows 11** y **Ubuntu 24.04 LTS**, enfocada en entornos físicos:
+
+---
+
+### 🧩 **Tabla: Proceso de Instalación Paso a Paso – Windows 11 vs Ubuntu 24.04**
+
+| **Etapa**                                 | **Windows 11**                                                                                                                                                            | **Ubuntu 24.04 LTS**                                                                                                                                     |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. Preparación del medio**              | Descargar la ISO desde el sitio oficial de Microsoft y crear un USB booteable con **Rufus** u otra herramienta.                                                           | Descargar la ISO desde el sitio oficial de Ubuntu. Crear un USB booteable con **balenaEtcher**, **Startup Disk Creator** o **Rufus**.                    |
+| **2. Configuración de BIOS/UEFI**         | Entrar a BIOS/UEFI (tecla DEL/F2). Habilitar **UEFI**, deshabilitar Secure Boot si se usan controladores no firmados. Establecer USB como primer dispositivo de arranque. | Igual que en Windows: configurar **UEFI**, y opcionalmente deshabilitar Secure Boot si se requiere. Elegir USB como prioridad de arranque.               |
+| **3. Arranque desde USB**                 | El sistema inicia el instalador gráfico de Windows.                                                                                                                       | El sistema inicia el instalador de Ubuntu ("Try Ubuntu" o "Install Ubuntu").                                                                             |
+| **4. Configuración regional e idioma**    | Selección de idioma, zona horaria, distribución del teclado.                                                                                                              | Igual: seleccionar idioma, zona horaria, distribución de teclado.                                                                                        |
+| **5. Licencia y requisitos**              | Aceptar los términos de licencia de Microsoft. Se verifica si el equipo cumple con TPM 2.0 y Secure Boot.                                                                 | No requiere aceptar una licencia propietaria. Se omite verificación de hardware TPM.                                                                     |
+| **6. Tipo de instalación**                | Seleccionar: actualización o instalación limpia. En instalación limpia, se elige el disco y se formatea (NTFS).                                                           | Elegir: instalación normal o mínima. Puede instalar software de terceros (drivers, codecs). Elegir disco y crear particiones manual o automática (ext4). |
+| **7. Particionamiento del disco**         | Crear/seleccionar particiones (automático o manual). Requiere al menos una partición principal NTFS.                                                                      | Particionamiento automático o manual. Suele crearse al menos: `/`, `/home`, `swap`.                                                                      |
+| **8. Configuración de usuario**           | Crear nombre de usuario y contraseña. Puede asociarse a cuenta Microsoft o crear cuenta local.                                                                            | Crear usuario, contraseña y nombre del equipo. No se requiere cuenta en línea.                                                                           |
+| **9. Instalación del sistema**            | Copia de archivos, instalación de funciones del sistema, configuración de servicios. Reinicia automáticamente.                                                            | Copia de archivos, instalación del sistema base, configuración de GRUB. Reinicia automáticamente.                                                        |
+| **10. Post-instalación**                  | Primera configuración: privacidad, red, idioma adicional, inicio de sesión. Se puede integrar a red corporativa.                                                          | Finaliza configuración: actualizaciones, instalación de controladores adicionales y configuración del sistema.                                           |
+| **11. Seguridad inicial sugerida**        | Activar Windows Update, habilitar firewall, activar BitLocker si es posible, revisar Defender.                                                                            | Ejecutar `sudo apt update && sudo apt upgrade`, habilitar UFW (`ufw enable`), revisar usuarios y servicios habilitados.                                  |
+| **12. Instalación de software adicional** | Usar Microsoft Store o instaladores `.exe` de fuentes confiables.                                                                                                         | Usar `apt`, Ubuntu Software o instalar paquetes `.deb` firmados.                                                                                         |
+
+---
+
+### ✅ **Observaciones importantes:**
+
+* **Windows 11** es más exigente con los requisitos de hardware (TPM 2.0, Secure Boot, CPU compatible).
+* **Ubuntu 24.04** permite mayor flexibilidad, especialmente en máquinas más antiguas.
+* Ubuntu puede usarse como **LiveCD** para probar el sistema antes de instalar.
+* Ambas plataformas pueden configurarse de forma segura post-instalación, pero Ubuntu ofrece más control técnico por defecto.
+
+---
+
+¿Te gustaría que esta tabla se convierta en una guía en PDF o en una presentación? También puedo crear un checklist práctico para laboratorio.
+
+
+
 ---
 
 ### **5. Recomendaciones de Seguridad Iniciales**
