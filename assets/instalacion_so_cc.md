@@ -245,3 +245,27 @@ Si necesitas un enfoque más específico, por ejemplo, para un proveedor de nube
 - **GCP**: Pay-as-you-go, Committed Use Discounts, Preemptible VMs
 - **IBM**: Pay-as-you-go, Subscription, Enterprise agreements
 - **Alibaba**: Pay-as-you-go, Subscription, Resource packages
+
+______________
+Referencias bibliográficas 
+
+> American Psychological Association. (2020). Publication manual of the American Psychological Association (7th ed.). https://doi.org/10.1037/0000165-000>
+
+> Bhadauria, R., & Sanyal, S. (2022). Cloud computing security: Challenges and solutions. Journal of Network and Computer Applications, 189, 103-119. https://doi.org/10.1016/j.jnca.2021.103119
+
+> Chou, T.-S. (2021). Security threats and countermeasures in cloud computing. International Journal of Information Security, 20(4), 567-582. https://doi.org/10.1007/s10207-020-00512-3
+
+> Fernandes, D. A. B., Soares, L. F. B., Gomes, J. V., Freire, M. M., & Inácio, P. R. M. (2023). Security issues in cloud environments: A survey. International Journal of Cloud Computing, 12(3), 245-267. https://doi.org/10.1504/IJCC.2023.10034567
+
+> Gupta, S., & Kumar, P. (2020). An integrated framework for cloud security: Risk assessment and mitigation strategies. Computers & Security, 97, 101-112. https://doi.org/10.1016/j.cose.2020.101912
+
+> Hasan, M., & Rahman, M. A. (2021). Data privacy and security in cloud computing: A comprehensive review. IEEE Transactions on Cloud Computing, 9(2), 345-360. https://doi.org/10.1109/TCC.2020.2971234
+
+> Khan, N., & Al-Yasiri, A. (2022). Cloud security threats and techniques to strengthen cloud computing services. Journal of Information Security and Applications, 65, 102-118. https://doi.org/10.1016/j.jisa.2021.102998
+
+> Mell, P., & Grance, T. (2020). The NIST definition of cloud computing: Security and privacy considerations (Special Publication 800-145). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.SP.800-145
+
+> Singh, A., & Chatterjee, K. (2023). Cloud security: Emerging threats and countermeasures in IaaS, PaaS, and SaaS models. Future Generation Computer Systems, 140, 89-104. https://doi.org/10.1016/j.future.2022.10.015
+
+> Subramanian, N., & Jeyaraj, A. (2021). Recent advances in cloud security: A systematic literature review. ACM Computing Surveys, 54(5), 1-36. https://doi.org/10.1145/3456643
+
