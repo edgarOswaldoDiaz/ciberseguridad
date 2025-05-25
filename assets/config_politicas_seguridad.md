@@ -101,3 +101,38 @@ iptables / ufw (Uncomplicated Firewall)
 Configurar políticas de seguridad permite **reducir la superficie de ataque** y garantizar el cumplimiento de estándares como **ISO 27001, NIST o CIS Benchmarks**. Es clave en la fase de *hardening* (fortalecimiento) de sistemas operativos, tanto en entornos locales como en la nube.  
 
 ¿Necesitas profundizar en algún aspecto en particular?
+
+
+Aquí tienes **cinco referencias bibliográficas en formato APA** que sustentan los conceptos mencionados sobre configuración de políticas de seguridad en sistemas operativos y entornos cloud:  
+
+---
+
+### **Referencias Bibliográficas**  
+
+1. **National Institute of Standards and Technology (NIST)**. (2020). *Security and Privacy Controls for Information Systems and Organizations* (NIST Special Publication 800-53, Revision 5). U.S. Department of Commerce.  
+   - **Enlace**: [https://doi.org/10.6028/NIST.SP.800-53r5](https://doi.org/10.6028/NIST.SP.800-53r5)  
+   - **Relevancia**: Estándar para políticas de seguridad, controles de acceso y auditoría.  
+
+2. **Microsoft**. (2022). *Windows 10 and Windows 11 Security Baseline*. Microsoft Docs.  
+   - **Enlace**: [https://docs.microsoft.com/en-us/windows/security/threat-protection/security-compliance-toolkit-10](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-compliance-toolkit-10)  
+   - **Relevancia**: Guía oficial para políticas de seguridad en Windows (Password Policy, Account Lockout, Firewall).  
+
+3. **Center for Internet Security (CIS)**. (2023). *CIS Benchmarks: Hardening Guidelines for Linux and Windows*.  
+   - **Enlace**: [https://www.cisecurity.org/cis-benchmarks/](https://www.cisecurity.org/cis-benchmarks/)  
+   - **Relevancia**: Configuraciones recomendadas para hardening de SO (ej. `/etc/pam.d/`, `iptables`).  
+
+4. **Amazon Web Services (AWS)**. (2021). *AWS Security Best Practices*. AWS Whitepapers.  
+   - **Enlace**: [https://docs.aws.amazon.com/whitepapers/latest/aws-security-best-practices/welcome.html](https://docs.aws.amazon.com/whitepapers/latest/aws-security-best-practices/welcome.html)  
+   - **Relevancia**: Políticas de IAM, Security Groups y cifrado en la nube.  
+
+5. **Stallings, W., & Brown, L.** (2018). *Computer Security: Principles and Practice* (4th ed.). Pearson.  
+   - **ISBN**: 978-0134794105  
+   - **Relevancia**: Fundamentos teóricos de políticas de seguridad, autenticación y auditoría (capítulos 4 y 5).  
+
+---
+
+### **Notas adicionales**  
+- Las fuentes incluyen **estándares internacionales (NIST, CIS)**, **documentación técnica (Microsoft, AWS)** y **libros académicos**.  
+- Para citar en un trabajo académico, verifica si requieres DOI o URLs directas según la versión de APA (7ª edición recomienda incluir URLs).  
+
+¿Necesitas adaptar alguna referencia a un contexto específico?
