@@ -263,6 +263,8 @@ Claro, aquí tienes **dos referencias bibliográficas en formato APA** que suste
 
 ---
 
+Referencias Bibliográficas 
+
 ### Referencia 1:
 **Negus, N., & Bresnahan, C. (2019).**  
 *Linux Bible* (10th ed.). Wiley Publishing.
