@@ -195,6 +195,59 @@ Una vez instalado el sistema operativo, es crucial asegurar el entorno antes de 
 * Comprobación de logs de instalación
 * Configuración de syslog o herramientas SIEM para eventos futuros
 
+
+¡Con gusto, Shamara! A continuación te presento una descripción detallada de las **recomendaciones iniciales de seguridad** que deben aplicarse en **Windows 11** y **Ubuntu 24.04 LTS**, una vez instalado el sistema operativo en un entorno físico, con el fin de establecer una base sólida para un entorno seguro.
+
+---
+
+## 🔐 Recomendaciones Iniciales de Seguridad
+
+### 🪟 **Windows 11**
+
+| **Categoría**                             | **Recomendación**                                                                                                                                                                  |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Actualizaciones del sistema**           | - Activar Windows Update y configurar la instalación automática de actualizaciones de seguridad.<br>- Verificar parches acumulativos y drivers.                                    |
+| **Antivirus y protección en tiempo real** | - Verificar que **Microsoft Defender** esté activo.<br>- Configurar la protección contra ransomware y el control de acceso a carpetas.                                             |
+| **Cifrado de disco**                      | - Activar **BitLocker** para cifrar la unidad de disco. Especialmente crítico en equipos portátiles.                                                                               |
+| **Firewall**                              | - Verificar que el **Firewall de Windows** esté activo en todos los perfiles (privado, público, dominio).<br>- Crear reglas específicas según servicios permitidos.                |
+| **Control de cuentas de usuario (UAC)**   | - Mantener UAC habilitado en nivel alto para evitar elevación de privilegios sin confirmación.                                                                                     |
+| **Cuentas de usuario**                    | - Usar cuentas **con permisos limitados** para tareas diarias.<br>- Deshabilitar cuentas predeterminadas innecesarias.<br>- Usar autenticación con PIN, Windows Hello o biometría. |
+| **Contraseñas seguras**                   | - Establecer políticas de contraseñas fuertes (mínimo 12 caracteres, complejas y rotación periódica).                                                                              |
+| **Microsoft Defender SmartScreen**        | - Activar para protección contra sitios web maliciosos y aplicaciones no verificadas.                                                                                              |
+| **Aplicaciones y servicios**              | - Desinstalar software innecesario.<br>- Restringir servicios que no se usan (por ejemplo, Remote Desktop si no es requerido).                                                     |
+| **Registro de eventos**                   | - Activar y revisar el **Visor de eventos**, especialmente eventos relacionados con inicios de sesión, fallos y cambios de políticas.                                              |
+
+---
+
+### 🐧 **Ubuntu 24.04 LTS**
+
+| **Categoría**                                | **Recomendación**                                                                                                                                       |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Actualizaciones del sistema**              | - Ejecutar `sudo apt update && sudo apt upgrade` tras la instalación.<br>- Habilitar actualizaciones automáticas con `unattended-upgrades`.             |
+| **Firewall**                                 | - Activar **UFW** (Uncomplicated Firewall):<br>`sudo ufw enable`<br>`sudo ufw default deny incoming`<br>`sudo ufw allow ssh` (si es necesario).         |
+| **Cuentas de usuario**                       | - Evitar usar el usuario root directamente.<br>- Crear cuentas con permisos limitados y usar `sudo` para tareas administrativas.                        |
+| **Contraseñas seguras**                      | - Usar contraseñas fuertes y únicas.<br>- Configurar expiración de contraseñas si es un entorno multiusuario.                                           |
+| **Cifrado de disco**                         | - Si no se activó durante la instalación, considerar cifrar particiones con **LUKS**.<br>- Cifrar directorios sensibles como `/home` si aplica.         |
+| **Servicios y puertos**                      | - Revisar servicios activos con `ss -tuln` o `netstat -tulnp`.<br>- Deshabilitar servicios innecesarios con `systemctl disable nombre-servicio`.        |
+| **Actualización del kernel y software base** | - Hacer uso de `sudo apt full-upgrade` periódicamente.<br>- Verificar vulnerabilidades del kernel.                                                      |
+| **Auditoría de seguridad**                   | - Instalar y configurar herramientas como **Fail2Ban**, **rkhunter** y **chkrootkit**.                                                                  |
+| **Protecciones adicionales**                 | - Activar **AppArmor** o configurar **SELinux** (aunque AppArmor viene habilitado por defecto).<br>- Usar `auditd` para monitorear eventos del sistema. |
+| **Registro de eventos**                      | - Configurar revisión de logs con `journalctl` y `logrotate`.<br>- Monitorear accesos fallidos con `lastb` y `faillog`.                                 |
+
+---
+
+## 🧠 Buenas prácticas generales
+
+* **Principio de mínimo privilegio:** Solo los usuarios que lo requieran deben tener permisos elevados.
+* **Segmentación de red:** Aislar servicios críticos en diferentes subredes (por ejemplo, acceso SSH, bases de datos, escritorio remoto).
+* **Educación del usuario:** Capacitar sobre ingeniería social, phishing, y prácticas de navegación segura.
+
+---
+
+¿Te gustaría que compile estas recomendaciones en una guía visual o formato PDF como parte del material de tu diplomado? También puedo incluir scripts básicos de hardening para ambos sistemas.
+
+
+
 ---
 
 ### **6. Aplicación en Ciberseguridad**
