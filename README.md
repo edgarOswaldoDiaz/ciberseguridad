@@ -12,7 +12,7 @@ Objetivo: Comprender los conceptos básicos de ciberseguridad y aprender a desar
 Objetivo: Instalar, configurar y asegurar sistemas operativos en entornos físicos y en la nube, protegiendo la información. 
 - [Instalación de sistemas operativos en entornos físicos](assets/instalacion_so.md)
 - [Instalación y configuración de sistemas operativos en la nube](assets/instalacion_so_cc.md) 
-- [Configuración de políticas de seguridad] 
+- [Configuración de políticas de seguridad](assets/config_politicas_seguridad.md) 
 - [Instalación de software de seguridad y controladores (drivers)] 
 - [Registro y gestión de usuarios en sistemas operativos] 
 
