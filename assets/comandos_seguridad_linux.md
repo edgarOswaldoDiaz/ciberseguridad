@@ -1,9 +1,4 @@
-
-Ubuntu 24.04, al igual que otras distribuciones basadas en Linux, ofrece una gran cantidad de comandos y herramientas enfocadas en la **seguridad del sistema**. A continuación, te presento una lista de los comandos más relevantes relacionados con la seguridad, junto con ejemplos prácticos de su uso.
-
----
-
-## 🔐 **Comandos para gestión de usuarios y permisos**
+## **Comandos para gestión de usuarios y permisos**
 
 ### `useradd`, `usermod`, `userdel`
 - **Propósito:** Crear, modificar o eliminar usuarios.
@@ -39,7 +34,7 @@ Ubuntu 24.04, al igual que otras distribuciones basadas en Linux, ofrece una gra
 
 ---
 
-## 🔒 **Control de acceso y privilegios**
+## **Control de acceso y privilegios**
 
 ### `sudo`
 - **Propósito:** Ejecutar comandos con privilegios elevados.
@@ -64,7 +59,7 @@ Ubuntu 24.04, al igual que otras distribuciones basadas en Linux, ofrece una gra
 
 ---
 
-## 🔍 **Auditoría y registro de eventos**
+## **Auditoría y registro de eventos**
 
 ### `journalctl`
 - **Propósito:** Ver logs del sistema.
@@ -101,7 +96,7 @@ Ubuntu 24.04, al igual que otras distribuciones basadas en Linux, ofrece una gra
 
 ---
 
-## 🔐 **Seguridad de red y firewall**
+## **Seguridad de red y firewall**
 
 ### `ufw` (Uncomplicated Firewall)
 - **Propósito:** Gestionar el firewall.
@@ -131,7 +126,7 @@ Ubuntu 24.04, al igual que otras distribuciones basadas en Linux, ofrece una gra
 
 ---
 
-## 🛡️ **Herramientas de detección de intrusos y análisis**
+## **Herramientas de detección de intrusos y análisis**
 
 ### `fail2ban`
 - **Propósito:** Bloquear IPs tras múltiples intentos fallidos de autenticación.
@@ -156,7 +151,7 @@ Ubuntu 24.04, al igual que otras distribuciones basadas en Linux, ofrece una gra
 
 ---
 
-## 🔑 **Cifrado y firma digital**
+## **Cifrado y firma digital**
 
 ### `gpg`
 - **Propósito:** Cifrar y firmar archivos.
@@ -176,7 +171,7 @@ Ubuntu 24.04, al igual que otras distribuciones basadas en Linux, ofrece una gra
 
 ---
 
-## 📁 **Permisos de archivos y directorios**
+## **Permisos de archivos y directorios**
 
 ### `chmod`
 - **Propósito:** Cambiar permisos.
@@ -202,7 +197,7 @@ Ubuntu 24.04, al igual que otras distribuciones basadas en Linux, ofrece una gra
 
 ---
 
-## 🧼 **Limpieza y revisión del sistema**
+## **Limpieza y revisión del sistema**
 
 ### `find`
 - **Propósito:** Buscar archivos peligrosos o sin dueño.
@@ -222,7 +217,7 @@ Ubuntu 24.04, al igual que otras distribuciones basadas en Linux, ofrece una gra
 
 ---
 
-## 🔄 **Actualizaciones y parcheo**
+## **Actualizaciones y parcheo**
 
 ### `apt`
 - **Propósito:** Instalar actualizaciones de seguridad.
@@ -241,7 +236,7 @@ Ubuntu 24.04, al igual que otras distribuciones basadas en Linux, ofrece una gra
 
 ---
 
-## ✅ **Resumen rápido por categorías**
+## **Resumen rápido por categorías**
 
 | Categoría | Comandos |
 |----------|----------|
@@ -255,30 +250,12 @@ Ubuntu 24.04, al igual que otras distribuciones basadas en Linux, ofrece una gra
 | Limpieza y búsqueda | `find`, `locate` |
 | Actualizaciones | `apt`, `unattended-upgrades` |
 
----
-
-Si necesitas profundizar en alguna categoría específica (como auditoría, cifrado o hardening), dime y puedo darte guías más detalladas.
-
-Claro, aquí tienes **dos referencias bibliográficas en formato APA** que sustentan la información sobre los comandos de seguridad en sistemas operativos basados en Ubuntu/Linux:
-
----
+____________
 
 Referencias Bibliográficas 
 
-### Referencia 1:
-**Negus, N., & Bresnahan, C. (2019).**  
-*Linux Bible* (10th ed.). Wiley Publishing.
-
+> **Negus, N., & Bresnahan, C. (2019).**  *Linux Bible* (10th ed.). Wiley Publishing.
 - **Descripción:** Este libro ofrece una guía completa sobre el sistema operativo Linux, incluyendo herramientas de seguridad, gestión de usuarios, permisos de archivos, firewall y auditoría del sistema. Es una fuente confiable para entender los comandos y configuraciones relacionadas con la seguridad en distribuciones como Ubuntu.
 
----
-
-### Referencia 2:
-**The Linux Foundation. (2023).**  
-*Introduction to Linux Security*. The Linux Foundation Training & Certification. https://training.linuxfoundation.org
-
+> **The Linux Foundation. (2023).** *Introduction to Linux Security*. The Linux Foundation Training & Certification. https://training.linuxfoundation.org
 - **Descripción:** Este recurso educativo proporcionado por The Linux Foundation aborda conceptos esenciales de seguridad en entornos Linux, incluyendo control de acceso, cifrado, detección de intrusos, uso de herramientas como `auditd`, `sudo`, `ufw` y buenas prácticas para mantener un sistema seguro.
-
----
-
-Si necesitas generar una cita textual o integrar estas fuentes en un documento académico, también puedo ayudarte a formularla.
