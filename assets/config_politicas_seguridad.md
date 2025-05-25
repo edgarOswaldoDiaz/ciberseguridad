@@ -63,8 +63,8 @@ iptables / ufw (Uncomplicated Firewall)
 
 # Comandos de seguridad 
 
-- [Comando de seguridad en Ms. Windows](assets/comandos_seguridad_windows.md)
-- [Comandos de seguridad en Ubuntu - Linux](assets/comandos_seguridad_linux.md)
+- [En Ms. Windows](comandos_seguridad_windows.md)
+- [En Ubuntu - Linux](comandos_seguridad_linux.md)
 
 ______________
 
