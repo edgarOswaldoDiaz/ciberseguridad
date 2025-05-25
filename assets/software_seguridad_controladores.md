@@ -224,14 +224,6 @@ Get-WindowsDriver -Online -All
 - **Implementar herramientas de respuesta a incidentes** (ej: CrowdStrike, SentinelOne).  
 - **Analizar comportamiento anómalo** post-instalación.  
 
----
-
-### **Conclusión**  
-Seguir estas consideraciones reduce riesgos como:  
-**Infección por malware** (troyanos, ransomware).  
-**Explotación de vulnerabilidades** (zero-days, drivers sin parches).  
-**Acceso no autorizado** (backdoors en software pirata).  
-
 _________________
 
 Referencias bibliográficas arbitradas 
