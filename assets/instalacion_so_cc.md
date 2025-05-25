@@ -246,6 +246,83 @@ Si necesitas un enfoque más específico, por ejemplo, para un proveedor de nube
 - **IBM**: Pay-as-you-go, Subscription, Enterprise agreements
 - **Alibaba**: Pay-as-you-go, Subscription, Resource packages
 
+
+Claro, contratar servicios de cómputo en la nube es una decisión estratégica que impacta tanto en el rendimiento operativo como en la seguridad y los costos de una organización. A continuación te presento una lista de **mejores prácticas** a considerar al momento de contratar estos servicios:
+
+---
+
+### 🔍 **1. Evaluar las necesidades del negocio**
+- **Objetivo claro:** Definir claramente qué se espera lograr con la nube (escalabilidad, reducción de costos, innovación, etc.).
+- **Análisis de carga de trabajo:** Determinar cuáles son las aplicaciones o procesos adecuados para migrar a la nube.
+- **Capacidad requerida:** Estimar necesidades de almacenamiento, computación y red.
+
+---
+
+### ☁️ **2. Seleccionar el modelo de nube adecuado**
+- **IaaS, PaaS o SaaS:** Elegir el modelo según el nivel de control y personalización necesario.
+- **Nube pública, privada o híbrida:** Considerar sensibilidad de datos, cumplimiento normativo y necesidades de escalabilidad.
+
+---
+
+### 🧭 **3. Analizar proveedores disponibles**
+- **Comparativa de proveedores:** AWS, Microsoft Azure, Google Cloud, Oracle Cloud, etc.
+- **Soporte técnico:** Nivel de atención postventa, disponibilidad 24/7, idioma, etc.
+- **Experiencia del proveedor:** Reputación, estabilidad financiera y casos de éxito relevantes.
+
+---
+
+### 💰 **4. Evaluar modelos de costos y facturación**
+- **Modelo “pay-as-you-go”:** Asegurar que solo se pague por lo que se consume.
+- **Costos ocultos:** Consultar por tráfico de salida, almacenamiento, transferencias entre zonas, etc.
+- **Presupuesto y optimización:** Usar herramientas de estimación de costos y planes de ahorro a largo plazo.
+
+---
+
+### 🔐 **5. Seguridad y cumplimiento normativo**
+- **Certificaciones:** ISO 27001, SOC 2, GDPR, HIPAA, etc., según el sector.
+- **Control de acceso y autenticación:** Verificar opciones de IAM (Identity and Access Management).
+- **Cifrado de datos:** En tránsito y en reposo.
+- **Ubicación geográfica de servidores:** Importante para cumplir regulaciones locales.
+
+---
+
+### ⚙️ **6. Rendimiento y alta disponibilidad**
+- **SLA (Acuerdo de Nivel de Servicio):** Revisar garantías de uptime (ej. 99.9% o más).
+- **Latencia:** Proximidad de centros de datos a los usuarios finales.
+- **Redundancia y respaldo:** Mecanismos de failover, replicación y recuperación ante desastres.
+
+---
+
+### 🔄 **7. Integración y compatibilidad**
+- **Interoperabilidad:** Compatibilidad con sistemas existentes y otros proveedores.
+- **APIs y herramientas de desarrollo:** Facilidad para integrar y automatizar procesos.
+- **Migración:** Evaluar facilidad y costo de trasladar cargas de trabajo a la nube.
+
+---
+
+### 📊 **8. Gestión y monitoreo**
+- **Herramientas de administración:** Dashboards, monitoreo en tiempo real, alertas.
+- **Automatización:** Capacidad de orquestar recursos y optimizar procesos.
+- **Gestión de logs y auditoría:** Herramientas para rastrear actividades y cumplir requisitos legales.
+
+---
+
+### 📅 **9. Planificación a largo plazo**
+- **Escalabilidad futura:** Capacidad de crecer sin cambiar completamente de proveedor.
+- **Contratos flexibles:** Evitar penalizaciones por cancelación anticipada o falta de renovación.
+- **Estrategia de salida (exit strategy):** Tener un plan para migrar a otro proveedor si es necesario.
+
+---
+
+### 🤝 **10. Capacitación y soporte interno**
+- **Formación del equipo:** Asegurar que el personal tenga conocimientos técnicos en la plataforma elegida.
+- **Documentación y comunidad:** Acceso a guías, foros y recursos oficiales del proveedor.
+
+---
+
+Si deseas, puedo ayudarte a crear una plantilla de evaluación comparativa entre proveedores de nube basada en estas prácticas. ¿Te gustaría eso?
+
+
 ______________
 Referencias bibliográficas 
 
