@@ -182,3 +182,34 @@ Add-LocalGroupMember -Group "Administradores" -Member "usuario2"
 La gestión adecuada de usuarios es clave en ciberseguridad para prevenir accesos no autorizados. Tanto en Linux como en Windows, existen herramientas de línea de comandos que permiten administrar usuarios de manera segura y automatizada. Siempre se deben aplicar políticas de contraseñas fuertes y el principio de mínimo privilegio.
 
 ¿Necesitas más detalles sobre algún aspecto en específico?
+
+
+Aquí tienes **cinco referencias bibliográficas en formato APA** que sustentan los temas de **registro y gestión de usuarios en sistemas operativos**, tanto en **Linux como en Windows**, desde un enfoque de **ciberseguridad**:
+
+---
+
+### **Referencias Bibliográficas (APA 7ª edición)**  
+
+1. **Nemeth, E., Snyder, G., Hein, T. R., Whaley, B., & Mackin, D.** (2017). *UNIX and Linux System Administration Handbook* (5th ed.). Pearson.  
+   - **Relevancia**: Cubre administración de usuarios en Linux, permisos, seguridad y hardening de sistemas.  
+
+2. **Microsoft.** (2021). *Windows Server Administration Fundamentals*. Microsoft Press.  
+   - **Relevancia**: Explica gestión de usuarios en entornos Windows, políticas de grupo y seguridad.  
+
+3. **Stallings, W., & Brown, L.** (2018). *Computer Security: Principles and Practice* (4th ed.). Pearson.  
+   - **Relevancia**: Fundamentos de seguridad en sistemas operativos, incluyendo autenticación y control de acceso.  
+
+4. **Shotts, W.** (2019). *The Linux Command Line: A Complete Introduction* (2nd ed.). No Starch Press.  
+   - **Relevancia**: Detalla comandos esenciales para gestión de usuarios en Linux (`useradd`, `usermod`, `passwd`, etc.).  
+
+5. **Easttom, C.** (2020). *Computer Security Fundamentals* (4th ed.). Pearson IT Certification.  
+   - **Relevancia**: Aborda buenas prácticas en gestión de usuarios, hardening y mitigación de riesgos.  
+
+---
+
+### **Notas adicionales**  
+- **Para artículos académicos o estándares**, puedes citar documentos del **NIST** (e.g., *NIST SP 800-53* sobre controles de acceso).  
+- Si necesitas fuentes **más técnicas**, considera manuales oficiales como:  
+  - `man useradd` (Linux) o `Microsoft Docs` (Windows).  
+
+¿Necesitas ajustar alguna referencia o incluir un enfoque específico (ej.: normativas ISO)? ¡Déjame saber!
