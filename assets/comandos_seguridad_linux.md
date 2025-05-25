@@ -1,3 +1,4 @@
+
 Ubuntu 24.04, al igual que otras distribuciones basadas en Linux, ofrece una gran cantidad de comandos y herramientas enfocadas en la **seguridad del sistema**. A continuación, te presento una lista de los comandos más relevantes relacionados con la seguridad, junto con ejemplos prácticos de su uso.
 
 ---
@@ -257,3 +258,25 @@ Ubuntu 24.04, al igual que otras distribuciones basadas en Linux, ofrece una gra
 ---
 
 Si necesitas profundizar en alguna categoría específica (como auditoría, cifrado o hardening), dime y puedo darte guías más detalladas.
+
+Claro, aquí tienes **dos referencias bibliográficas en formato APA** que sustentan la información sobre los comandos de seguridad en sistemas operativos basados en Ubuntu/Linux:
+
+---
+
+### Referencia 1:
+**Negus, N., & Bresnahan, C. (2019).**  
+*Linux Bible* (10th ed.). Wiley Publishing.
+
+- **Descripción:** Este libro ofrece una guía completa sobre el sistema operativo Linux, incluyendo herramientas de seguridad, gestión de usuarios, permisos de archivos, firewall y auditoría del sistema. Es una fuente confiable para entender los comandos y configuraciones relacionadas con la seguridad en distribuciones como Ubuntu.
+
+---
+
+### Referencia 2:
+**The Linux Foundation. (2023).**  
+*Introduction to Linux Security*. The Linux Foundation Training & Certification. https://training.linuxfoundation.org
+
+- **Descripción:** Este recurso educativo proporcionado por The Linux Foundation aborda conceptos esenciales de seguridad en entornos Linux, incluyendo control de acceso, cifrado, detección de intrusos, uso de herramientas como `auditd`, `sudo`, `ufw` y buenas prácticas para mantener un sistema seguro.
+
+---
+
+Si necesitas generar una cita textual o integrar estas fuentes en un documento académico, también puedo ayudarte a formularla.
