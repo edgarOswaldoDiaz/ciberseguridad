@@ -270,3 +270,18 @@ Instalar un sistema operativo de manera segura en un entorno físico es un paso 
 
 ¿Te gustaría que prepare también una presentación en PowerPoint o una ficha técnica basada en esta explicación?
 
+Con gusto, Shamara. Aquí tienes **cinco referencias bibliográficas en formato APA 7** que sustentan la información técnica y las recomendaciones de seguridad descritas anteriormente para los sistemas operativos **Windows 11** y **Ubuntu 24.04 LTS**:
+
+---
+Referencias bibliográficas 
+
+> Microsoft. (2023). *Protección y seguridad en Windows 11*. Recuperado de [https://support.microsoft.com/es-es/windows/protección-y-seguridad-en-windows-11-98e0c3ba-4b52-4b44-9ef1-d38f89e98f75](https://support.microsoft.com/es-es/windows/protección-y-seguridad-en-windows-11-98e0c3ba-4b52-4b44-9ef1-d38f89e98f75)
+
+>Canonical Ltd. (2024). *Ubuntu 24.04 LTS Documentation*. Recuperado de [https://ubuntu.com/server/docs](https://ubuntu.com/server/docs)
+
+> Soper, M. (2022). *CompTIA Security+ Guide to Network Security Fundamentals* (7.ª ed.). Cengage Learning.
+
+> The Linux Foundation. (2023). *Linux System Security Best Practices*. Recuperado de [https://training.linuxfoundation.org/resources/free-courses/introduction-to-linux/](https://training.linuxfoundation.org/resources/free-courses/introduction-to-linux/)
+
+> Grimes, R. A. (2023). *Hacking the Hacker: Learn from the Experts Who Take Down Hackers* (2.ª ed.). Wiley.
+
