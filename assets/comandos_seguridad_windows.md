@@ -1,11 +1,6 @@
-Claro, a continuación te presento una lista de **comandos y herramientas relacionadas con la seguridad** en el sistema operativo **Microsoft Windows 11**, junto con ejemplos prácticos de uso. Estos comandos pueden ayudarte a auditar, proteger y diagnosticar tu sistema desde una perspectiva de seguridad.
+## **Comandos y Herramientas de Seguridad en Windows 11**
 
----
-
-## 🔐 **Comandos y Herramientas de Seguridad en Windows 11**
-
-### 1. **`net user`**
-Muestra información sobre cuentas de usuario locales.
+### **`net user`** Muestra información sobre cuentas de usuario locales.
 
 #### Ejemplo:
 ```cmd
@@ -20,8 +15,7 @@ Muestra detalles del usuario "Administrador".
 
 ---
 
-### 2. **`net localgroup`**
-Muestra o modifica grupos locales.
+### **`net localgroup`** Muestra o modifica grupos locales.
 
 #### Ejemplo:
 ```cmd
