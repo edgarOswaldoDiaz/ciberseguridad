@@ -91,7 +91,7 @@ sudo passwd -u usuario1
 
 ---
 
-## **Gestión de Usuarios en Windows**
+## **Gestión de Usuarios en Microsoft Windows**
 
 En Windows, la gestión de usuarios puede realizarse mediante:
 - **Interfaz gráfica** (Administración de equipos).
