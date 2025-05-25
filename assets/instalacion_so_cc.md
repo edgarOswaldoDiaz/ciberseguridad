@@ -60,7 +60,7 @@ La protección de datos es un componente crítico en la configuración de SO en 
 - **Respuesta a incidentes**: Configura un plan para responder a brechas de seguridad, incluyendo snapshots de instancias para análisis forense.
 
 
-# Comparación Detallada de Servicios de las Principales Plataformas Cloud
+# Servicios de las Principales Plataformas
 
 | Categoría de Servicio | AWS | Microsoft Azure | Google Cloud Platform | IBM Cloud | Alibaba Cloud |
 |----------------------|-----|----------------|----------------------|-----------|---------------|
@@ -97,13 +97,6 @@ La protección de datos es un componente crítico en la configuración de SO en 
 ### Alibaba Cloud
 - **Fortalezas**: Liderazgo en mercado asiático, precios competitivos, e-commerce integration
 - **Especialidades**: Servicios para e-commerce, fintech, mercado chino
-
-## Modelos de Precios
-- **AWS**: Pay-as-you-go, Reserved Instances, Spot Instances
-- **Azure**: Pay-as-you-go, Reserved Instances, Hybrid Benefit
-- **GCP**: Pay-as-you-go, Committed Use Discounts, Preemptible VMs
-- **IBM**: Pay-as-you-go, Subscription, Enterprise agreements
-- **Alibaba**: Pay-as-you-go, Subscription, Resource packages
 
 ---------
 
@@ -158,56 +151,53 @@ La protección de datos es un componente crítico en la configuración de SO en 
 - **Formación del equipo:** Asegurar que el personal tenga conocimientos técnicos en la plataforma elegida.
 - **Documentación y comunidad:** Acceso a guías, foros y recursos oficiales del proveedor.
 
-
 ### **Calculadoras de Costo y Dimensionamiento en la Nube**  
 
 #### **Multi-Cloud / Independientes**  
-1. **CloudZero** – Herramienta para estimar costos multi-nube.  
+**CloudZero** – Herramienta para estimar costos multi-nube.  
    - [https://www.cloudzero.com/](https://www.cloudzero.com/)  
-2. **Terraform (Infraestructura como Código)** – Permite planificar recursos antes de implementarlos.  
+**Terraform (Infraestructura como Código)** – Permite planificar recursos antes de implementarlos.  
    - [https://www.terraform.io/](https://www.terraform.io/)  
 
 #### **Amazon Web Services (AWS)**  
-3. **AWS Pricing Calculator** – Calculadora oficial para estimar costos en AWS.  
+**AWS Pricing Calculator** – Calculadora oficial para estimar costos en AWS.  
    - [https://calculator.aws/](https://calculator.aws/)  
-4. **AWS Simple Monthly Calculator** (Legacy) – Versión anterior de la calculadora de AWS.  
+**AWS Simple Monthly Calculator** (Legacy) – Versión anterior de la calculadora de AWS.  
    - [https://calculator.s3.amazonaws.com/index.html](https://calculator.s3.amazonaws.com/index.html)  
-5. **AWS Well-Architected Tool** – Ayuda a optimizar cargas de trabajo.  
+**AWS Well-Architected Tool** – Ayuda a optimizar cargas de trabajo.  
    - [https://aws.amazon.com/well-architected-tool/](https://aws.amazon.com/well-architected-tool/)  
 
 #### **Microsoft Azure**  
-6. **Azure Pricing Calculator** – Calculadora de costos para servicios de Azure.  
+**Azure Pricing Calculator** – Calculadora de costos para servicios de Azure.  
    - [https://azure.microsoft.com/en-us/pricing/calculator/](https://azure.microsoft.com/en-us/pricing/calculator/)  
-7. **Azure TCO Calculator** – Compara costos entre on-premise y Azure.  
+**Azure TCO Calculator** – Compara costos entre on-premise y Azure.  
    - [https://azure.microsoft.com/en-us/pricing/tco/calculator/](https://azure.microsoft.com/en-us/pricing/tco/calculator/)  
 
 #### **Google Cloud Platform (GCP)**  
-8. **Google Cloud Pricing Calculator** – Herramienta de estimación de costos en GCP.  
+**Google Cloud Pricing Calculator** – Herramienta de estimación de costos en GCP.  
    - [https://cloud.google.com/products/calculator](https://cloud.google.com/products/calculator)  
-9. **Google Cloud Recommender** – Sugiere optimizaciones de recursos.  
+**Google Cloud Recommender** – Sugiere optimizaciones de recursos.  
    - [https://cloud.google.com/recommender](https://cloud.google.com/recommender)  
 
 #### **Oracle Cloud**  
-10. **Oracle Cloud Cost Estimator** – Calculadora de costos para OCI.  
+**Oracle Cloud Cost Estimator** – Calculadora de costos para OCI.  
    - [https://www.oracle.com/cloud/cost-estimator.html](https://www.oracle.com/cloud/cost-estimator.html)  
 
 #### **IBM Cloud**  
-11. **IBM Cloud Pricing Calculator** – Estimador de costos para IBM Cloud.  
+**IBM Cloud Pricing Calculator** – Estimador de costos para IBM Cloud.  
    - [https://www.ibm.com/cloud/pricing](https://www.ibm.com/cloud/pricing)  
 
 #### **Herramientas de Monitorización y Optimización**  
-12. **CloudHealth by VMware** – Gestión de costos multi-nube.  
+**CloudHealth by VMware** – Gestión de costos multi-nube.  
    - [https://www.cloudhealthtech.com/](https://www.cloudhealthtech.com/)  
-13. **Kubecost** – Para optimizar costos en Kubernetes (EKS, AKS, GKE).  
+**Kubecost** – Para optimizar costos en Kubernetes (EKS, AKS, GKE).  
    - [https://www.kubecost.com/](https://www.kubecost.com/)  
 
 ### **Herramientas Open Source**  
-14. **Infracost** – Calcula costos desde Terraform.  
+**Infracost** – Calcula costos desde Terraform.  
    - [https://www.infracost.io/](https://www.infracost.io/)  
-15. **Cloud Custodian** – Automatiza la optimización de costos.  
+**Cloud Custodian** – Automatiza la optimización de costos.  
    - [https://cloudcustodian.io/](https://cloudcustodian.io/)  
-
-Estas herramientas te ayudarán a estimar costos, dimensionar recursos y optimizar cargas de trabajo en la nube. ¿Necesitas ayuda con alguna en específico?
 
 ______________
 Referencias bibliográficas 
