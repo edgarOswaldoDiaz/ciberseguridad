@@ -12,6 +12,38 @@ Un entorno físico se refiere al hardware tangible donde se ejecutan los sistema
 * **Distribuciones Linux (Ubuntu, CentOS, Debian, Kali, etc.)**
 * **BSD, Unix (menos común, pero usado en ciertos entornos críticos)**
 
+Claro, Shamara. A continuación te presento una **tabla comparativa de sistemas operativos comunes en entornos físicos**, enfocada en sus características clave relevantes para ciberseguridad:
+
+---
+
+### 🧩 **Tabla: Sistemas Operativos y sus Características para Entornos Físicos**
+
+| **Sistema Operativo**                | **Tipo**                  | **Uso Común**                                           | **Ventajas**                                                                               | **Desventajas**                                                                      | **Herramientas de Seguridad Nativas**                    |
+| ------------------------------------ | ------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | -------------------------------------------------------- |
+| **Windows 10/11**                    | Cliente                   | Estaciones de trabajo, laptops                          | Interfaz amigable, compatibilidad con software comercial, integración con Active Directory | Propenso a malware si no se actualiza, licencia costosa                              | Windows Defender, BitLocker, Firewall, AppLocker         |
+| **Windows Server**                   | Servidor                  | Servidores de archivos, AD, DNS, web                    | Gestión centralizada (Group Policy), soporte empresarial, herramientas administrativas     | Mayor consumo de recursos, dependencia de GUI                                        | Windows Defender AV, Group Policy, Hyper-V, WAC          |
+| **Ubuntu (Desktop/Server)**          | Cliente/Servidor          | Desarrolladores, servidores web, laboratorios           | Comunidad amplia, libre, estable, versátil, compatible con muchas herramientas open source | Curva de aprendizaje para nuevos usuarios                                            | ufw, AppArmor, fail2ban, iptables, auditd                |
+| **Debian**                           | Servidor                  | Servidores estables, entornos críticos                  | Muy estable, conservador en actualizaciones, alta seguridad                                | Software menos actualizado                                                           | SELinux/AppArmor, iptables, fail2ban                     |
+| **CentOS / Rocky Linux / AlmaLinux** | Servidor                  | Infraestructura empresarial, servidores corporativos    | Compatible con RHEL, soporte a largo plazo                                                 | Menor soporte de escritorio, CentOS ya no tiene soporte oficial                      | SELinux, firewalld, auditd                               |
+| **Kali Linux**                       | Cliente especial          | Pruebas de penetración, laboratorios forenses           | Incluye más de 600 herramientas de hacking ético, soporte para hardware especializado      | No apto como sistema principal, puede ser malinterpretado por políticas corporativas | Nmap, Wireshark, Metasploit, John, etc.                  |
+| **Arch Linux**                       | Cliente/Servidor avanzado | Usuarios avanzados, entornos personalizados             | Extremadamente personalizable, muy actualizado                                             | No apto para principiantes, mantenimiento continuo                                   | firewalld, iptables, herramientas de auditoría avanzadas |
+| **macOS (Apple)**                    | Cliente                   | Profesionales creativos, desarrollo, dispositivos Apple | Alta integración hardware-software, interfaz pulida, menos malware que Windows             | Hardware propietario, menos soporte empresarial, licencia costosa                    | Gatekeeper, XProtect, FileVault, sandboxing nativo       |
+| **FreeBSD**                          | Servidor                  | Firewalls, routers, sistemas embebidos, hosting web     | Seguridad sólida, rendimiento de red, ZFS, jails                                           | Menor compatibilidad con software moderno                                            | pf (packet filter), jails, audit framework               |
+
+---
+
+### ✅ **Notas adicionales:**
+
+* **Sistemas como Ubuntu Server, Debian y Rocky Linux** son ampliamente usados en entornos de ciberseguridad y DevOps por su estabilidad, soporte a largo plazo y compatibilidad con herramientas de seguridad.
+* **Kali Linux** es una herramienta más que un sistema operativo de uso diario. Se instala en físico solo cuando se necesita acceso a hardware específico como WiFi o Bluetooth.
+* **Windows Server** sigue siendo un estándar en muchas organizaciones, especialmente en redes basadas en Active Directory.
+* **macOS** y **FreeBSD** ofrecen altos niveles de seguridad, pero tienen usos más específicos y entornos de hardware limitados.
+
+---
+
+¿Quieres que esta tabla la convierta en un formato editable (Word o Excel), o que forme parte de una presentación para tu diplomado?
+
+
 ---
 
 ### **3. Requisitos Previos para la Instalación**
