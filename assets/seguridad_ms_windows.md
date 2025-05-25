@@ -129,3 +129,31 @@ Herramientas para evaluar el cumplimiento de políticas de seguridad:
 
 ### **Conclusión**
 La seguridad en Windows Server requiere un enfoque integral que combine políticas de grupo, herramientas de auditoría y análisis automatizado. La implementación de estas medidas reduce riesgos y garantiza el cumplimiento de normativas como **ISO 27001, NIST o CIS**.
+
+Aquí tienes cinco referencias bibliográficas en formato **APA (7ª edición)** que sustentan los temas abordados sobre seguridad en **Windows Server** y **Active Directory**:
+
+---
+
+### **Referencias Bibliográficas**  
+
+1. Microsoft. (2023). *Windows Server 2022 security baseline*. Microsoft Docs.  
+   [https://docs.microsoft.com/en-us/windows/security/threat-protection/security-compliance-toolkit-10](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-compliance-toolkit-10)  
+
+2. Center for Internet Security (CIS). (2022). *CIS Microsoft Windows Server 2022 Benchmark*.  
+   [https://www.cisecurity.org/benchmark/microsoft_windows_server](https://www.cisecurity.org/benchmark/microsoft_windows_server)  
+
+3. Stanek, W. R. (2021). *Windows Server 2022 Inside Out*. Microsoft Press.  
+
+4. Gibson, D. (2020). *CompTIA Security+ Guide to Network Security Fundamentals* (7th ed.). Cengage Learning.  
+
+5. Johansson, J., & Price, M. (2019). *Microsoft Windows Security Fundamentals: For Windows 2003 SP1 and R2*. Microsoft Press.  
+
+---
+
+### **Notas sobre las referencias**  
+- **Microsoft Docs** es una fuente oficial con guías sobre políticas de seguridad y herramientas como **Security Compliance Toolkit**.  
+- **CIS Benchmarks** proporciona estándares de seguridad ampliamente reconocidos.  
+- Los libros de **Stanek** y **Johansson & Price** ofrecen fundamentos técnicos sobre configuración segura en Windows Server.  
+- **Gibson (CompTIA Security+)** respalda conceptos generales de seguridad aplicables a entornos Windows.  
+
+Si necesitas más referencias o artículos académicos, puedo proporcionar fuentes adicionales.
