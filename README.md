@@ -13,7 +13,7 @@ Objetivo: Instalar, configurar y asegurar sistemas operativos en entornos físic
 - [Instalación de sistemas operativos en entornos físicos](assets/instalacion_so.md)
 - [Instalación y configuración de sistemas operativos en la nube](assets/instalacion_so_cc.md) 
 - [Configuración de políticas de seguridad](assets/config_politicas_seguridad.md) 
-- [Instalación de software de seguridad y controladores (drivers)] 
+- [Instalación de software de seguridad y controladores (drivers)](assets/software_seguridad_controladores.md) 
 - [Registro y gestión de usuarios en sistemas operativos] 
 
 ## Módulo 3: Mitigación de riesgos en sistemas informáticos 
