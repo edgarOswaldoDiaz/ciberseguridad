@@ -51,7 +51,7 @@ Un entorno físico se refiere al hardware tangible donde se ejecutan los sistema
 
 ### **Tabla: Proceso de Instalación Paso a Paso – Windows 11 vs Ubuntu 24.04**
 
-| **Etapa**                                 | **Windows 11**                                                                                                                                                            | **Ubuntu 24.04 LTS**                                                                                                                                     |
+| **Etapa**                                 | **Microsoft Windows 11**                                                                                                                                                            | **Ubuntu 24.04 LTS**                                                                                                                                     |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **1. Preparación del medio**              | Descargar la ISO desde el sitio oficial de Microsoft y crear un USB booteable con **Rufus** u otra herramienta.                                                           | Descargar la ISO desde el sitio oficial de Ubuntu. Crear un USB booteable con **balenaEtcher**, **Startup Disk Creator** o **Rufus**.                    |
 | **2. Configuración de BIOS/UEFI**         | Entrar a BIOS/UEFI (tecla DEL/F2). Habilitar **UEFI**, deshabilitar Secure Boot si se usan controladores no firmados. Establecer USB como primer dispositivo de arranque. | Igual que en Windows: configurar **UEFI**, y opcionalmente deshabilitar Secure Boot si se requiere. Elegir USB como prioridad de arranque.               |
@@ -68,7 +68,7 @@ Un entorno físico se refiere al hardware tangible donde se ejecutan los sistema
 
 ### **Observaciones importantes:**
 
-* **Windows 11** es más exigente con los requisitos de hardware (TPM 2.0, Secure Boot, CPU compatible).
+* **Microsoft Windows 11** es más exigente con los requisitos de hardware (TPM 2.0, Secure Boot, CPU compatible).
 * **Ubuntu 24.04** permite mayor flexibilidad, especialmente en máquinas más antiguas.
 * Ubuntu puede usarse como **LiveCD** para probar el sistema antes de instalar.
 * Ambas plataformas pueden configurarse de forma segura post-instalación, pero Ubuntu ofrece más control técnico por defecto.
