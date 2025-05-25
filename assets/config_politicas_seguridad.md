@@ -61,7 +61,10 @@ iptables / ufw (Uncomplicated Firewall)
 - **BitLocker (Windows)** o **LUKS (Linux)** para discos.  
 - **SSL/TLS** para comunicaciones seguras.  
 
+# Comandos de seguridad 
 
+- [Comando de seguridad en Ms. Windows](assets/comandos_seguridad_windows.md)
+- [Comandos de seguridad en Ubuntu - Linux]()
 
 ______________
 
