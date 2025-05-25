@@ -198,3 +198,50 @@ La protección de datos es un componente crítico en la configuración de SO en 
 La instalación y configuración de sistemas operativos en la nube requiere un enfoque sistemático que combine la selección adecuada de recursos, configuraciones optimizadas y medidas de seguridad robustas. En un entorno de ciberseguridad, el énfasis debe estar en el endurecimiento del SO, la gestión de accesos, el cifrado y el monitoreo continuo para proteger la información y garantizar la resiliencia frente a amenazas.
 
 Si necesitas un enfoque más específico, por ejemplo, para un proveedor de nube en particular (AWS, Azure, GCP) o un sistema operativo específico (Linux, Windows), o si deseas ejemplos de comandos o configuraciones detalladas, ¡puedes pedírmelo! También puedo ayudarte a generar diagramas o flujos de trabajo si lo necesitas para el diplomado.
+
+
+
+# Comparación Detallada de Servicios de las Principales Plataformas Cloud
+
+| Categoría de Servicio | AWS | Microsoft Azure | Google Cloud Platform | IBM Cloud | Alibaba Cloud |
+|----------------------|-----|----------------|----------------------|-----------|---------------|
+| **Cómputo** | • EC2 (máquinas virtuales)<br>• Lambda (serverless)<br>• ECS/EKS (contenedores)<br>• Batch (procesamiento por lotes)<br>• Lightsail (VPS simplificado) | • Virtual Machines<br>• Azure Functions (serverless)<br>• Container Instances/AKS<br>• Batch (procesamiento por lotes)<br>• App Service (PaaS web) | • Compute Engine (VMs)<br>• Cloud Functions (serverless)<br>• Google Kubernetes Engine<br>• Cloud Run (contenedores)<br>• App Engine (PaaS) | • Virtual Servers<br>• Cloud Functions<br>• Kubernetes Service<br>• Code Engine<br>• Cloud Foundry | • Elastic Compute Service (ECS)<br>• Function Compute<br>• Container Service<br>• Batch Compute<br>• Simple Application Server |
+| **Almacenamiento** | • S3 (objeto)<br>• EBS (bloques)<br>• EFS (archivos)<br>• Glacier (archivo)<br>• Storage Gateway | • Blob Storage (objeto)<br>• Disk Storage (bloques)<br>• Files (archivos)<br>• Archive Storage • StorSimple | • Cloud Storage (objeto)<br>• Persistent Disk (bloques)<br>• Filestore (archivos)<br>• Archive Storage<br>• Transfer Service | • Object Storage<br>• Block Storage<br>• File Storage<br>• Archive Storage<br>• Mass Data Migration | • Object Storage Service<br>• Block Storage<br>• Network Attached Storage<br>• Archive Storage<br>• Hybrid Cloud Storage |
+| **Base de Datos** | • RDS (relacional)<br>• DynamoDB (NoSQL)<br>• Redshift (data warehouse)<br>• ElastiCache (caché)<br>• DocumentDB (MongoDB) | • SQL Database<br>• Cosmos DB (NoSQL)<br>• Synapse Analytics<br>• Cache for Redis<br>• Database for PostgreSQL/MySQL | • Cloud SQL (relacional)<br>• Firestore (NoSQL)<br>• BigQuery (analytics)<br>• Memorystore (caché)<br>• Cloud Spanner (global) | • Db2 on Cloud<br>• Cloudant (NoSQL)<br>• Netezza Performance Server<br>• Databases for Redis<br>• Informix on Cloud | • ApsaraDB (RDS)<br>• Table Store (NoSQL)<br>• AnalyticDB<br>• ApsaraDB for Redis<br>• PolarDB |
+| **Redes** | • VPC<br>• CloudFront (CDN)<br>• Route 53 (DNS)<br>• Direct Connect<br>• Elastic Load Balancer | • Virtual Network<br>• Content Delivery Network<br>• DNS<br>• ExpressRoute<br>• Load Balancer | • Virtual Private Cloud<br>• Cloud CDN<br>• Cloud DNS<br>• Cloud Interconnect<br>• Cloud Load Balancing | • Virtual Private Cloud<br>• Content Delivery Network<br>• Internet Services<br>• Direct Link<br>• Load Balancer | • Virtual Private Cloud<br>• Alibaba Cloud CDN<br>• DNS<br>• Express Connect<br>• Server Load Balancer |
+| **Inteligencia Artificial** | • SageMaker (ML)<br>• Rekognition (visión)<br>• Comprehend (NLP)<br>• Polly (texto a voz)<br>• Lex (chatbots) | • Machine Learning<br>• Computer Vision<br>• Language Understanding<br>• Speech Services<br>• Bot Framework | • AI Platform<br>• Vision AI<br>• Natural Language AI<br>• Speech-to-Text<br>• Dialogflow | • Watson Machine Learning<br>• Watson Visual Recognition<br>• Watson Natural Language<br>• Watson Speech to Text<br>• Watson Assistant | • Machine Learning Platform<br>• Image Recognition<br>• Natural Language Processing<br>• Intelligent Speech Interaction<br>• Chatbot |
+| **Analytics y Big Data** | • EMR (Hadoop/Spark)<br>• Kinesis (streaming)<br>• Athena (queries)<br>• QuickSight (BI)<br>• Glue (ETL) | • HDInsight (Hadoop/Spark)<br>• Stream Analytics<br>• Data Lake Analytics<br>• Power BI<br>• Data Factory | • Dataproc (Hadoop/Spark)<br>• Dataflow (streaming)<br>• Data Studio<br>• Looker (BI)<br>• Cloud Composer | • Analytics Engine<br>• Streaming Analytics<br>• Db2 Warehouse<br>• Cognos Analytics<br>• InfoSphere DataStage | • E-MapReduce<br>• Realtime Compute<br>• Data Lake Analytics<br>• Quick BI<br>• DataWorks |
+| **Seguridad e Identidad** | • IAM<br>• Cognito<br>• Certificate Manager<br>• WAF<br>• GuardDuty | • Active Directory<br>• Key Vault<br>• Security Center<br>• Application Gateway<br>• Sentinel | • Identity and Access Management<br>• Cloud Identity<br>• Certificate Authority<br>• Cloud Armor<br>• Security Command Center | • Identity and Access Management<br>• Key Protect<br>• Security Advisor<br>• App ID<br>• Certificate Manager | • Resource Access Management<br>• Key Management Service<br>• Security Center<br>• Web Application Firewall<br>• ActionTrail |
+| **DevOps y Desarrollo** | • CodeCommit/CodeBuild/CodeDeploy<br>• CodePipeline<br>• CloudFormation<br>• Systems Manager<br>• X-Ray (monitoring) | • Azure DevOps<br>• GitHub integration<br>• Resource Manager<br>• Application Insights<br>• Monitor | • Cloud Source Repositories<br>• Cloud Build<br>• Deployment Manager<br>• Operations Suite<br>• Cloud Debugger | • Toolchain<br>• Continuous Delivery<br>• Resource Controller<br>• Monitoring<br>• Log Analysis | • CodePipeline<br>• Container Registry<br>• Resource Orchestration Service<br>• CloudMonitor<br>• Log Service |
+| **Internet de las Cosas (IoT)** | • IoT Core<br>• IoT Device Management<br>• IoT Analytics<br>• FreeRTOS<br>• IoT Events | • IoT Hub<br>• IoT Central<br>• Digital Twins<br>• Stream Analytics<br>• Time Series Insights | • Cloud IoT Core<br>• Edge TPU<br>• IoT Device SDK<br>• Pub/Sub<br>• Time Series Insights | • Watson IoT Platform<br>• Maximo Asset Monitor<br>• Edge Application Manager<br>• Event Streams<br>• Cloudant (for IoT data) | • IoT Platform<br>• Link IoT Edge<br>• IoT Device Management<br>• Message Queue<br>• Time Series Database |
+| **Blockchain** | • Managed Blockchain<br>• Quantum Ledger Database<br>• Partner solutions | • Blockchain Service<br>• Azure Confidential Ledger<br>• Partner integrations | • No servicio nativo<br>• Partner solutions<br>• Marketplace options | • Blockchain Platform<br>• Hyper Protect Services<br>• Certificate Authority | • Blockchain as a Service<br>• Ant Blockchain<br>• Partner solutions |
+| **Migración y Híbrido** | • Database Migration Service<br>• Server Migration Service<br>• Outposts (híbrido)<br>• Snow Family<br>• Storage Gateway | • Database Migration Service<br>• Azure Migrate<br>• Azure Stack (híbrido)<br>• Data Box<br>• StorSimple | • Database Migration Service<br>• Transfer Service<br>• Anthos (híbrido)<br>• Transfer Appliance<br>• Storage Transfer Service | • Lift and Shift<br>• Mass Data Migration<br>• Satellite (edge)<br>• Cloud Pak for Integration<br>• Aspera (transfer) | • Data Transmission Service<br>• Server Migration Center<br>• Hybrid Cloud<br>• Data Transport<br>• Hybrid Backup Recovery |
+
+## Características Distintivas por Proveedor
+
+### AWS
+- **Fortalezas**: Mayor ecosistema de servicios, amplia adopción empresarial, documentación extensa
+- **Especialidades**: Servicios serverless, machine learning, amplio marketplace
+
+### Microsoft Azure
+- **Fortalezas**: Integración con ecosistema Microsoft, soluciones híbridas robustas
+- **Especialidades**: Windows Server, Active Directory, Office 365 integration
+
+### Google Cloud Platform
+- **Fortalezas**: Liderazgo en AI/ML, analytics avanzados, infraestructura de red global
+- **Especialidades**: BigQuery, TensorFlow, Kubernetes (origen)
+
+### IBM Cloud
+- **Fortalezas**: Soluciones empresariales, Watson AI, mainframe integration
+- **Especialidades**: Servicios cognitivos, blockchain empresarial, computación cuántica
+
+### Alibaba Cloud
+- **Fortalezas**: Liderazgo en mercado asiático, precios competitivos, e-commerce integration
+- **Especialidades**: Servicios para e-commerce, fintech, mercado chino
+
+## Modelos de Precios
+- **AWS**: Pay-as-you-go, Reserved Instances, Spot Instances
+- **Azure**: Pay-as-you-go, Reserved Instances, Hybrid Benefit
+- **GCP**: Pay-as-you-go, Committed Use Discounts, Preemptible VMs
+- **IBM**: Pay-as-you-go, Subscription, Enterprise agreements
+- **Alibaba**: Pay-as-you-go, Subscription, Resource packages
