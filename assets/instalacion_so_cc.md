@@ -323,6 +323,59 @@ Claro, contratar servicios de cómputo en la nube es una decisión estratégica 
 Si deseas, puedo ayudarte a crear una plantilla de evaluación comparativa entre proveedores de nube basada en estas prácticas. ¿Te gustaría eso?
 
 
+
+Aquí tienes una lista de referencias a calculadoras y herramientas útiles para dimensionar servicios en la nube de los principales proveedores:  
+
+### **Calculadoras de Costo y Dimensionamiento en la Nube**  
+
+#### **Multi-Cloud / Independientes**  
+1. **CloudZero** – Herramienta para estimar costos multi-nube.  
+   - [https://www.cloudzero.com/](https://www.cloudzero.com/)  
+2. **Terraform (Infraestructura como Código)** – Permite planificar recursos antes de implementarlos.  
+   - [https://www.terraform.io/](https://www.terraform.io/)  
+
+#### **Amazon Web Services (AWS)**  
+3. **AWS Pricing Calculator** – Calculadora oficial para estimar costos en AWS.  
+   - [https://calculator.aws/](https://calculator.aws/)  
+4. **AWS Simple Monthly Calculator** (Legacy) – Versión anterior de la calculadora de AWS.  
+   - [https://calculator.s3.amazonaws.com/index.html](https://calculator.s3.amazonaws.com/index.html)  
+5. **AWS Well-Architected Tool** – Ayuda a optimizar cargas de trabajo.  
+   - [https://aws.amazon.com/well-architected-tool/](https://aws.amazon.com/well-architected-tool/)  
+
+#### **Microsoft Azure**  
+6. **Azure Pricing Calculator** – Calculadora de costos para servicios de Azure.  
+   - [https://azure.microsoft.com/en-us/pricing/calculator/](https://azure.microsoft.com/en-us/pricing/calculator/)  
+7. **Azure TCO Calculator** – Compara costos entre on-premise y Azure.  
+   - [https://azure.microsoft.com/en-us/pricing/tco/calculator/](https://azure.microsoft.com/en-us/pricing/tco/calculator/)  
+
+#### **Google Cloud Platform (GCP)**  
+8. **Google Cloud Pricing Calculator** – Herramienta de estimación de costos en GCP.  
+   - [https://cloud.google.com/products/calculator](https://cloud.google.com/products/calculator)  
+9. **Google Cloud Recommender** – Sugiere optimizaciones de recursos.  
+   - [https://cloud.google.com/recommender](https://cloud.google.com/recommender)  
+
+#### **Oracle Cloud**  
+10. **Oracle Cloud Cost Estimator** – Calculadora de costos para OCI.  
+   - [https://www.oracle.com/cloud/cost-estimator.html](https://www.oracle.com/cloud/cost-estimator.html)  
+
+#### **IBM Cloud**  
+11. **IBM Cloud Pricing Calculator** – Estimador de costos para IBM Cloud.  
+   - [https://www.ibm.com/cloud/pricing](https://www.ibm.com/cloud/pricing)  
+
+#### **Herramientas de Monitorización y Optimización**  
+12. **CloudHealth by VMware** – Gestión de costos multi-nube.  
+   - [https://www.cloudhealthtech.com/](https://www.cloudhealthtech.com/)  
+13. **Kubecost** – Para optimizar costos en Kubernetes (EKS, AKS, GKE).  
+   - [https://www.kubecost.com/](https://www.kubecost.com/)  
+
+### **Herramientas Open Source**  
+14. **Infracost** – Calcula costos desde Terraform.  
+   - [https://www.infracost.io/](https://www.infracost.io/)  
+15. **Cloud Custodian** – Automatiza la optimización de costos.  
+   - [https://cloudcustodian.io/](https://cloudcustodian.io/)  
+
+Estas herramientas te ayudarán a estimar costos, dimensionar recursos y optimizar cargas de trabajo en la nube. ¿Necesitas ayuda con alguna en específico?
+
 ______________
 Referencias bibliográficas 
 
