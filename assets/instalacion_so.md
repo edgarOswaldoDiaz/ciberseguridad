@@ -56,6 +56,40 @@ Antes de instalar un sistema operativo, se deben considerar varios aspectos crí
 * Cantidad de RAM y espacio en disco
 * Tarjetas de red y controladores
 
+Claro, Shamara. A continuación te presento una **tabla de requisitos previos** para la instalación de los sistemas operativos mencionados anteriormente, considerando factores como arquitectura, RAM mínima, espacio en disco, tipo de sistema de archivos compatible, y medio de instalación habitual:
+
+---
+
+### 🧩 **Tabla: Requisitos Previos para Instalar Sistemas Operativos en Entornos Físicos**
+
+| **Sistema Operativo**          | **Arquitectura**  | **RAM Mínima**            | **Espacio en Disco (mínimo)**   | **Sistema de Archivos Soportado** | **Medio de Instalación Común** |
+| ------------------------------ | ----------------- | ------------------------- | ------------------------------- | --------------------------------- | ------------------------------ |
+| **Windows 10/11**              | 64 bits           | 4 GB (8 GB recomendado)   | 64 GB (128+ GB recomendado)     | NTFS, FAT32                       | USB booteable, DVD             |
+| **Windows Server**             | 64 bits (x64)     | 8 GB (16+ GB recomendado) | 32–50 GB base (más según roles) | NTFS                              | USB, DVD, red (PXE)            |
+| **Ubuntu Desktop**             | 64 bits (x86\_64) | 4 GB (8 GB óptimo)        | 25 GB (50+ GB recomendado)      | ext4, Btrfs, XFS                  | USB, DVD                       |
+| **Ubuntu Server**              | 64 bits           | 512 MB (2 GB recomendado) | 2 GB (20+ GB recomendado)       | ext4, LVM                         | USB, PXE, red                  |
+| **Debian (Desktop/Server)**    | 64 bits           | 512 MB (1 GB mínimo)      | 10 GB (20–30 GB recomendado)    | ext4, XFS, Btrfs                  | USB, DVD, red                  |
+| **CentOS / Rocky / AlmaLinux** | 64 bits           | 1 GB (2–4 GB recomendado) | 10 GB mínimo (más si GUI)       | ext4, XFS                         | USB, ISO, red (PXE)            |
+| **Kali Linux**                 | 64 bits           | 2 GB (4+ GB recomendado)  | 20 GB (mínimo)                  | ext4, LVM                         | USB booteable                  |
+| **Arch Linux**                 | 64 bits           | 512 MB (2 GB recomendado) | 2–5 GB base (personalizable)    | ext4, Btrfs, XFS, F2FS            | USB, netboot                   |
+| **macOS (Apple)**              | ARM64 (M1+) / x64 | 4 GB (8+ GB recomendado)  | 35–60 GB                        | APFS, HFS+                        | USB, recuperación de red       |
+| **FreeBSD**                    | 64 bits (amd64)   | 512 MB (1 GB recomendado) | 1.5–4 GB mínimo                 | UFS, ZFS                          | USB, DVD, red                  |
+
+---
+
+### ✅ **Notas importantes:**
+
+* **RAM y espacio en disco recomendados** varían según el uso (servidor web, servidor de base de datos, estación de trabajo, etc.).
+* Los **entornos sin interfaz gráfica** (como Ubuntu Server o Arch) requieren mucho menos recursos que sus equivalentes con GUI.
+* **ZFS y LVM** requieren más memoria y CPU para gestionarse eficientemente, pero ofrecen ventajas de integridad de datos y snapshots.
+* Para arquitecturas modernas, casi todos los sistemas están enfocados a **64 bits**, salvo en dispositivos muy antiguos o sistemas embebidos.
+
+---
+
+¿Te gustaría que esta tabla también esté en formato Excel o en un archivo Word como parte de una guía técnica?
+
+
+
 #### b. **Medio de instalación**
 
 * USB booteable, DVD, o medios de red (PXE Boot)
