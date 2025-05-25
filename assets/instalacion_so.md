@@ -1,22 +1,10 @@
-## **Instalación de Sistemas Operativos en Entornos Físicos**
+# **Instalación de Sistemas Operativos en Entornos Físicos**
 
-### **1. ¿Qué es un entorno físico?**
+### **¿Qué es un entorno físico?**
 
 Un entorno físico se refiere al hardware tangible donde se ejecutan los sistemas operativos. Esto incluye computadoras personales, servidores, estaciones de trabajo, equipos industriales, entre otros. A diferencia de los entornos virtuales o en la nube, en los entornos físicos hay un contacto directo con el hardware real, lo que requiere mayor atención en compatibilidad, controladores y configuración del sistema.
 
----
-
-### **2. Tipos de Sistemas Operativos Comunes en Seguridad**
-
-* **Windows Server / Windows 10/11**
-* **Distribuciones Linux (Ubuntu, CentOS, Debian, Kali, etc.)**
-* **BSD, Unix (menos común, pero usado en ciertos entornos críticos)**
-
-Claro, Shamara. A continuación te presento una **tabla comparativa de sistemas operativos comunes en entornos físicos**, enfocada en sus características clave relevantes para ciberseguridad:
-
----
-
-### 🧩 **Tabla: Sistemas Operativos y sus Características para Entornos Físicos**
+### **Tabla: Sistemas Operativos y sus Características para Entornos Físicos**
 
 | **Sistema Operativo**                | **Tipo**                  | **Uso Común**                                           | **Ventajas**                                                                               | **Desventajas**                                                                      | **Herramientas de Seguridad Nativas**                    |
 | ------------------------------------ | ------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | -------------------------------------------------------- |
@@ -30,37 +18,16 @@ Claro, Shamara. A continuación te presento una **tabla comparativa de sistemas 
 | **macOS (Apple)**                    | Cliente                   | Profesionales creativos, desarrollo, dispositivos Apple | Alta integración hardware-software, interfaz pulida, menos malware que Windows             | Hardware propietario, menos soporte empresarial, licencia costosa                    | Gatekeeper, XProtect, FileVault, sandboxing nativo       |
 | **FreeBSD**                          | Servidor                  | Firewalls, routers, sistemas embebidos, hosting web     | Seguridad sólida, rendimiento de red, ZFS, jails                                           | Menor compatibilidad con software moderno                                            | pf (packet filter), jails, audit framework               |
 
----
-
-### ✅ **Notas adicionales:**
+### **Notas adicionales:**
 
 * **Sistemas como Ubuntu Server, Debian y Rocky Linux** son ampliamente usados en entornos de ciberseguridad y DevOps por su estabilidad, soporte a largo plazo y compatibilidad con herramientas de seguridad.
 * **Kali Linux** es una herramienta más que un sistema operativo de uso diario. Se instala en físico solo cuando se necesita acceso a hardware específico como WiFi o Bluetooth.
 * **Windows Server** sigue siendo un estándar en muchas organizaciones, especialmente en redes basadas en Active Directory.
 * **macOS** y **FreeBSD** ofrecen altos niveles de seguridad, pero tienen usos más específicos y entornos de hardware limitados.
 
----
+### **Requisitos Previos para la Instalación**
 
-¿Quieres que esta tabla la convierta en un formato editable (Word o Excel), o que forme parte de una presentación para tu diplomado?
-
-
----
-
-### **3. Requisitos Previos para la Instalación**
-
-Antes de instalar un sistema operativo, se deben considerar varios aspectos críticos:
-
-#### a. **Compatibilidad de hardware**
-
-* Arquitectura del procesador (32-bit vs. 64-bit)
-* Cantidad de RAM y espacio en disco
-* Tarjetas de red y controladores
-
-Claro, Shamara. A continuación te presento una **tabla de requisitos previos** para la instalación de los sistemas operativos mencionados anteriormente, considerando factores como arquitectura, RAM mínima, espacio en disco, tipo de sistema de archivos compatible, y medio de instalación habitual:
-
----
-
-### 🧩 **Tabla: Requisitos Previos para Instalar Sistemas Operativos en Entornos Físicos**
+### **Tabla: Requisitos Previos para Instalar Sistemas Operativos en Entornos Físicos**
 
 | **Sistema Operativo**          | **Arquitectura**  | **RAM Mínima**            | **Espacio en Disco (mínimo)**   | **Sistema de Archivos Soportado** | **Medio de Instalación Común** |
 | ------------------------------ | ----------------- | ------------------------- | ------------------------------- | --------------------------------- | ------------------------------ |
@@ -75,65 +42,14 @@ Claro, Shamara. A continuación te presento una **tabla de requisitos previos** 
 | **macOS (Apple)**              | ARM64 (M1+) / x64 | 4 GB (8+ GB recomendado)  | 35–60 GB                        | APFS, HFS+                        | USB, recuperación de red       |
 | **FreeBSD**                    | 64 bits (amd64)   | 512 MB (1 GB recomendado) | 1.5–4 GB mínimo                 | UFS, ZFS                          | USB, DVD, red                  |
 
----
-
-### ✅ **Notas importantes:**
+### **Notas importantes:**
 
 * **RAM y espacio en disco recomendados** varían según el uso (servidor web, servidor de base de datos, estación de trabajo, etc.).
 * Los **entornos sin interfaz gráfica** (como Ubuntu Server o Arch) requieren mucho menos recursos que sus equivalentes con GUI.
 * **ZFS y LVM** requieren más memoria y CPU para gestionarse eficientemente, pero ofrecen ventajas de integridad de datos y snapshots.
 * Para arquitecturas modernas, casi todos los sistemas están enfocados a **64 bits**, salvo en dispositivos muy antiguos o sistemas embebidos.
 
----
-
-¿Te gustaría que esta tabla también esté en formato Excel o en un archivo Word como parte de una guía técnica?
-
-
-
-#### b. **Medio de instalación**
-
-* USB booteable, DVD, o medios de red (PXE Boot)
-* Imagen ISO oficial y verificada (hash MD5/SHA256 para verificar integridad)
-
-#### c. **Planificación del particionado**
-
-* Tabla de particiones: MBR vs. GPT
-* Sistema de archivos: NTFS, ext4, xfs, etc.
-* Esquema sugerido para seguridad: partición separada para `/home`, `/var`, `/tmp` (en Linux)
-
----
-
-### **4. Proceso de Instalación Paso a Paso**
-
-#### a. **Preparación del medio de instalación**
-
-* Descargar la imagen ISO del sitio oficial
-* Crear USB booteable (herramientas: Rufus, balenaEtcher, dd en Linux)
-
-#### b. **Configuración de la BIOS/UEFI**
-
-* Establecer prioridad de arranque
-* Habilitar/disabling Secure Boot o Legacy Mode si es necesario
-
-#### c. **Ejecución del asistente de instalación**
-
-* Elegir idioma, teclado y zona horaria
-* Particionar el disco (manual o automático)
-* Crear usuario(s) y establecer contraseñas seguras
-* Seleccionar software adicional (servidores, herramientas de red, etc.)
-
-#### d. **Instalación del sistema operativo**
-
-* Copia de archivos
-* Instalación del gestor de arranque (GRUB, Windows Boot Manager)
-* Reinicio y verificación del arranque correcto
-
-
-Claro, Shamara. A continuación te presento una **tabla comparativa detallada del proceso de instalación paso a paso** para los sistemas operativos **Microsoft Windows 11** y **Ubuntu 24.04 LTS**, enfocada en entornos físicos:
-
----
-
-### 🧩 **Tabla: Proceso de Instalación Paso a Paso – Windows 11 vs Ubuntu 24.04**
+### **Tabla: Proceso de Instalación Paso a Paso – Windows 11 vs Ubuntu 24.04**
 
 | **Etapa**                                 | **Windows 11**                                                                                                                                                            | **Ubuntu 24.04 LTS**                                                                                                                                     |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -150,59 +66,17 @@ Claro, Shamara. A continuación te presento una **tabla comparativa detallada de
 | **11. Seguridad inicial sugerida**        | Activar Windows Update, habilitar firewall, activar BitLocker si es posible, revisar Defender.                                                                            | Ejecutar `sudo apt update && sudo apt upgrade`, habilitar UFW (`ufw enable`), revisar usuarios y servicios habilitados.                                  |
 | **12. Instalación de software adicional** | Usar Microsoft Store o instaladores `.exe` de fuentes confiables.                                                                                                         | Usar `apt`, Ubuntu Software o instalar paquetes `.deb` firmados.                                                                                         |
 
----
-
-### ✅ **Observaciones importantes:**
+### **Observaciones importantes:**
 
 * **Windows 11** es más exigente con los requisitos de hardware (TPM 2.0, Secure Boot, CPU compatible).
 * **Ubuntu 24.04** permite mayor flexibilidad, especialmente en máquinas más antiguas.
 * Ubuntu puede usarse como **LiveCD** para probar el sistema antes de instalar.
 * Ambas plataformas pueden configurarse de forma segura post-instalación, pero Ubuntu ofrece más control técnico por defecto.
 
----
 
-¿Te gustaría que esta tabla se convierta en una guía en PDF o en una presentación? También puedo crear un checklist práctico para laboratorio.
+## Recomendaciones Iniciales de Seguridad
 
-
-
----
-
-### **5. Recomendaciones de Seguridad Iniciales**
-
-Una vez instalado el sistema operativo, es crucial asegurar el entorno antes de ponerlo en producción:
-
-#### a. **Aplicación de parches y actualizaciones**
-
-* Usar repositorios oficiales o WSUS (en Windows)
-
-#### b. **Creación de usuarios con principio de mínimo privilegio**
-
-* Evitar uso continuo del usuario root o administrador
-
-#### c. **Desactivación de servicios innecesarios**
-
-* Evaluar qué servicios se ejecutan por defecto
-* Deshabilitar puertos abiertos innecesarios
-
-#### d. **Instalación de herramientas de seguridad**
-
-* Firewall (ufw, firewalld, Windows Defender Firewall)
-* Antivirus y/o EDR
-* SSH seguro: deshabilitar root login, usar autenticación por clave
-
-#### e. **Auditoría básica del sistema**
-
-* Comprobación de logs de instalación
-* Configuración de syslog o herramientas SIEM para eventos futuros
-
-
-¡Con gusto, Shamara! A continuación te presento una descripción detallada de las **recomendaciones iniciales de seguridad** que deben aplicarse en **Windows 11** y **Ubuntu 24.04 LTS**, una vez instalado el sistema operativo en un entorno físico, con el fin de establecer una base sólida para un entorno seguro.
-
----
-
-## 🔐 Recomendaciones Iniciales de Seguridad
-
-### 🪟 **Windows 11**
+### **Microsoft Windows 11**
 
 | **Categoría**                             | **Recomendación**                                                                                                                                                                  |
 | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -217,9 +91,8 @@ Una vez instalado el sistema operativo, es crucial asegurar el entorno antes de 
 | **Aplicaciones y servicios**              | - Desinstalar software innecesario.<br>- Restringir servicios que no se usan (por ejemplo, Remote Desktop si no es requerido).                                                     |
 | **Registro de eventos**                   | - Activar y revisar el **Visor de eventos**, especialmente eventos relacionados con inicios de sesión, fallos y cambios de políticas.                                              |
 
----
 
-### 🐧 **Ubuntu 24.04 LTS**
+### **Ubuntu 24.04 LTS**
 
 | **Categoría**                                | **Recomendación**                                                                                                                                       |
 | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -234,45 +107,7 @@ Una vez instalado el sistema operativo, es crucial asegurar el entorno antes de 
 | **Protecciones adicionales**                 | - Activar **AppArmor** o configurar **SELinux** (aunque AppArmor viene habilitado por defecto).<br>- Usar `auditd` para monitorear eventos del sistema. |
 | **Registro de eventos**                      | - Configurar revisión de logs con `journalctl` y `logrotate`.<br>- Monitorear accesos fallidos con `lastb` y `faillog`.                                 |
 
----
-
-## 🧠 Buenas prácticas generales
-
-* **Principio de mínimo privilegio:** Solo los usuarios que lo requieran deben tener permisos elevados.
-* **Segmentación de red:** Aislar servicios críticos en diferentes subredes (por ejemplo, acceso SSH, bases de datos, escritorio remoto).
-* **Educación del usuario:** Capacitar sobre ingeniería social, phishing, y prácticas de navegación segura.
-
----
-
-¿Te gustaría que compile estas recomendaciones en una guía visual o formato PDF como parte del material de tu diplomado? También puedo incluir scripts básicos de hardening para ambos sistemas.
-
-
-
----
-
-### **6. Aplicación en Ciberseguridad**
-
-Instalar un sistema operativo de manera segura en un entorno físico es un paso fundamental en cualquier infraestructura de seguridad. Una instalación mal hecha puede dejar puertas abiertas desde el primer día. Además:
-
-* Permite establecer un sistema base sólido para aplicar políticas de hardening
-* Facilita el cumplimiento de normativas como ISO 27001, NIST, o CIS Benchmarks
-* Sirve como base para implementar servidores de monitoreo, firewalls, o honeypots
-
----
-
-### **7. Casos de Uso**
-
-* Estaciones de trabajo seguras para analistas SOC
-* Equipos de administración para servidores en red interna
-* Servidores de archivos, DNS, correo o controladores de dominio en redes empresariales
-
----
-
-¿Te gustaría que prepare también una presentación en PowerPoint o una ficha técnica basada en esta explicación?
-
-Con gusto, Shamara. Aquí tienes **cinco referencias bibliográficas en formato APA 7** que sustentan la información técnica y las recomendaciones de seguridad descritas anteriormente para los sistemas operativos **Windows 11** y **Ubuntu 24.04 LTS**:
-
----
+____________
 Referencias bibliográficas 
 
 > Microsoft. (2023). *Protección y seguridad en Windows 11*. 
