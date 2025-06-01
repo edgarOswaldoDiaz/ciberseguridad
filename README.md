@@ -32,7 +32,7 @@ Objetivo: Monitorear el tráfico de red para identificar y solucionar vulnerabil
 - Configuración de firewalls y sistemas de detección de intrusos (IDS) 
 - Análisis de logs y reportes de seguridad
 
-## Módulo 5: Preservación de Evidencias y Simulación de Ciberataques
+## Módulo 5: Preservación de evidencias y simulación de ciberataques
 Objetivo: Crear escenarios de ciberataques y aplicar procedimientos de preservación de evidencias según normativas vigentes.
 
 - Simulación y análisis de ciberataques
