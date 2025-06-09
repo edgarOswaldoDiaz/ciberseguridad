@@ -15,7 +15,8 @@ Objetivo: Instalar, configurar y asegurar sistemas operativos en entornos físic
 - [Configuración de políticas de seguridad](assets/config_politicas_seguridad.md) 
 - [Instalación de software de seguridad y controladores (drivers)](assets/software_seguridad_controladores.md) 
 - [Registro y gestión de usuarios en sistemas operativos](assets/registro_gestion_usuarios.md)
-  Nota: [tecnología de contenedores](/datosmasivos/assets/contenedores.md)
+
+**Nota:** [tecnología de contenedores](/datosmasivos/assets/contenedores.md)
 
 ## Módulo 3: Mitigación de riesgos en sistemas informáticos 
 Objetivo: Identificar vulnerabilidades en sistemas informáticos y aplicar medidas correctivas para mitigar riesgos. 
