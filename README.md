@@ -16,6 +16,8 @@ Objetivo: Instalar, configurar y asegurar sistemas operativos en entornos físic
 - [Instalación de software de seguridad y controladores (drivers)](assets/software_seguridad_controladores.md) 
 - [Registro y gestión de usuarios en sistemas operativos](assets/registro_gestion_usuarios.md)
 
+Submódulo 1 | Submódulo 2
+
 **Nota:** [tecnología de contenedores](assets/contenedores.md)
 
 ## Módulo 3: Mitigación de riesgos en sistemas informáticos 
