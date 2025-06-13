@@ -10,7 +10,7 @@ Objetivo: Comprender los conceptos básicos de ciberseguridad y aprender a desar
 
 ### Submódulos 
 - [Diseño de algoritmos de problemas de seguridad](assets/m1s1.md) 
-- [Implementación de un scripts en un lenguaje de programación para la solución de problemas de seguridad]()
+- [Implementación de un scripts en un lenguaje de programación para la solución de problemas de seguridad](assets/m1s2.md)
 
 ## Módulo 2: Instalación y configuración de sistemas operativos 
 Objetivo: Instalar, configurar y asegurar sistemas operativos en entornos físicos y en la nube, protegiendo la información. 
