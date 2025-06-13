@@ -8,6 +8,8 @@ Objetivo: Comprender los conceptos básicos de ciberseguridad y aprender a desar
 - [Diseño de algoritmos de seguridad](/assets/algoritmos_seguridad.md) 
 - [Programación de scripts para solución de problemas de seguridad](assets/script_seguridad.md) 
 
+[Submódulo 1]() | [Submódulo 2]()
+
 ## Módulo 2: Instalación y configuración de sistemas operativos 
 Objetivo: Instalar, configurar y asegurar sistemas operativos en entornos físicos y en la nube, protegiendo la información. 
 - [Instalación de sistemas operativos en entornos físicos](assets/instalacion_so.md)
@@ -15,8 +17,6 @@ Objetivo: Instalar, configurar y asegurar sistemas operativos en entornos físic
 - [Configuración de políticas de seguridad](assets/config_politicas_seguridad.md) 
 - [Instalación de software de seguridad y controladores (drivers)](assets/software_seguridad_controladores.md) 
 - [Registro y gestión de usuarios en sistemas operativos](assets/registro_gestion_usuarios.md)
-
-Submódulo 1 | Submódulo 2
 
 **Nota:** [tecnología de contenedores](assets/contenedores.md)
 
