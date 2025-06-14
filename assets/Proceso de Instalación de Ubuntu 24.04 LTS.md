@@ -15,4 +15,4 @@
 | **11. Verificación y Pruebas**        | Verificar que el sistema funcione correctamente y cumpla con los requerimientos. | - Pruebas de hardware y software.<br>- Confirmar aplicaciones y configuraciones.                                      |
 | **12. Documentación y Entrega**       | Documentar la instalación y entregar el sistema al usuario.                    | - Crear informe de instalación con detalles y problemas.<br>- Proporcionar guías o capacitación al usuario si es necesario. |
 
-Este proceso asegura una instalación segura y funcional de Ubuntu 24.04 LTS, alineada con los objetivos de ciberseguridad del diplomado, considerando tanto el trabajo autónomo como la colaboración con el usuario o equipo, y respetando las directrices del fabricante y del jefe inmediato.
+Este proceso es una instalación segura y funcional de Ubuntu 24.04 LTS, alineada con los objetivos de ciberseguridad del diplomado, considerando tanto el trabajo autónomo como la colaboración con el usuario o equipo, y respetando las directrices del fabricante y del jefe inmediato.
