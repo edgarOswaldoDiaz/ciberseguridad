@@ -1,5 +1,4 @@
-# Proceso para Instalar el Sistema Operativo Microsoft Windows Server
-### **Instalación Detallada de Windows Server 2019 en un Servidor Físico**  
+# Proceso para instalar el sistema operativo Microsoft Windows Server
 
 *Requisitos Previos:*  
 1. **Hardware:**  
