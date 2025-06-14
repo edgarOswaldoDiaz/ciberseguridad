@@ -1,4 +1,4 @@
-# Proceso para Instalar el Sistema Operativo Ubuntu 24.04 LTS
+# Proceso para instalar el sistema operativo Ubuntu 24.04 LTS
 
 *Requisitos Previos:*  
 1. **Hardware:**  
