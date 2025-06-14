@@ -29,3 +29,4 @@
 ## Referencias Adicionales
 - [Documentación Oficial de Microsoft para Windows Server](https://docs.microsoft.com/en-us/windows-server/)
 - [Guías de Seguridad para Windows Server](https://docs.microsoft.com/en-us/windows-server/security/security-and-assurance)
+- [Video](https://www.youtube.com/watch?v=0OI8i9K0ZbE)
