@@ -1,30 +1,117 @@
 # Proceso para Instalar el Sistema Operativo Microsoft Windows Server
+### **Instalación Detallada de Windows Server 2019 en un Servidor Físico**  
 
-| **Etapa**                        | **Tarea**                                                                 | **Responsable** | **Tiempo Estimado** | **Consideraciones de Seguridad**                                                                 | **Notas/Recursos**                                                                                     |
-|----------------------------------|---------------------------------------------------------------------------|-----------------|---------------------|----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| **1. Planificación y Preparación** | 1.1 Reunión con el usuario para determinar requerimientos específicos.    | [Nombre]        | 1 hora              | Asegurar que los requerimientos incluyan medidas de seguridad (ej. cifrado, acceso restringido).         | Documentar requerimientos en un informe.                                                               |
-|                                  | 1.2 Investigar requisitos mínimos para la versión de Windows Server.      | [Nombre]        | 30 minutos          | Seleccionar una versión con soporte activo y actualizaciones de seguridad.                               | Consultar [Documentación de Microsoft](https://docs.microsoft.com/en-us/windows-server/get-started-19/system-requirements). |
-|                                  | 1.3 Verificar compatibilidad del hardware con Windows Server.             | [Nombre]        | 1 hora              | Asegurar que todos los componentes tengan controladores compatibles y seguros.                           | Utilizar la lista de compatibilidad de hardware de Microsoft.                                          |
-|                                  | 1.4 Adquirir o crear medios de instalación (DVD/USB).                     | [Nombre]        | 30 minutos          | Descargar la ISO desde una fuente oficial para evitar malware.                                           | Usar la herramienta de creación de medios de Microsoft.                                                |
-|                                  | 1.5 Planificar partición del disco y configuración del sistema de archivos.| [Nombre]        | 1 hora              | Considerar particiones separadas para el sistema y datos; usar NTFS para seguridad.                      | Consultar mejores prácticas de particionamiento.                                                       |
-|                                  | 1.6 Consultar documentación oficial de Microsoft.                         | [Nombre]        | 1 hora              | Revisar guías de seguridad y mejores prácticas de instalación.                                           | [Guía de Instalación de Windows Server](https://docs.microsoft.com/en-us/windows-server/get-started-19/install). |
-| **2. Instalación**                | 2.1 Configurar BIOS/UEFI para arrancar desde el medio de instalación.     | [Nombre]        | 15 minutos          | Habilitar Secure Boot si es compatible para prevenir arranques no autorizados.                           | Verificar configuración de arranque seguro.                                                            |
-|                                  | 2.2 Iniciar el proceso de instalación desde el medio seleccionado.        | [Nombre]        | 5 minutos           | Asegurarse de que el medio de instalación no esté comprometido.                                          | Observar mensajes de error durante el arranque.                                                        |
-|                                  | 2.3 Seleccionar la versión de Windows Server y aceptar términos de licencia.| [Nombre]        | 10 minutos          | Elegir la versión que mejor se alinee con los requerimientos de seguridad.                               | Revisar las diferencias entre ediciones (Standard, Datacenter, etc.).                                  |
-|                                  | 2.4 Configurar particiones del disco según lo planificado.                | [Nombre]        | 15 minutos          | Habilitar BitLocker para cifrado de disco si es necesario.                                               | Asegurar que las particiones sean adecuadas para el uso previsto.                                      |
-|                                  | 2.5 Instalar controladores de hardware si es necesario.                   | [Nombre]        | 30 minutos          | Usar controladores firmados y de fuentes confiables.                                                     | Tener controladores listos en un medio externo.                                                        |
-|                                  | 2.6 Configuración inicial del sistema operativo.                          | [Nombre]        | 30 minutos          | Establecer una contraseña fuerte para la cuenta de administrador.                                        | Configurar nombre del servidor, unir al dominio si aplica.                                             |
-| **3. Configuración y Verificación Posterior** | 3.1 Aplicar actualizaciones y parches de seguridad.                       | [Nombre]        | 1-2 horas           | Instalar todas las actualizaciones críticas y de seguridad disponibles.                                  | Usar Windows Update o WSUS si está disponible.                                                         |
-|                                  | 3.2 Instalar software adicional según requerimientos del usuario.         | [Nombre]        | Variable            | Asegurar que el software sea de fuentes confiables y esté actualizado.                                   | Lista de software a instalar previamente acordada.                                                     |
-|                                  | 3.3 Configurar roles y características del servidor.                      | [Nombre]        | 1-2 horas           | Aplicar el principio de privilegio mínimo; habilitar solo roles necesarios.                              | Consultar [Guía de Roles de Windows Server](https://docs.microsoft.com/en-us/windows-server/administration/server-manager/server-manager). |
-|                                  | 3.4 Configurar políticas de seguridad y firewalls.                        | [Nombre]        | 1 hora              | Habilitar firewall y configurar reglas para permitir solo tráfico necesario.                             | Usar Windows Defender Firewall o software de terceros si es necesario.                                 |
-|                                  | 3.5 Realizar pruebas de funcionalidad.                                    | [Nombre]        | 1-2 horas           | Verificar que todas las funciones cumplan con los requerimientos del usuario y sean seguras.             | Crear un checklist de pruebas basado en los requerimientos.                                            |
-|                                  | 3.6 Documentar el proceso de instalación y configuración.                 | [Nombre]        | 1 hora              | Incluir detalles de configuración de seguridad para auditorías futuras.                                  | Mantener un registro detallado para referencia y mantenimiento.                                        |
+*Requisitos Previos:*  
+1. **Hardware:**  
+   - CPU: Procesador de 64 bits a 1.4 GHz o superior (mínimo 2 núcleos).  
+   - RAM: Mínimo 512 MB (recomendado 2 GB para *Essentials*, 16 GB para *Datacenter*).  
+   - Almacenamiento: 32 GB de espacio libre (SSD recomendado).  
+   - Tarjeta de red: Adaptador Ethernet compatible (1 Gbps o superior).  
 
-## Resumen
-- **Objetivos de la Instalación:** Instalar Microsoft Windows Server de acuerdo con los requerimientos del usuario, asegurando compatibilidad de hardware y software, y siguiendo las recomendaciones del fabricante y las mejores prácticas de seguridad.
-- **Requerimientos del Usuario:** [Detallar aquí los requerimientos específicos obtenidos en la reunión, por ejemplo, servidor de archivos con acceso restringido, etc.]
-- **Criterios de Éxito:** El servidor debe estar operativo, seguro, y cumplir con todas las funcionalidades especificadas por el usuario, verificado mediante pruebas de funcionalidad y seguridad.
+2. **Software:**  
+   - Imagen ISO de Windows Server 2019 ([Descarga desde Microsoft Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019)).  
+   - Herramienta para crear USB booteable: Rufus o Media Creation Tool.  
+   - Clave de producto (si no es evaluación).  
+
+3. **Preparación:**  
+   - Backup de datos existentes en el servidor.  
+   - Verificar compatibilidad de hardware con el fabricante (drivers RAID, NIC, etc.).  
+
+---
+
+### **Proceso Paso a Paso:**  
+#### **1. Preparar Medio de Instalación (USB Booteable)**  
+   a. Descargar la ISO de Windows Server 2019.  
+   b. Insertar USB vacío (≥8 GB).  
+   c. Usar **Rufus** (Configuración recomendada):  
+      - *Esquema de partición:* GPT (para UEFI) o MBR (para BIOS heredado).  
+      - *Sistema de archivos:* NTFS.  
+      - Ejecutar Rufus > Seleccionar ISO > Iniciar.  
+
+#### **2. Configurar BIOS/UEFI del Servidor**  
+   a. Reiniciar servidor y acceder a BIOS/UEFI (tecla: F2, F10, DEL, ESC según fabricante).  
+   b. Verificar ajustes:  
+      - *Boot Order:* Priorizar USB.  
+      - *Modo de arranque:* UEFI o Legacy (coherente con el USB).  
+      - *Virtualization Technology (VT-x):* Habilitado (si se usará Hyper-V).  
+      - *Secure Boot:* Deshabilitado (si instalas en Legacy).  
+   c. Guardar cambios y reiniciar.  
+
+#### **3. Iniciar Instalación**  
+   a. Al arrancar desde USB, aparecerá el logo de Windows.  
+   b. **Configuración inicial:**  
+      - *Idioma, formato de hora y moneda, teclado:* Seleccionar opciones.  
+      - Clic en **Siguiente** > **Instalar ahora**.  
+   c. **Introducir clave de producto:**  
+      - Ingresar clave o seleccionar *"No tengo clave"* (versión de evaluación).  
+   d. **Seleccionar edición:**  
+      - Elegir entre *Standard* o *Datacenter* (ambas en **Experiencia de escritorio** o **Core**).  
+      - *Recomendado:* "Experiencia de escritorio" (interfaz gráfica).  
+
+#### **4. Particionamiento del Disco**  
+   a. **Tipo de instalación:** *"Personalizada: instalar solo Windows"*.  
+   b. **Administración de discos:**  
+      - Si el disco tiene particiones, eliminarlas todas (reserva espacio para sistema).  
+      - Seleccionar *"Unallocated Space"* > **Nuevo**.  
+      - *Tamaño de partición:* Asignar espacio (mínimo 32 GB).  
+      - **Formatear en NTFS** (Windows creará particiones reservadas automáticamente).  
+   c. Seleccionar la partición principal > **Siguiente**.  
+
+#### **5. Instalación y Primer Reinicio**  
+   a. El sistema copiará archivos, instalará características y actualizará.  
+   b. **Reinicio automático:** Extraer USB tras el primer reinicio (evitar ciclo de arranque).  
+
+#### **6. Configuración Inicial Post-Instalación**  
+   a. **Establecer contraseña de Administrador:**  
+      - Crear una contraseña compleja (mínimo 8 caracteres, mayúsculas, números).  
+   b. **Acceder al Escritorio:** Iniciar sesión con *Administrador*.  
+
+---
+
+### **Configuración Básica Post-Instalación**  
+#### **1. Configurar Red**  
+   a. Ir a **Administrador del Servidor > Servidor Local**.  
+   b. Hacer clic en *"Ethernet"* (nombre de interfaz) > Propiedades > Configurar dirección IP:  
+      - Asignar IP estática, máscara, gateway y DNS.  
+
+#### **2. Unir Dominio o Grupo de Trabajo**  
+   a. **Administrador del Servidor > Servidor Local > Grupo de trabajo:**  
+      - Clic en *"Cambiar"* > Unir a dominio (ej: `miempresa.local`) o dejar grupo de trabajo.  
+   b. Ingresar credenciales de dominio si es necesario.  
+
+#### **3. Actualizaciones de Seguridad**  
+   a. Abrir **Windows Update** (en Herramientas Administrativas).  
+   b. Buscar actualizaciones > Instalar todas las críticas.  
+
+#### **4. Instalar Drivers Faltantes**  
+   a. Verificar **Administrador de dispositivos** (controladores con alerta amarilla).  
+   b. Usar drivers del fabricante del servidor (HP, Dell, Lenovo) desde USB/CD.  
+
+#### **5. Activar Windows**  
+   a. **Servidor Local > Propiedades del sistema:**  
+      - Clic en *"Activar Windows"* e ingresar clave.  
+
+---
+
+### **Configuración Opcional Avanzada**  
+- **Agregar Roles:** DNS, AD Domain Services, DHCP (vía *Administrador del Servidor > Administrar > Agregar roles*).  
+- **Habilitar Escritorio Remoto:**  
+  - *Servidor Local > Configuración de acceso remoto:* Permitir conexiones remotas.  
+- **Firewall de Windows:** Configurar reglas de entrada/salida según necesidades.  
+
+---
+
+### **Solución de Problemas Comunes**  
+- **Error "No se encontraron unidades":**  
+  - Requiere drivers de almacenamiento (RAID/SATA). Descargar del fabricante, copiar a USB e instalar durante particionamiento (botón **"Cargar controlador"**).  
+- **Arranque en bucle:**  
+  - Verificar modo UEFI/Legacy en BIOS y coherencia con USB.  
+- **Problemas de red:**  
+  - Instalar drivers de NIC manualmente.  
+
+### **Notas Finales**  
+- **Licenciamiento:** La versión de evaluación dura 180 días (convertible a licencia completa con clave).  
+- **Recomendación:** Usar modo **Core** para servidores de producción (menor superficie de ataque).  
 
 ## Referencias Adicionales
 - [Documentación Oficial de Microsoft para Windows Server](https://docs.microsoft.com/en-us/windows-server/)
