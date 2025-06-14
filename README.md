@@ -25,7 +25,7 @@ Objetivo: Instalar, configurar y asegurar sistemas operativos en entornos físic
 ### Submódulos
 
 - [Configura sistemas operativos en ambiente físico](assets/m2s1.md)
-
+- [Configura sistemas operativos en la nube]()
 
 ## Módulo 3: Mitigación de riesgos en sistemas informáticos 
 Objetivo: Identificar vulnerabilidades en sistemas informáticos y aplicar medidas correctivas para mitigar riesgos. 
