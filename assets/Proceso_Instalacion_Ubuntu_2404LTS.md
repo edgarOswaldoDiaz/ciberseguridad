@@ -16,3 +16,5 @@
 | **12. Documentación y Entrega**       | Documentar la instalación y entregar el sistema al usuario.                    | - Crear informe de instalación con detalles y problemas.<br>- Proporcionar guías o capacitación al usuario si es necesario. |
 
 Este proceso asegura una instalación segura y funcional de Ubuntu 24.04 LTS, alineada con los objetivos de ciberseguridad del diplomado, considerando tanto el trabajo autónomo como la colaboración con el usuario o equipo, y respetando las directrices del fabricante y del jefe inmediato.
+
+Referencia video explica la instalación https://www.youtube.com/watch?v=D1cWCqKsN00 
