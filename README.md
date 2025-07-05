@@ -29,7 +29,7 @@ Objetivo: Instalar, configurar y asegurar sistemas operativos en entornos físic
 
 ## Módulo 3: Mitigación de riesgos en sistemas informáticos 
 Objetivo: Identificar vulnerabilidades en sistemas informáticos y aplicar medidas correctivas para mitigar riesgos. 
-- Evaluación de vulnerabilidades en sistemas. 
+- [Evaluación de vulnerabilidades en sistemas.](assets/evaluacion_vulnerabilidades.md) 
 - Técnicas de mitigación de riesgos de seguridad. 
 - Gestión de parches y actualizaciones de seguridad. 
 - Uso de herramientas de análisis de vulnerabilidades. 
