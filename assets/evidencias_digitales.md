@@ -54,6 +54,32 @@
 *   **Cifrado:** Datos o dispositivos cifrados dificultan el acceso y análisis.
 *   **Tecnologías Emergentes:** IoT, dispositivos móviles, cloud computing presentan nuevos retos para la recolección forense.
 *   **Plazos Legales:** Investigaciones pueden tener límites de tiempo estrictos.
+
+---
+## Decálogo para la Preservación de Evidencias Digitales (INCIBE)
+
+Para asegurar la validez y utilidad de las **evidencias digitales** en cualquier proceso legal o investigación, es crucial seguir un protocolo riguroso. Este decálogo, basado en la guía del Instituto Nacional de Ciberseguridad (INCIBE), te ayudará a preservar adecuadamente la información digital:
+
+1.  **Actúa con prontitud:** El tiempo es oro en la **evidencia digital**. Cuanto antes inicies el proceso de preservación, menor será el riesgo de alteración o pérdida de datos. La volatilidad de la información digital exige una respuesta rápida.
+
+2.  **Asegura la integridad:** La **integridad de la evidencia** es fundamental. Esto significa garantizar que la información no ha sido modificada, alterada o corrompida desde el momento de su recolección. Utiliza herramientas de *hashing* (como MD5 o SHA256) para crear una huella digital que demuestre su inalterabilidad.
+
+3.  **Documenta cada paso:** Lleva un registro exhaustivo de todo el proceso de preservación. Anota la fecha, hora, personas involucradas, herramientas utilizadas, y cualquier observación relevante. Esta **cadena de custodia** es vital para la credibilidad de la evidencia.
+
+4.  **Minimiza la manipulación:** Evita interactuar directamente con el dispositivo o sistema que contiene la **evidencia original**. Siempre que sea posible, trabaja sobre copias forenses (imágenes bit a bit) para no alterar el estado original de la información.
+
+5.  **Utiliza herramientas forenses:** Emplea *software* y *hardware* especializados en **informática forense**. Estas herramientas están diseñadas para recolectar y preservar evidencia de manera segura y reproducible, garantizando la fiabilidad del proceso.
+
+6.  **Protege la escena digital:** Considera el entorno digital como una escena del crimen. Aísla el sistema o la red para evitar que se sigan produciendo cambios o que se comprometa más información. Desconecta de la red si es necesario, pero con precaución para no perder datos volátiles.
+
+7.  **Preserva la volatilidad:** Prioriza la recolección de **información volátil** antes que la persistente. Datos como la memoria RAM, conexiones de red activas o procesos en ejecución pueden desaparecer al apagar el sistema.
+
+8.  **Copia forense antes que nada:** Siempre realiza una **copia forense exacta** del soporte original. Esta copia debe ser idéntica bit a bit al original y verificable mediante *hashing*. Nunca trabajes directamente sobre el original a menos que sea estrictamente necesario y no haya otra opción.
+
+9.  **Almacena de forma segura:** Una vez recolectada y copiada, la **evidencia digital** debe almacenarse en un lugar seguro y controlado. Protege los soportes de almacenamiento de posibles daños físicos, accesos no autorizados o condiciones ambientales adversas.
+
+10. **Prepara para el análisis:** Aunque el decálogo se centra en la preservación, ten en cuenta que la **evidencia** deberá ser analizada posteriormente. Asegúrate de que los formatos y métodos de preservación permitan un análisis forense eficaz y que la evidencia sea comprensible para los expertos.
+
 _______________
 Referencias Bibliográficas
 
