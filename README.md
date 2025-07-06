@@ -43,7 +43,7 @@ Objetivo: Identificar vulnerabilidades en sistemas informáticos y aplicar medid
   
 ## Módulo 4: Monitoreo de redes y detección de vulnerabilidades 
 Objetivo: Monitorear el tráfico de red para identificar y solucionar vulnerabilidades, garantizando la seguridad de la red. 
-- Introducción al monitoreo de redes. 
+- [Introducción al monitoreo de redes.](assets/monitoreo_redes.md) 
 - Herramientas para el análisis de tráfico de red (Wireshark, Snort, entre otras). 
 - Detección de intrusiones y vulnerabilidades en redes. 
 - Configuración de firewalls y sistemas de detección de intrusos (IDS). 
