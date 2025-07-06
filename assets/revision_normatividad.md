@@ -34,21 +34,12 @@ Revisión de normativas de seguridad informática y mejores prácticas
 | **PCI DSS**                  | Establecer estándares de seguridad para proteger la información de las tarjetas de pago. | Organizaciones que procesan, almacenan o transmiten información de tarjetas de pago. | Medidas de seguridad como la protección de datos de tarjetas, control de acceso, monitorización de redes y gestión de vulnerabilidades. | Protege la información de las tarjetas de pago, reduce el riesgo de fraudes y mejora la confianza de los clientes. | Cualquier organización que maneje información de tarjetas de pago (comercios, procesadores de pagos, bancos, etc.). |
 
 
-#### Normativas nacionales (ejemplos según país):
-- Leyes de protección de datos personales.
-- Mandatos gubernamentales sobre seguridad digital.
-- Lineamientos sectoriales (banca, salud, telecomunicaciones).
-
 #### Mejores prácticas en ciberseguridad:
 - **CIS Controls**: Lista prioritaria de controles de seguridad.
 - **MITRE ATT&CK**: Marco de tácticas y técnicas de atacantes reales.
 - **Zero Trust Architecture (ZTA)**: Modelo de seguridad sin confianza implícita.
 - **Principios de defensa en profundidad** y análisis de superficie de ataque.
 
-#### Integración de normativas y mejores prácticas en planes de mitigación de riesgos:
-- Evaluación de brechas de cumplimiento.
-- Mapeo de controles a requisitos normativos.
-- Diseño de planes de acción basados en estándares reconocidos.
 
 #### Casos prácticos y estudios de aplicación:
 - Análisis de incidentes y cómo el cumplimiento normativo pudo prevenir o mitigar daños.
