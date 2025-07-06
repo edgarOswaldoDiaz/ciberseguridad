@@ -100,4 +100,3 @@ Referencias Bibliográficas
 
 > **Perlman, R. (2009).** *Interconnections: Bridges, Routers, Switches, and Internetworking Protocols* (2nd ed.). Addison-Wesley Professional. (Aunque es más un libro de redes fundamentales, entender cómo funcionan los protocolos y el interfuncionamiento de la red es crucial para interpretar el tráfico. Muchas herramientas de análisis de tráfico se basan en este conocimiento fundamental).
 
-Espero que esta descripción detallada y las referencias sean de gran ayuda para el diplomado.
