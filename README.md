@@ -71,7 +71,7 @@ Objetivo: Crear escenarios de ciberataques y aplicar procedimientos de preservac
 
 __________________
 
-## [Ética en ciberseguridad](assets/etica_ciberseguridad.md) | [Labotatorio de ciberseguridad para incubación de proyectos](assets/laboratorio_ciberseguridad.md)
+#### [Ética en ciberseguridad](assets/etica_ciberseguridad.md) | [Labotatorio de ciberseguridad para incubación de proyectos](assets/laboratorio_ciberseguridad.md)
 
 ________________________
 > By CISO Oswaldo.Díaz
