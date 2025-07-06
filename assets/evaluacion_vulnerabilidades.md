@@ -79,3 +79,15 @@
   3. Analizar resultados, redactar un informe y proponer remediaciones.
   4. Aplicar parches/configuraciones y validar la mitigación.
 
+_______________________
+Referencias bibliográficas
+
+> Scarfone, K., & Mell, P. (2008). Guide to Security Assessment and Testing (NIST Special Publication 800‑115). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.SP.800-115
+
+> OWASP Foundation. (2021). OWASP Testing Guide Version 4. The Open Web Application Security Project. Recuperado de https://owasp.org/www-project-web-security-testing-guide/
+
+> International Organization for Standardization. (2013). ISO/IEC 27001:2013 – Information technology — Security techniques — Information security management systems — Requirements. ISO.
+
+> McGraw, G. (2006). Software Security: Building Security In. Addison‑Wesley Professional.
+
+> Northcutt, S., Shenk, J., Winters, J., & London, P. (2000). Network Security Assessment: Know Your Network. O’Reilly Media.
