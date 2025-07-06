@@ -48,14 +48,6 @@ Revisión de normativas de seguridad informática y mejores prácticas
 | **Defensa en Profundidad** | Estrategia de múltiples capas de seguridad (tecnológicas, físicas y administrativas) para proteger sistemas y datos. | - Capas: Red (firewalls, IDS/IPS), endpoint (antivirus, EDR), aplicación (WAF), datos (cifrado) y procesos (políticas, capacitación).<br>- Incluye redundancia para mitigar fallos individuales.<br>- Complementado con **análisis de superficie de ataque**. | 1. Diseñar arquitectura con capas redundantes.<br>2. Implementar herramientas de detección y prevención en cada capa.<br>3. Realizar auditorías de superficie de ataque (ej.: escaneo de puertos, APIs expuestas).<br>4. Capacitar a usuarios en seguridad básica.<br>5. Mantener actualizaciones y parches. | - Resiliencia ante ataques de múltiples vectores.<br>- Reducción de puntos únicos de fallo.<br>- Detección temprana de amenazas.<br>- Mayor tiempo para responder a incidentes. |
 | **Análisis de Superficie de Ataque** | Técnica para identificar y minimizar los puntos de entrada potenciales que un atacante podría explotar. | - Incluye activos expuestos (servidores, APIs, dispositivos IoT).<br>- Herramientas: escaneo de red, análisis de código, gestión de activos.<br>- Enfoque en "minimización" (ej.: desactivar servicios no esenciales). | 1. Mapear todos los activos digitales (internos y externos).<br>2. Identificar vulnerabilidades en interfaces públicas.<br>3. Eliminar o proteger componentes innecesarios.<br>4. Monitorear cambios en la superficie (ej.: nuevos dispositivos IoT).<br>5. Integrar con DevSecOps para pruebas tempranas. | - Reducción de riesgos por exposición no controlada.<br>- Mejora en la gestión de activos y vulnerabilidades.<br>- Prevención de ataques en puntos ciegos.<br>- Optimización de recursos de seguridad. |
 
-### Notas Adicionales:
-- **Integración**: Estas prácticas son complementarias. Ejemplo: MITRE ATT&CK puede guiar la implementación de CIS Controls, mientras que ZTA y Defensa en Profundidad refuerzan la arquitectura.
-- **Herramientas Comunes**: 
-  - **CIS Controls**: CIS-CAT Pro, OpenVAS.
-  - **MITRE ATT&CK**: ATT&CK Navigator, Caldera.
-  - **ZTA**: Microsoft Azure AD, Palo Alto Prisma Access.
-  - **Defensa en Profundidad**: Firewalls Next-Gen, EDR (CrowdStrike, SentinelOne).
-
 
 #### Casos prácticos y estudios de aplicación:
 - Análisis de incidentes y cómo el cumplimiento normativo pudo prevenir o mitigar daños.
