@@ -58,7 +58,7 @@ Objetivo: Monitorear el tráfico de red para identificar y solucionar vulnerabil
 ## Módulo 5: Preservación de evidencias y simulación de ciberataques
 Objetivo: Crear escenarios de ciberataques y aplicar procedimientos de preservación de evidencias según normativas vigentes.
 
-- Simulación y análisis de ciberataques.
+- [Simulación y análisis de ciberataques.](assets/simulacion_analisis.md)
 - Generación escenarios de ataques y defensa.
 - Preservación y manejo de evidencias digitales.
 - Cadena de custodia en incidentes de ciberseguridad.
