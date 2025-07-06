@@ -31,7 +31,7 @@ Objetivo: Instalar, configurar y asegurar sistemas operativos en entornos físic
 Objetivo: Identificar vulnerabilidades en sistemas informáticos y aplicar medidas correctivas para mitigar riesgos. 
 - [Evaluación de vulnerabilidades en sistemas.](assets/evaluacion_vulnerabilidades.md) 
 - [Técnicas de mitigación de riesgos de seguridad.](assets/tecnicas_mitigacion.md) 
-- Gestión de parches y actualizaciones de seguridad. 
+- [Gestión de parches y actualizaciones de seguridad.]() 
 - Uso de herramientas de análisis de vulnerabilidades. 
 - Revisión de normativas de seguridad informática y mejores prácticas.
 
