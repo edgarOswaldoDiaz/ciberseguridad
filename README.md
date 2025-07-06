@@ -32,7 +32,7 @@ Objetivo: Identificar vulnerabilidades en sistemas informáticos y aplicar medid
 - [Evaluación de vulnerabilidades en sistemas.](assets/evaluacion_vulnerabilidades.md) 
 - [Técnicas de mitigación de riesgos de seguridad.](assets/tecnicas_mitigacion.md) 
 - [Gestión de parches y actualizaciones de seguridad.](assets/gestion_parches.md) 
-- Uso de herramientas de análisis de vulnerabilidades. 
+- [Uso de herramientas de análisis de vulnerabilidades.](assets/herramientas_vulnerabilidades.md) 
 - Revisión de normativas de seguridad informática y mejores prácticas.
 
 ### Submódulos
