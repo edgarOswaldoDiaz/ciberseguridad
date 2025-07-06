@@ -1,0 +1,19 @@
+# OWASP Juice-Shop 
+version: '3.8'
+
+services:
+  juice-shop:
+    image: bkimminich/juice-shop:latest
+    container_name: juice-shop
+    ports:
+      - "3000:3000"
+    environment:
+      # Establece el entorno en producción
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - juice-net
+
+networks:
+  juice-net:
+    driver: bridge
