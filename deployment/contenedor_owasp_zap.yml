@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  zap:
+    image: owasp/zap2docker-stable:latest
+    container_name: owasp-zap
+    restart: unless-stopped
+    ports:
+      - "8080:8080"    # ZAP proxy and API port
+    volumes:
+      - ./zap_data:/zap/wrk    # Persist scan data, reports, and session files
+    command: >
+      zap.sh -daemon \
+        -host 0.0.0.0 \
+        -port 8080 \
+        -config api.disablekey=true
+    networks:
+      - zap-net
+
+networks:
+  zap-net:
+    driver: bridge
