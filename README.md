@@ -46,7 +46,7 @@ Objetivo: Monitorear el tráfico de red para identificar y solucionar vulnerabil
 - [Introducción al monitoreo de redes.](assets/monitoreo_redes.md) 
 - [Herramientas para el análisis de tráfico de red (Wireshark, Snort, entre otras).](assets/herramientas_monitoreo_red.md) 
 - [Detección de intrusiones y vulnerabilidades en redes.](assets/intrusiones_redes.md) 
-- Configuración de firewalls y sistemas de detección de intrusos (IDS). 
+- [Configuración de firewalls y sistemas de detección de intrusos (IDS).](assets/firewall_IDS.md) 
 - Análisis de logs y reportes de seguridad.
 
 ### Submódulos
