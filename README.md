@@ -69,8 +69,9 @@ Objetivo: Crear escenarios de ciberataques y aplicar procedimientos de preservac
 - [Generación de escenarios de ataque en sistemas informáticos.](assets/m5s1.md)
 - [Aplicación de la cadena de custodia para preservar la ciberseguridad.](assets/m5s2.md)
 
+__________________
 
-## [Ética en ciberseguridad]() | [Labotatorio de ciberseguridad para incubación de proyectos](assets/laboratorio_ciberseguridad.md)
+## [Ética en ciberseguridad](assets/etica_ciberseguridad.md) | [Labotatorio de ciberseguridad para incubación de proyectos](assets/laboratorio_ciberseguridad.md)
 
 ________________________
 > By CISO Oswaldo.Díaz
