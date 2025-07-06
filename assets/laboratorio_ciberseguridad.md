@@ -1,6 +1,6 @@
 # Laboratorio de ciberseguridad
 
-## 1. Arquitectura general del laboratorio
+## Arquitectura general del laboratorio
 
 1. **Host principal**
 
@@ -27,7 +27,7 @@
 
 ---
 
-## 2. Preparación del host Ubuntu 24.04
+## Preparación del host Ubuntu 24.04
 
 1. **Actualización y paquetes base**
 
@@ -71,7 +71,7 @@
 
 ---
 
-## 3. Orquestación del laboratorio
+## Orquestación del laboratorio
 
 ### 3.1. Docker Compose
 
@@ -118,7 +118,7 @@ networks:
 
 > **Tip:** usa **volúmenes nombrados** para persistir datos (DB de Metasploit, índices de Elasticsearch, reportes de ZAP…).
 
-### 3.2. Kubernetes ligero (k3s)
+### Kubernetes ligero (k3s)
 
 Si optas por un cluster más “real”:
 
@@ -132,7 +132,7 @@ Si optas por un cluster más “real”:
 
 ---
 
-## 4. Herramientas open‑source recomendadas
+## Herramientas open‑source recomendadas
 
 | Categoría                   | Herramienta                           | Contenedor / Repo                                |
 | --------------------------- | ------------------------------------- | ------------------------------------------------ |
@@ -146,7 +146,7 @@ Si optas por un cluster más “real”:
 
 ---
 
-## 5. Flujo de trabajo típico
+## Flujo de trabajo 
 
 1. **Desarrollo web**
 
@@ -175,7 +175,7 @@ Si optas por un cluster más “real”:
 
 ---
 
-## 6. Buenas prácticas y seguridad del lab
+## Buenas prácticas y seguridad del lab
 
 * **Aislamiento fuerte:** mantén el host separado de tu LAN de producción (usa VLAN o una VM-hypervisor).
 * **Snapshots:** haz imágenes base de tu VM antes de cada gran cambio.
@@ -183,15 +183,6 @@ Si optas por un cluster más “real”:
 * **Control de acceso:** usuarios de Docker/GitLab distintos de root; autenticación fuerte (LLaves SSH, 2FA).
 * **Backups:** exporta volúmenes (`docker volume export`) y snapshots de bases de datos semanalmente.
 * **Documentación:** versiona tu `docker-compose.yml`, manifests de k3s, pipelines CI/CD y playbooks Ansible en un repo dedicado.
-
----
-
-## 7. Expansiones futuras
-
-* Integrar **CTF challenges** en el mismo entorno para formación.
-* Añadir **honeypots** como **Cowrie** dentro de contenedores.
-* Orquestar despliegues con **Terraform** + **Ansible** en un proveedor cloud para entornos efímeros.
-* Experimentar con **sandboxing** avanzado (gVisor, Kata Containers).
 
 __________________
 > By CISO Oswaldo.Diaz
