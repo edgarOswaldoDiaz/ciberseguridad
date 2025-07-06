@@ -55,9 +55,9 @@ Implementar sistemas de detección enfrenta retos como:
 
 En resumen, la **detección de vulnerabilidades** se enfoca en encontrar las "grietas" en tu armadura antes de la batalla, mientras que la **detección de intrusiones** se encarga de alertarte (o defenderte activamente) cuando alguien intenta explotar esas grietas o ya ha logrado entrar. Ambas son esenciales para una postura de ciberseguridad robusta.
 
-_______________________
+______
 
-Referencias bibliográficas en formato APA
+Referencias bibliográficas
 
 > Guías BibUpo. (2024). *Seguridad informática*. Universidad Pablo de Olavide. https://guiasbib.upo.es/seguridad_informatica  
    (Ofrece una visión general de conceptos de ciberseguridad aplicables al monitoreo de redes).
