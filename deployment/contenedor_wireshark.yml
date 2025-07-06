@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  wireshark:
+    image: lscr.io/linuxserver/wireshark:latest
+    container_name: wireshark
+    environment:
+      - PUID=1000            # Your user ID
+      - PGID=1000            # Your group ID
+      - TZ=America/Mexico_City  # Adjust to your timezone
+      - XPRA_PASSWORD=wireshark  # Password for web access (change as needed)
+    volumes:
+      - ./config:/config    # Persist Wireshark configuration
+    network_mode: "host"  # Allows capturing on host interfaces
+    cap_add:
+      - NET_ADMIN          # Required to capture packets
+      - NET_RAW            # Required to capture raw sockets
+    ports:
+      - "14500:14500"     # XPRA web UI port
+    restart: unless-stopped  # Auto-restart policy
