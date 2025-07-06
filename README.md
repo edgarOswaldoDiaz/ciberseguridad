@@ -52,7 +52,7 @@ Objetivo: Monitorear el tráfico de red para identificar y solucionar vulnerabil
 ### Submódulos
 
 - [Detección de vulnerabilidades en redes de datos.](assets/m4s1.md)
-- Configuración de sistemas de seguridd en redes de datos.
+- Configuración de sistemas de seguridad en redes de datos.
 
 
 ## Módulo 5: Preservación de evidencias y simulación de ciberataques
