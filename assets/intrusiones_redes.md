@@ -37,6 +37,24 @@ Implementar sistemas de detección enfrenta retos como:
 - **Mantenimiento**: Las herramientas requieren actualizaciones frecuentes de firmas y definiciones de vulnerabilidades para mantenerse efectivas.
 - **Capacitación**: Configurar y gestionar estas soluciones demanda conocimientos técnicos avanzados, un aspecto clave a desarrollar en el diplomado.
 
+## Detección de Intrusiones vs. Detección de Vulnerabilidades en Redes
+
+| Característica         | Detección de Intrusiones (IDS/IPS)                                 | Detección de Vulnerabilidades (Escaneo de Vulnerabilidades/Pentesting) |
+| :--------------------- | :----------------------------------------------------------------- | :--------------------------------------------------------------------- |
+| **Objetivo Principal** | Identificar y/o prevenir actividades maliciosas en tiempo real o casi real una vez que ocurren. | Identificar debilidades y fallos de seguridad en sistemas y aplicaciones antes de que sean explotados. |
+| **Naturaleza** | **Reactiva y/o proactiva (IPS):** Monitorea el tráfico y el comportamiento para detectar anomalías o firmas de ataques. | **Proactiva:** Busca debilidades conocidas y potenciales puntos de entrada para ataques. |
+| **Enfoque** | Se centra en el **comportamiento** y los **patrones de ataque** (firmas) para detectar actividades no autorizadas. | Se centra en las **configuraciones incorrectas, software obsoleto, fallos de diseño o implementación** que pueden ser explotados. |
+| **Momento de Acción** | **Durante o después** de un intento de ataque/intrusión (IDS). **Antes y durante** para prevenir (IPS). | **Antes** de que ocurra un ataque, para identificar y corregir las debilidades. |
+| **Métodos/Técnicas** | **Basado en firmas:** Compara el tráfico con una base de datos de patrones de ataque conocidos.\<br\>**Basado en anomalías:** Detecta desviaciones del comportamiento normal de la red.\<br\>**Basado en políticas/protocolos:** Monitorea el cumplimiento de políticas de seguridad predefinidas. | **Escaneo de vulnerabilidades:** Utiliza herramientas automatizadas para identificar vulnerabilidades conocidas en sistemas y aplicaciones.\<br\>**Pruebas de penetración (Pentesting):** Simula ataques reales para explotar vulnerabilidades y evaluar la efectividad de los controles de seguridad. |
+| **Herramientas Comunes** | Snort, Suricata, Zeek (Bro), PRTG, Cisco Firepower, IBM QRadar (SIEM con capacidades IDS/IPS). | Nessus, OpenVAS, Qualys, Acunetix, Burp Suite (para aplicaciones web), Metasploit (para pentesting). |
+| **Tipo de Detección** | Tráfico de red malicioso, escaneos de puertos, intentos de explotación, actividad de malware, violaciones de políticas, movimiento lateral dentro de la red. | Puertos abiertos, servicios no seguros, software desactualizado con vulnerabilidades conocidas, configuraciones predeterminadas débiles, contraseñas predecibles, errores de programación, inyecciones SQL. |
+| **Salida/Resultado** | Alertas, registros de eventos, bloqueo de tráfico (IPS), terminación de sesiones. | Informes detallados de vulnerabilidades encontradas, su severidad, posibles impactos y recomendaciones para remediarlas. |
+| **Rol en la Seguridad** | **Defensa en profundidad:** Actúa como una capa de monitoreo y respuesta para detectar y mitigar ataques en curso. | **Análisis proactivo de riesgos:** Ayuda a entender la postura de seguridad de una organización y priorizar la remediación de debilidades. |
+| **Complementariedad** | Ambos son cruciales y complementarios. Un sistema de detección de intrusiones puede alertar sobre intentos de explotación de vulnerabilidades que no fueron corregidas. La detección de vulnerabilidades reduce la superficie de ataque que los IDS/IPS necesitan monitorear. | Son dos pilares fundamentales de una estrategia de ciberseguridad integral. Las vulnerabilidades identificadas pueden ser objetivos para intrusiones. |
+| **Ejemplo** | Un IDS detecta un alto volumen de conexiones a un puerto específico y genera una alerta porque coincide con la firma de un escaneo de puertos conocido. | Un escáner de vulnerabilidades identifica que un servidor web está ejecutando una versión antigua de Apache con una vulnerabilidad conocida de desbordamiento de búfer. |
+
+En resumen, la **detección de vulnerabilidades** se enfoca en encontrar las "grietas" en tu armadura antes de la batalla, mientras que la **detección de intrusiones** se encarga de alertarte (o defenderte activamente) cuando alguien intenta explotar esas grietas o ya ha logrado entrar. Ambas son esenciales para una postura de ciberseguridad robusta.
+
 _______________________
 
 Referencias bibliográficas en formato APA
