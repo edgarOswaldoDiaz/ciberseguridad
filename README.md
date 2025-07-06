@@ -59,7 +59,7 @@ Objetivo: Monitorear el tráfico de red para identificar y solucionar vulnerabil
 Objetivo: Crear escenarios de ciberataques y aplicar procedimientos de preservación de evidencias según normativas vigentes.
 
 - [Simulación y análisis de ciberataques.](assets/simulacion_analisis.md)
-- Generación escenarios de ataques y defensa.
+- [Generación escenarios de ataques y defensa.](assets/ataques_defensa.md)
 - Preservación y manejo de evidencias digitales.
 - Cadena de custodia en incidentes de ciberseguridad.
 - Legislación y normativas aplicables en la preservación de evidencias .
