@@ -61,7 +61,7 @@ Objetivo: Crear escenarios de ciberataques y aplicar procedimientos de preservac
 - [Simulación y análisis de ciberataques.](assets/simulacion_analisis.md)
 - [Generación escenarios de ataques y defensa.](assets/ataques_defensa.md)
 - [Preservación y manejo de evidencias digitales.](assets/evidencias_digitales.md)
-- Cadena de custodia en incidentes de ciberseguridad.
+- [Cadena de custodia en incidentes de ciberseguridad.](assets/cadena_custodia.md)
 - Legislación y normativas aplicables en la preservación de evidencias .
 
 ### Submódulos
