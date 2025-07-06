@@ -37,7 +37,7 @@ Objetivo: Identificar vulnerabilidades en sistemas informáticos y aplicar medid
 
 ### Submódulos
 
-- Detección de vulnerabilidades en sistemas informáticos.
+- [Detección de vulnerabilidades en sistemas informáticos.](assets/m3s1.md)
 - Corrección de vulnerabilidades en sistemas informáticos.
 
   
