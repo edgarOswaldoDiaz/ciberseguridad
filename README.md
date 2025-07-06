@@ -66,8 +66,8 @@ Objetivo: Crear escenarios de ciberataques y aplicar procedimientos de preservac
 
 ### Submódulos
 
-- Generación de escenarios de ataque en sistemas informáticos.
-- Aplicación de la cadena de custodia para preservar la ciberseguridad
+- [Generación de escenarios de ataque en sistemas informáticos.](assets/m5s1.md)
+- [Aplicación de la cadena de custodia para preservar la ciberseguridad.](assets/m5s2.md)
 
 ________________________
 > By CISO Oswaldo.Díaz
