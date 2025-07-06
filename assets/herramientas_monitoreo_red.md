@@ -85,6 +85,47 @@ NetFlow (y su estándar más reciente, IPFIX) es un protocolo desarrollado por C
 * **Integración:** La capacidad de la herramienta para integrarse con otras soluciones de seguridad existentes (SIEM, SOAR, etc.).
 * **Escalabilidad:** Que la herramienta pueda crecer junto con las necesidades de la red.
 
+### Top 10 Herramientas Open Source para el Análisis de Tráfico de Red
+
+**Wireshark:**
+    * **Descripción:** Es, sin duda, el estándar de oro en el análisis de protocolos de red. Wireshark permite la captura interactiva y el análisis profundo de paquetes en tiempo real o desde archivos de captura (.pcap). Ofrece una interfaz gráfica intuitiva, potentes filtros de captura y visualización, y soporta cientos de protocolos. Es indispensable para la resolución de problemas de red, análisis forense, ingeniería inversa de protocolos y detección de intrusiones.
+    * **Por qué es top:** Su profundidad de análisis, su facilidad de uso (una vez que se domina), la gran comunidad de usuarios y desarrolladores, y su constante actualización lo hacen insustituible.
+
+**tcpdump:**
+    * **Descripción:** La contraparte de línea de comandos de Wireshark. `tcpdump` es una herramienta extremadamente potente y ligera para la captura y el análisis de paquetes. Es ideal para su uso en servidores remotos, entornos donde no hay interfaz gráfica, o para automatizar la captura de tráfico a través de scripts. Permite filtrar el tráfico de manera muy precisa.
+    * **Por qué es top:** Su versatilidad en entornos de línea de comandos, su eficiencia y su capacidad para capturar tráfico de red sin una sobrecarga significativa lo hacen fundamental para administradores de sistemas y analistas de seguridad.
+
+**Snort:**
+    * **Descripción:** Es un IDS (Sistema de Detección de Intrusiones) de código abierto que realiza análisis de tráfico en tiempo real y registro de paquetes. Utiliza un motor de reglas flexible para detectar una amplia variedad de ataques, incluyendo desbordamientos de búfer, escaneos de puertos, ataques CGI, sondeos de SMB y mucho más. Puede configurarse como un sniffer, un registrador de paquetes o un sistema de detección de intrusiones de red.
+    * **Por qué es top:** Su capacidad para detectar intrusiones en tiempo real mediante un robusto sistema de reglas lo convierte en una herramienta vital para la seguridad perimetral y la monitorización de amenazas.
+
+**Suricata:**
+    * **Descripción:** Otro potente IDS/IPS (Sistema de Detección/Prevención de Intrusiones) de código abierto y motor de seguridad de red. Suricata es conocido por su rendimiento, capacidad de usar múltiples núcleos de CPU (multi-threading) y su compatibilidad con las reglas de Snort, además de ofrecer sus propias capacidades de análisis y firmas de protocolos. También puede funcionar como un motor NSM (Network Security Monitoring).
+    * **Por qué es top:** Su alta eficiencia y rendimiento, especialmente en redes de alto tráfico, lo hacen una opción superior para la detección y prevención de intrusiones en entornos empresariales.
+
+**ntopng:**
+    * **Descripción:** Una sonda de tráfico de red de "próxima generación" que monitorea el uso de la red de manera interactiva. `ntopng` proporciona una visión detallada del tráfico en tiempo real, incluyendo protocolos, hosts, aplicaciones y flujos de tráfico. Es excelente para identificar quién está usando la red, qué aplicaciones están generando más tráfico y detectar anomalías.
+    * **Por qué es top:** Su interfaz web amigable y sus capacidades de visualización en tiempo real lo hacen muy útil para obtener una visión general rápida y detallada del comportamiento de la red.
+
+**Zabbix:**
+    * **Descripción:** Aunque es principalmente una herramienta de monitoreo de infraestructura completa (servidores, bases de datos, aplicaciones), Zabbix tiene robustas capacidades para el monitoreo de tráfico de red. Puede recolectar métricas de routers, switches y firewalls usando SNMP, JMX, y otros protocolos, lo que permite visualizar el uso del ancho de banda, la latencia y la disponibilidad de la red.
+    * **Por qué es top:** Su flexibilidad y capacidad de monitorear un espectro tan amplio de métricas de red, junto con su potente sistema de alertas y dashboards personalizables, lo hacen ideal para el monitoreo integral de la salud y el rendimiento de la red.
+
+**Nagios Core:**
+    * **Descripción:** Un sistema de monitoreo de código abierto muy popular que permite a las organizaciones identificar y resolver problemas de infraestructura de TI antes de que afecten a los procesos críticos de negocio. Nagios Core puede monitorear el estado de dispositivos de red, servicios, aplicaciones y sistemas operativos, y su vasto ecosistema de plugins permite monitorear el tráfico de red de diversas maneras.
+    * **Por qué es top:** Su extensibilidad a través de plugins y su capacidad para monitorear una amplia gama de componentes de red lo convierten en una solución de monitoreo muy adaptable, aunque puede requerir más configuración inicial.
+
+**ELK Stack (Elasticsearch, Logstash, Kibana) + Packetbeat/Filebeat:**
+    * **Descripción:** No es una única herramienta, sino una potente suite de herramientas para la ingesta, procesamiento, almacenamiento, búsqueda y visualización de grandes volúmenes de datos. Para el análisis de tráfico de red, `Packetbeat` (un *shipper* de datos ligero) puede capturar métricas de red y enviarlas a Elasticsearch, que luego pueden ser visualizadas en `Kibana`. Es excelente para el análisis de logs y eventos de seguridad.
+    * **Por qué es top:** Su escalabilidad, flexibilidad para manejar grandes volúmenes de datos y sus capacidades de visualización avanzadas lo hacen una opción poderosa para el análisis forense y el monitoreo de seguridad a largo plazo.
+
+**Cacti:**
+    * **Descripción:** Cacti es una herramienta de monitoreo de red basada en web que utiliza RRDtool para crear gráficos de datos de tiempo. Es excelente para visualizar el uso del ancho de banda, la carga del CPU, el uso de la memoria y otras métricas de dispositivos de red (routers, switches) a lo largo del tiempo. Aunque no es un analizador de paquetes, proporciona una visión valiosa de las tendencias de tráfico.
+    * **Por qué es top:** Su enfoque en la visualización de datos históricos de rendimiento lo hace muy útil para identificar patrones de tráfico, picos inusuales y la evolución del uso de la red.
+
+**Pandora FMS (Community Edition):**
+    * **Descripción:** Una plataforma de monitoreo de código abierto muy completa que puede monitorear servidores, redes, aplicaciones y servicios. Ofrece una amplia gama de capacidades de monitoreo de red, incluyendo el monitoreo de tráfico mediante SNMP y NetFlow, detección de anomalías y gestión de eventos. Su edición comunitaria es robusta y funcional.
+    * **Por qué es top:** Su capacidad para ofrecer una solución de monitoreo de infraestructura unificada, incluyendo un monitoreo de red avanzado con soporte para NetFlow y otras fuentes de datos, la hace una opción poderosa y versátil.
 
 ---
 
