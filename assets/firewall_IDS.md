@@ -1,4 +1,4 @@
-# Configuración de firewalls y sistemas de detección de intrusos (IDS)**  
+# Configuración de firewalls y sistemas de detección de intrusos (IDS)
 
 #### **Configuración de Firewalls**  
 **Definición:**  
