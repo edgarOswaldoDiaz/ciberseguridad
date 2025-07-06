@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  modsecurity:
+    image: owasp/modsecurity-crs:3-nginx-alpine
+    container_name: modsecurity
+    ports:
+      - "8080:80"
+    environment:
+      # Nivel de paranoia (1–4). Más alto = más reglas activas.
+      - PARANOIA=2
+      # Umbrales de puntuación de anomalía (inbound y outbound)
+      - ANOMALYIN=5
+      - ANOMALYOUT=4
+      # Dirección de tu backend (puede ser un contenedor o un host externo)
+      - BACKEND=http://backend:80
+    volumes:
+      # Monta aquí tu carpeta local con las reglas CRS si quieres customizar
+      - ./coreruleset:/opt/owasp-crs/rules:ro
+    restart: unless-stopped
+
+  backend:
+    image: httpd:alpine
+    container_name: backend
+    volumes:
+      # Carpeta local con tu aplicación web estática o configuración Apache
+      - ./html:/usr/local/apache2/htdocs/:ro
+    restart: unless-stopped
