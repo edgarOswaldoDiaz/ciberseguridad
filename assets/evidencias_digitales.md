@@ -54,15 +54,6 @@
 *   **Cifrado:** Datos o dispositivos cifrados dificultan el acceso y análisis.
 *   **Tecnologías Emergentes:** IoT, dispositivos móviles, cloud computing presentan nuevos retos para la recolección forense.
 *   **Plazos Legales:** Investigaciones pueden tener límites de tiempo estrictos.
-
-**Por qué es Vital en el Módulo de Simulación:**
-Al simular ciberataques, los estudiantes practican la aplicación **realista y controlada** de estos procedimientos. Aprenden a:
-*   Reaccionar rápidamente identificando fuentes de evidencia bajo presión (simulada).
-*   Elegir y usar correctamente herramientas de adquisición forense.
-*   Documentar minuciosamente cada paso y mantener una cadena de custodia impecable *desde el primer momento*.
-*   Comprender las consecuencias de un error en la preservación (evidencia inadmisible).
-*   Articular sus acciones y hallazgos en un informe forense.
-
 _______________
 Referencias Bibliográficas
 
