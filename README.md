@@ -1,4 +1,4 @@
-# Ciberseguridad 
+## Ciberseguridad 
 ## Módulo 1: Fundamentos de ciberseguridad y programación
 Objetivo: Comprender los conceptos básicos de ciberseguridad y aprender a desarrollar algoritmos para proteger información. 
 - [Introducción a la ciberseguridad.](assets/introduccion.md)
@@ -70,7 +70,7 @@ Objetivo: Crear escenarios de ciberataques y aplicar procedimientos de preservac
 - [Aplicación de la cadena de custodia para preservar la ciberseguridad.](assets/m5s2.md)
 __________________
 
-# A N E X O S
+## A N E X O S
 
 - [Ética en ciberseguridad](assets/etica_ciberseguridad.md)
 - [Labotatorio de ciberseguridad para incubación de proyectos](assets/laboratorio_ciberseguridad.md)
