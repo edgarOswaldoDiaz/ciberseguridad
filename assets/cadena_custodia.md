@@ -8,17 +8,13 @@ La cadena de custodia es fundamental porque las evidencias digitales poseen cara
 
 ### Principios Fundamentales
 
-#### 1. Integridad
-La evidencia debe mantenerse íntegra y sin alteraciones desde su recolección hasta su análisis final. Esto se logra mediante el uso de funciones hash criptográficas (como SHA-256) que generan una "huella digital" única de la evidencia.
+1. Integridad : La evidencia debe mantenerse íntegra y sin alteraciones desde su recolección hasta su análisis final. Esto se logra mediante el uso de funciones hash criptográficas (como SHA-256) que generan una "huella digital" única de la evidencia.
 
-#### 2. Autenticidad
-Debe poder demostrarse que la evidencia es genuina y proviene de la fuente declarada, sin haber sido falsificada o sustituida.
+2. Autenticidad : Debe poder demostrarse que la evidencia es genuina y proviene de la fuente declarada, sin haber sido falsificada o sustituida.
 
-#### 3. Confiabilidad
-Los métodos y herramientas utilizados deben ser técnicamente sólidos y reconocidos por la comunidad forense.
+3. Confiabilidad : Los métodos y herramientas utilizados deben ser técnicamente sólidos y reconocidos por la comunidad forense.
 
-#### 4. Admisibilidad
-La evidencia debe cumplir con los requisitos legales para ser admitida en procedimientos judiciales.
+4. Admisibilidad : La evidencia debe cumplir con los requisitos legales para ser admitida en procedimientos judiciales.
 
 ### Fases de la Cadena de Custodia
 
