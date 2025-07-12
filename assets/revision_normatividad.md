@@ -1,4 +1,6 @@
-Revisión de normativas de seguridad informática y mejores prácticas
+# Revisión de normativas de seguridad informática y mejores prácticas
+
+La Revisión de Normativas de Seguridad Informática y Mejores Prácticas es un proceso continuo y sistemático que una organización lleva a cabo para asegurar que sus políticas, procedimientos y controles de seguridad de la información cumplen con los requisitos legales, regulatorios e industriales aplicables, así como con los estándares y recomendaciones de seguridad reconocidos. Esto implica analizar leyes de protección de datos, estándares internacionales (ISO 27001/27002), marcos de ciberseguridad (NIST), y guías específicas de la industria. Al adherirse a estas normativas y mejores prácticas (como autenticación multifactor, gestión de parches, concienciación del usuario), las organizaciones no solo evitan sanciones legales y multas, sino que también fortalecen su postura defensiva contra ciberataques, construyen confianza con sus clientes y socios, y aseguran la continuidad de sus operaciones. Es un pilar fundamental para una gestión de riesgos de seguridad efectiva.
 
 #### Introducción a la regulación en ciberseguridad
 - Importancia de cumplir con normativas.
