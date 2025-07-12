@@ -49,6 +49,8 @@ Objetivo: Monitorear el tráfico de red para identificar y solucionar vulnerabil
 - [Configuración de firewalls y sistemas de detección de intrusos (IDS).](assets/firewall_IDS.md) 
 - [Análisis de logs y reportes de seguridad.](assets/analisis_log.md)
 
+Nota: Implementación de herramienta Wireshark
+
 ### Submódulos
 
 - [Detección de vulnerabilidades en redes de datos.](assets/m4s1.md)
