@@ -1,7 +1,5 @@
 # Simulación y Análisis de Ciberataques
 
-### Concepto de Simulación de Ciberataques
-
 La simulación de ciberataques, a menudo denominada "ejercicios de mesa", "pentesting" (pruebas de penetración) o "ejercicios de equipo rojo/azul", implica la replicación controlada de tácticas, técnicas y procedimientos (TTPs) utilizados por atacantes reales. El objetivo principal no es causar daño, sino identificar vulnerabilidades, evaluar la efectividad de los controles de seguridad existentes y mejorar la capacidad de respuesta de una organización.
 
 **Componentes clave de la simulación:**
