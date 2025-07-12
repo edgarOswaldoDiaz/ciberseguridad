@@ -95,6 +95,10 @@ Para una evaluación integral de la seguridad de las aplicaciones web, lo ideal 
 
 ## Laboratorio de ciberseguridad
 
+Un laboratorio de ciberseguridad es un entorno controlado y aislado, ya sea físico o virtual, diseñado para simular escenarios del mundo real de ataques cibernéticos y defensas. Permite a profesionales y estudiantes experimentar de forma segura con herramientas, técnicas y procedimientos de seguridad, sin riesgo para sistemas productivos.
+
+Su aportación al conocimiento es invaluable. Facilita la investigación de nuevas vulnerabilidades, el desarrollo y prueba de contramedidas, la capacitación práctica en análisis forense digital, respuesta a incidentes y ethical hacking. Es un espacio crucial para entender el comportamiento de malware, perfeccionar habilidades y mantenerse actualizado ante la evolución constante de las amenazas cibernéticas, contribuyendo directamente a fortalecer la resiliencia digital.
+
   1. Montar un laboratorio con contenedores.
   2. Ejecutar escaneos con OWASP ZAP.
   3. Analizar resultados, redactar un informe y proponer remediaciones.
