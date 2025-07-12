@@ -1,5 +1,7 @@
 # Técnicas de mitigación de riesgos de seguridad
 
+Las Técnicas de Mitigación de Riesgos de Seguridad son el conjunto de acciones y controles implementados para reducir la probabilidad de ocurrencia de un riesgo o minimizar su impacto si este se materializa. Tras identificar y evaluar las vulnerabilidades, estas técnicas buscan fortalecer la postura de seguridad. Incluyen medidas proactivas como la aplicación de parches y actualizaciones de software, la configuración segura de sistemas y redes, la implementación de controles de acceso robustos, el cifrado de datos sensibles y la segmentación de redes. También abarcan la concienciación y capacitación del personal, la creación de planes de respuesta a incidentes y la realización de copias de seguridad. La elección de la técnica adecuada depende de la naturaleza del riesgo y el nivel de impacto, buscando un equilibrio costo-beneficio para proteger los activos críticos de una organización.
+
 ## Clasificación de controles de mitigación
 
 ---
