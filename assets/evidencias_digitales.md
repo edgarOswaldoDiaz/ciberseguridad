@@ -1,5 +1,7 @@
 # Preservación y Manejo de Evidencias Digitales en Ciberseguridad
 
+La Preservación y Manejo de Evidencias Digitales en Ciberseguridad es un pilar fundamental en la respuesta a incidentes y en la procuración de justicia digital. Se refiere al conjunto de procesos y técnicas meticulosas para identificar, recolectar, adquirir, autenticar, analizar, documentar y almacenar información digital de manera que su integridad y validez legal sean inquebrantables. No se trata simplemente de guardar archivos, sino de asegurar que cada bit de datos, desde logs de sistemas hasta correos electrónicos y metadatos, sea tratado como una pieza crucial de un rompecabezas. Esto implica el uso de herramientas forenses especializadas que garantizan que la evidencia no sea alterada durante su recolección, empleando métodos como el hash criptográfico para verificar su inmutabilidad. Un manejo adecuado asegura la cadena de custodia, demostrando quién tuvo acceso a la evidencia y cuándo, eliminando cualquier duda sobre su autenticidad. En esencia, es el arte y la ciencia de transformar datos efímeros en pruebas irrefutables, permitiendo a los investigadores reconstruir eventos cibernéticos, identificar atacantes, y mitigar futuros riesgos, todo ello mientras se adhiere estrictamente a los marcos legales y regulatorios pertinentes. Sin una preservación y manejo rigurosos, incluso la evidencia más incriminatoria puede ser desestimada, comprometiendo la seguridad y la justicia.
+
 **Principios Fundamentales (Reglas de Oro):**
 
 1.  **Minimizar la Alteración:** La acción de recolección debe alterar lo menos posible la fuente original de los datos.
@@ -81,6 +83,7 @@ Para asegurar la validez y utilidad de las **evidencias digitales** en cualquier
 10. **Prepara para el análisis:** Aunque el decálogo se centra en la preservación, ten en cuenta que la **evidencia** deberá ser analizada posteriormente. Asegúrate de que los formatos y métodos de preservación permitan un análisis forense eficaz y que la evidencia sea comprensible para los expertos.
 
 _______________
+
 Referencias Bibliográficas
 
 > **Agencia de Gobierno Electrónico y Tecnologías de la Información y Comunicación (AGETIC) & Oficina Nacional de Tecnologías de Información (ONTI). (2020). *Guía de Preservación Digital y Gestión de Evidencias Digitales*. La Paz, Bolivia: Autor.**  
