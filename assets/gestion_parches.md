@@ -1,6 +1,7 @@
 # Gestión de parches y actualizaciones de seguridad
 
 La Gestión de Parches y Actualizaciones de Seguridad es un proceso crítico en ciberseguridad que implica la identificación, adquisición, prueba, distribución e implementación sistemática de actualizaciones de software ("parches") emitidas por los proveedores. Su objetivo primordial es corregir vulnerabilidades conocidas, errores de software y mejorar el rendimiento o añadir funcionalidades. Este proceso proactivo es vital para cerrar las "brechas" que los ciberdelincuentes podrían explotar para infiltrarse en los sistemas, robar datos o causar interrupciones. Una gestión eficaz de parches minimiza la superficie de ataque, garantiza la conformidad con normativas y estándares, y mantiene la estabilidad y eficiencia de la infraestructura tecnológica, protegiendo así la integridad, confidencialidad y disponibilidad de los activos de información de una organización.
+
 ---
 
 ## Ciclo de vida de la gestión de parches
