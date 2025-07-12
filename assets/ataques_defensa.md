@@ -1,6 +1,5 @@
 # Generación de Escenarios de Ataque y Defensa en Ciberseguridad
 
-**Concepto Clave:**  
 Consiste en la creación metódica de narrativas de ciberataques hipotéticos pero basados en amenazas reales, junto con los correspondientes planes, técnicas y herramientas de defensa. Estos escenarios se ejecutan en entornos controlados (laboratorios, entornos virtualizados, sandboxes) para evaluar la resiliencia de sistemas, políticas de seguridad y la capacidad del equipo.
 
 **Metodología Detallada:**
