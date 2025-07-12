@@ -6,7 +6,7 @@ Se actualiza periódicamente (la última versión es de 2021) para reflejar la e
 
 Cada vulnerabilidad de la lista se describe detalladamente, incluyendo cómo ocurre, su impacto potencial y las mejores prácticas para prevenirla y mitigarla.
 
-## 1. A01:2021 – Control de Acceso Roto (Broken Access Control)
+## A01:2021 – Control de Acceso Roto (Broken Access Control)
 
 **Descripción**
 Ocurre cuando un usuario puede acceder a recursos o acciones para las que no tiene permiso (por ejemplo, ver o modificar datos de otros usuarios).
@@ -73,7 +73,7 @@ def get_user_data(user_id):
 
 ---
 
-## 2. A02:2021 – Fallas Criptográficas (Cryptographic Failures)
+## A02:2021 – Fallas Criptográficas (Cryptographic Failures)
 
 **Descripción**
 Uso inadecuado o ausencia de cifrado para proteger datos sensibles (contraseñas, tokens, información PII).
@@ -117,7 +117,7 @@ def verify_password(password: str, hashed: bytes) -> bool:
 
 ---
 
-## 3. A03:2021 – Inyección (Injection)
+## A03:2021 – Inyección (Injection)
 
 **Descripción**
 Ocurre cuando datos de entrada no confiables se incluyen en un comando o consulta sin validación, lo que permite modificar su ejecución (SQL, OS, LDAP…).
@@ -159,7 +159,7 @@ def find_user(username):
 
 ---
 
-## 4. A04:2021 – Diseño Inseguro (Insecure Design)
+## A04:2021 – Diseño Inseguro (Insecure Design)
 
 **Descripción**
 Falta de controles de seguridad durante la fase de diseño (modelos de amenaza, validaciones, principios de mínimo privilegio).
@@ -198,7 +198,7 @@ def login():
 
 ---
 
-## 5. A05:2021 – Configuración de Seguridad Incorrecta (Security Misconfiguration)
+## A05:2021 – Configuración de Seguridad Incorrecta (Security Misconfiguration)
 
 **Descripción**
 Configuraciones por defecto inseguras, puertos abiertos, mensajes de error detallados, directorios expuestos.
@@ -231,7 +231,7 @@ Talisman(app)  # añade Content-Security-Policy, HSTS, etc.
 
 ---
 
-## 6. A06:2021 – Vulnerabilidades y Componentes Desactualizados (Vulnerable and Outdated Components)
+## A06:2021 – Vulnerabilidades y Componentes Desactualizados (Vulnerable and Outdated Components)
 
 **Descripción**
 Uso de librerías o frameworks con vulnerabilidades conocidas.
@@ -264,7 +264,7 @@ requests>=2.31.0
 
 ---
 
-## 7. A07:2021 – Fallas de Identificación y Autenticación (Identification and Authentication Failures)
+## A07:2021 – Fallas de Identificación y Autenticación (Identification and Authentication Failures)
 
 **Descripción**
 Gestión deficiente de sesiones y autenticación (tokens predecibles, falta de expiración, no invalidar sesiones…).
@@ -307,7 +307,7 @@ def login():
 
 ---
 
-## 8. A08:2021 – Fallas en la Integridad de Software y Datos (Software and Data Integrity Failures)
+## A08:2021 – Fallas en la Integridad de Software y Datos (Software and Data Integrity Failures)
 
 **Descripción**
 No verificar la integridad de componentes o datos críticos (actualizaciones, paquetes, archivos).
@@ -349,7 +349,7 @@ if h != expected_sha256:
 
 ---
 
-## 9. A09:2021 – Fallas de Registro y Monitoreo (Security Logging and Monitoring Failures)
+## A09:2021 – Fallas de Registro y Monitoreo (Security Logging and Monitoring Failures)
 
 **Descripción**
 No generar logs suficientes o no monitorear eventos críticos (login, errores, accesos no autorizados).
@@ -393,7 +393,7 @@ def login(username, password):
 
 ---
 
-## 10. A10:2021 – SSRF (Server-Side Request Forgery)
+## A10:2021 – SSRF (Server-Side Request Forgery)
 
 **Descripción**
 La aplicación recibe una URL de usuario y realiza peticiones sin validar, permitiendo acceder a recursos internos (Intranet, metadata AWS…).
