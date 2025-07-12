@@ -1,5 +1,7 @@
 # Evaluación de vulnerabilidades en sistemas
 
+La Evaluación de Vulnerabilidades en sistemas es un proceso fundamental en ciberseguridad que busca identificar y analizar las debilidades, fallos o brechas de seguridad existentes en la infraestructura tecnológica de una organización, incluyendo hardware, software, redes, aplicaciones y configuraciones. El objetivo principal es descubrir estos "agujeros" antes de que actores maliciosos puedan explotarlos para obtener acceso no autorizado, robar información, causar interrupciones o comprometer la integridad de los sistemas. Se emplean diversas metodologías, desde escaneos automatizados con herramientas especializadas hasta revisiones manuales exhaustivas, para detectar problemas como software desactualizado, configuraciones incorrectas, contraseñas débiles o fallos en la lógica de las aplicaciones. Los resultados de esta evaluación permiten a las organizaciones comprender su "superficie de ataque", priorizar las vulnerabilidades según su riesgo y, lo más importante, implementar las medidas correctivas necesarias, como la aplicación de parches, la reconfiguración de sistemas o la mejora de las políticas de seguridad, fortaleciendo así su postura de seguridad y reduciendo significativamente la probabilidad de un ciberataque exitoso.
+
 ## Fases de la evaluación de vulnerabilidades
 
 1. **Planificación y Alcance**
