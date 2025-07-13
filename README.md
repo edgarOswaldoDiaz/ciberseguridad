@@ -85,12 +85,13 @@ __________________
 - [OWASP ASV Standar](assets/OWASP_Application_Security_Verification_Standard_5.0.0_sp.md)
 
 OWASP - SAMM
-
+_____________
 | [Gobernanza](assets/owasp_samm/gobernanza.md) |
 [Diseño](assets/owasp_samm/diseno.md) |
 [Implementación](assets/owasp_samm/implementacion.md) |
 [Verificación](assets/owasp_samm/verificacion.md) |
 [Operacion](assets/owasp_samm/operaciones.md) |
+______________
 
 ________________________
 > By CISO Oswaldo.Díaz
