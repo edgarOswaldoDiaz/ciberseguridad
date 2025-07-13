@@ -84,7 +84,7 @@ __________________
 - [Comandos OWASP ZAP](assets/owasp_zap.md)
 - [OWASP ASV Standar](assets/OWASP_Application_Security_Verification_Standard_5.0.0_sp.md)
 
-OWASP - SAMM
+OWASP SAMM (Software Assurance Maturity Model) es un marco de código abierto que ayuda a las organizaciones a evaluar, diseñar e implementar una estrategia de seguridad de software adaptable y medible en todo su ciclo de vida de desarrollo.
 
 | [Gobernanza](assets/owasp_samm/gobernanza.md) |
 [Diseño](assets/owasp_samm/diseno.md) |
