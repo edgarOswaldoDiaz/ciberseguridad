@@ -1,5 +1,7 @@
 # Gobernanza en OWASP SAMM
 
+La gobernanza se centra en los procesos y actividades relacionados con la forma en que una organización gestiona las actividades generales de desarrollo de software. Más específicamente, esto incluye preocupaciones que afectan a los grupos multifuncionales involucrados en el desarrollo, así como a los procesos de negocio establecidos a nivel de la organización.
+
 ---
 
 ## Estrategia y métricas
