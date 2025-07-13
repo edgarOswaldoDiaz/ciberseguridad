@@ -2,7 +2,7 @@
 
 ---
 
-## 🔹 Docker CLI
+## Docker CLI
 
 ### Gestión de imágenes
 
