@@ -76,12 +76,9 @@ __________________
 
 - [Ética en ciberseguridad](assets/etica_ciberseguridad.md)
 - [Labotatorio de ciberseguridad para incubación de proyectos](assets/laboratorio_ciberseguridad.md)
-- [Comandos de Linux](assets/comandos_linux.md)
-- [Comandos de Podman](assets/comandos_podman.md)
-- [Comandos de Docker](assets/comandos_docker.md)
-- [Comandos Python](assets/comandos_python.md)
+- Comandos [Linux](assets/comandos_linux.md) | [Podman](assets/comandos_podman.md) | [Docker](assets/comandos_docker.md) | [Python](assets/comandos_python.md)
 - [OWASP Top Ten Web](assets/owasp_top_ten.md)
-- [Comandos OWASP ZAP](assets/owasp_zap.md)
+- [OWASP ZAP](assets/owasp_zap.md)
 - [OWASP ASV Standar](assets/OWASP_Application_Security_Verification_Standard_5.0.0_sp.md)
 - OWASP SAMM | [Gobernanza](assets/owasp_samm/gobernanza.md) | [Diseño](assets/owasp_samm/diseno.md) | [Implementación](assets/owasp_samm/implementacion.md) | [Verificación](assets/owasp_samm/verificacion.md) | [Operacion](assets/owasp_samm/operaciones.md) |
 
