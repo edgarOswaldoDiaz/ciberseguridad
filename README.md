@@ -79,6 +79,7 @@ __________________
 - [Comandos de Linux](assets/comandos_linux.md)
 - [Comandos de Podman](assets/comandos_podman.md)
 - [Comandos de Docker](assets/comandos_docker.md)
+- [Comandos Python](assets/comandos_python.md)
 - [OWASP Top Ten Web](assets/owasp_top_ten.md)
 - [Comandos OWASP ZAP](assets/owasp_zap.md)
 - [OWASP ASV Standar](assets/OWASP_Application_Security_Verification_Standard_5.0.0_sp.md)
