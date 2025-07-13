@@ -1,4 +1,4 @@
-# Gobernanza** en OWASP SAMM
+# Gobernanza en OWASP SAMM
 
 ---
 
