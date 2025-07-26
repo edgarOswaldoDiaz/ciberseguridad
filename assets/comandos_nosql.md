@@ -21,6 +21,253 @@
 | **Listar índices**     | `db.<colección>.getIndexes()`                                                      |         |
 | **Aggregation**        | `db.<colección>.aggregate([ { $stage1 }, { $stage2 }, … ])`                        |         |
 
+
+¡Claro! A continuación, te presento un **"Cheat Sheet"** (hoja de comandos) con los comandos más utilizados en **Neo4j**, un sistema de base de datos gráfica (NoSQL) basado en nodos, relaciones y propiedades.
+
+---
+
+# 📘 **Neo4j - Comandos Básicos (Cypher Query Language)**
+
+---
+
+## 🔧 **1. Comandos Generales**
+
+| Comando | Descripción |
+|--------|-------------|
+| `RETURN` | Devuelve resultados de una consulta |
+| `MATCH` | Busca patrones en el grafo |
+| `WHERE` | Filtra resultados |
+| `CREATE` | Crea nodos o relaciones |
+| `MERGE` | Crea nodos o relaciones si no existen |
+| `DELETE` | Elimina nodos o relaciones |
+| `DETACH DELETE` | Elimina nodos y sus relaciones |
+| `SET` | Asigna o actualiza propiedades |
+| `REMOVE` | Elimina propiedades o etiquetas |
+| `WITH` | Encadena partes de una consulta |
+| `UNWIND` | Desenvuelve listas en filas individuales |
+| `LIMIT` | Limita el número de resultados |
+| `SKIP` | Omite un número de resultados |
+| `ORDER BY` | Ordena los resultados |
+| `DISTINCT` | Elimina duplicados |
+| `OPTIONAL MATCH` | Coincidencia opcional de patrones |
+
+---
+
+## 🧱 **2. Nodos y Relaciones**
+
+### Crear nodos
+
+```cypher
+CREATE (n:Label {property: 'value'})
+```
+
+### Crear relaciones
+
+```cypher
+CREATE (n1)-[:RELATION_TYPE]->(n2)
+```
+
+### Combinar nodos y relaciones
+
+```cypher
+CREATE (n1:Label1 {prop: 'val1'})-[:RELATION]->(n2:Label2 {prop: 'val2'})
+```
+
+---
+
+## 🔍 **3. Búsqueda (MATCH)**
+
+### Buscar nodos
+
+```cypher
+MATCH (n:Label)
+RETURN n
+```
+
+### Buscar relaciones
+
+```cypher
+MATCH (n1)-[r:RELATION_TYPE]->(n2)
+RETURN n1, r, n2
+```
+
+### Buscar por propiedad
+
+```cypher
+MATCH (n:Label {property: 'value'})
+RETURN n
+```
+
+---
+
+## 🔁 **4. MERGE (Crear si no existe)**
+
+```cypher
+MERGE (n:Label {property: 'value'})
+ON CREATE SET n.created = timestamp()
+ON MATCH SET n.lastSeen = timestamp()
+```
+
+---
+
+## 🧹 **5. Actualizar / Eliminar**
+
+### Actualizar propiedades
+
+```cypher
+MATCH (n:Label {property: 'value'})
+SET n.newProperty = 'newValue'
+```
+
+### Eliminar nodo
+
+```cypher
+MATCH (n:Label {property: 'value'})
+DELETE n
+```
+
+### Eliminar nodo con relaciones
+
+```cypher
+MATCH (n:Label {property: 'value'})
+DETACH DELETE n
+```
+
+### Eliminar propiedad
+
+```cypher
+MATCH (n:Label {property: 'value'})
+REMOVE n.property
+```
+
+### Eliminar etiqueta
+
+```cypher
+MATCH (n:Label {property: 'value'})
+REMOVE n:Label
+```
+
+---
+
+## 🔗 **6. Relaciones**
+
+### Crear relación
+
+```cypher
+MATCH (a:Person {name: 'Alice'}), (b:Person {name: 'Bob'})
+CREATE (a)-[:KNOWS]->(b)
+```
+
+### Eliminar relación
+
+```cypher
+MATCH (a)-[r:KNOWS]->(b)
+DELETE r
+```
+
+---
+
+## 📊 **7. Funciones Comunes**
+
+| Función | Descripción |
+|--------|-------------|
+| `count()` | Cuenta resultados |
+| `sum()` | Suma valores |
+| `avg()` | Promedio |
+| `max()` / `min()` | Valor máximo/mínimo |
+| `collect()` | Agrupa valores en lista |
+| `size()` | Tamaño de una lista o cadena |
+| `exists()` | Verifica si una propiedad existe |
+| `coalesce()` | Devuelve el primer valor no nulo |
+| `timestamp()` | Devuelve marca de tiempo actual |
+| `toUpper()` / `toLower()` | Convierte texto a mayúsculas/minúsculas |
+
+---
+
+## 🧠 **8. Patrones Comunes**
+
+### Encontrar amigos de amigos
+
+```cypher
+MATCH (p1:Person)-[:KNOWS]->(friend)-[:KNOWS]->(foaf:Person)
+WHERE p1.name = 'Alice'
+RETURN foaf
+```
+
+### Caminos más cortos
+
+```cypher
+MATCH path = shortestPath((a:Person {name: 'Alice'})-[*]-(b:Person {name: 'Bob'}))
+RETURN path
+```
+
+---
+
+## 🛠️ **9. Índices y Constraints**
+
+### Crear índice
+
+```cypher
+CREATE INDEX FOR (n:Label) ON (n.property)
+```
+
+### Crear constraint de unicidad
+
+```cypher
+CREATE CONSTRAINT FOR (n:Label) REQUIRE n.property IS UNIQUE
+```
+
+### Eliminar índice o constraint
+
+```cypher
+DROP INDEX index_name
+DROP CONSTRAINT constraint_name
+```
+
+---
+
+## 🧪 **10. Perfilado y Explicación**
+
+| Comando | Descripción |
+|--------|-------------|
+| `EXPLAIN` | Muestra el plan de ejecución sin correr la consulta |
+| `PROFILE` | Ejecuta la consulta y muestra estadísticas |
+
+```cypher
+EXPLAIN MATCH (n:Label) RETURN n
+PROFILE MATCH (n:Label) RETURN count(n)
+```
+
+---
+
+## 📁 **11. Importar Datos**
+
+### Desde CSV
+
+```cypher
+LOAD CSV WITH HEADERS FROM 'file:///ruta/archivo.csv' AS row
+CREATE (:Label {property: row.column})
+```
+
+---
+
+## 🧾 **12. Comandos del Shell / Administración**
+
+| Comando | Descripción |
+|--------|-------------|
+| `:help` | Muestra ayuda |
+| `:clear` | Limpia la consola |
+| `:server status` | Estado del servidor |
+| `:play movies` | Ejemplo de base de datos de películas |
+| `:schema` | Muestra esquema de índices/constraints |
+| `:queries` | Muestra consultas activas |
+| `:sysinfo` | Información del sistema |
+
+---
+
+¿Quieres que te lo exporte en formato PDF o Markdown para imprimir? También puedo ayudarte a crear una versión visual.
+
+
 ---
 
 ## Redis (CLI)
