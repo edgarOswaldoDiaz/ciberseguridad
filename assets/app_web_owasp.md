@@ -1,4 +1,4 @@
-## Mitigación de OWASP Top 10 2021
+## App´s de ejemplo para mitigar vulnerabilidades
 
 - A01:2021-Pérdida de Control de Acceso: La falla más común, se produce cuando las restricciones sobre lo que los usuarios autenticados pueden hacer no se aplican correctamente. Los atacantes pueden explotar estas fallas para acceder a funcionalidades o datos no autorizados, como cuentas de otros usuarios o información administrativa.
 - A02:2021-Fallas Criptográficas: Son errores relacionados con la protección de datos en tránsito y en reposo. Esto puede incluir el uso de algoritmos débiles, claves inseguras o una implementación incorrecta de cifrado, dejando información sensible como credenciales, datos financieros o de salud expuesta.
