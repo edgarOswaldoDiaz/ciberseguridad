@@ -516,6 +516,8 @@ CREATE (:Label {property: row.column})
 | CREATE KEYSPACE mi\_keyspace                                            |                                                 |           |
 | WITH replication = {'class':'SimpleStrategy', 'replication\_factor':3}; |                                                 |           |
 
+----
+
 ````|
 | `DESCRIBE KEYSPACE` | Muestra la definición de un keyspace. | ```sql  
 DESCRIBE KEYSPACE mi_keyspace;  
@@ -704,9 +706,8 @@ SELECT * FROM ...;
 
 ---
 
-## ** Cheat Sheet de Apache CouchDB**
 
-### 🔧 **1. Instalación y Configuración Básica**
+### **Instalación y Configuración Básica**
 
 | Comando / Acción | Descripción |
 |------------------|-------------|
@@ -717,7 +718,7 @@ SELECT * FROM ...;
 
 ---
 
-### ** Manejo de Bases de Datos**
+### **Manejo de Bases de Datos**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -729,7 +730,7 @@ SELECT * FROM ...;
 
 ---
 
-### ** Documentos**
+### **Documentos**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -742,7 +743,7 @@ SELECT * FROM ...;
 
 ---
 
-### ** Revisiones y Conflicto de Documentos**
+### **Revisiones y Conflicto de Documentos**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -752,7 +753,7 @@ SELECT * FROM ...;
 
 ---
 
-### ** Consultas y Vistas**
+### **Consultas y Vistas**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -763,7 +764,7 @@ SELECT * FROM ...;
 
 ---
 
-### ** Replicación**
+### **Replicación**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -782,7 +783,7 @@ Ejemplo de replicación:
 
 ---
 
-### ** Funciones de Administración**
+### **Funciones de Administración**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -794,7 +795,7 @@ Ejemplo de replicación:
 
 ---
 
-### ** Autenticación y Seguridad**
+### **Autenticación y Seguridad**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -806,7 +807,7 @@ Ejemplo de replicación:
 
 ---
 
-### ** Útil para Desarrolladores**
+### **Útil para Desarrolladores**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -816,7 +817,7 @@ Ejemplo de replicación:
 
 ---
 
-### ** Ejemplo Práctico con cURL**
+### **Ejemplo Práctico con cURL**
 
 Crear un documento:
 ```bash
