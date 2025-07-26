@@ -1,32 +1,18 @@
 # No‑SQL
 
----
 
-## MongoDB (Shell)
+## Neo4j
 
-| Categoría              | Comando y descripción                                                              |         |
-| ---------------------- | ---------------------------------------------------------------------------------- | ------- |
-| **Conectar**           | `mongo` — lanza el shell de MongoDB                                                |         |
-| **Mostrar bases**      | `show dbs`                                                                         |         |
-| **Usar base**          | `use <db>`                                                                         |         |
-| **Crear colección**    | `db.createCollection("<colección>")`                                               |         |
-| **Insertar documento** | `db.<colección>.insertOne({ campo: valor, … })`                                    |         |
-| **Insertar varios**    | `db.<colección>.insertMany([{…}, {…}, …])`                                         |         |
-| **Buscar**             | `db.<colección>.find()`<br>`db.<colección>.find({ filtro })`                       |         |
-| **Proyección**         | `db.<colección>.find({}, { campo1: 1, campo2: 0 })`                                |         |
-| **Modificar**          | `db.<colección>.updateOne({ filtro }, { $set: { campo: valor } })`<br>`updateMany` |         |
-| **Reemplazar**         | `db.<colección>.replaceOne({ filtro }, { documento completo })`                    |         |
-| **Eliminar**           | `db.<colección>.deleteOne({ filtro })`<br>`deleteMany({ filtro })`                 |         |
-| **Crear índice**       | \`db.\<colección>.createIndex({ campo: 1                                           | ‑1 })\` |
-| **Listar índices**     | `db.<colección>.getIndexes()`                                                      |         |
-| **Aggregation**        | `db.<colección>.aggregate([ { $stage1 }, { $stage2 }, … ])`                        |         |
-
-
-¡Claro! A continuación, te presento un **"Cheat Sheet"** (hoja de comandos) con los comandos más utilizados en **Neo4j**, un sistema de base de datos gráfica (NoSQL) basado en nodos, relaciones y propiedades.
-
----
-
-# 📘 **Neo4j - Comandos Básicos (Cypher Query Language)**
+| Categoría             | Comando                                                          |
+| --------------------- | ---------------------------------------------------------------- |
+| **Conectar**          | `neo4j console` o a través de Neo4j Browser                      |
+| **Crear nodo**        | `CREATE (n:Label {prop1: val1, prop2: val2});`                   |
+| **Leer nodos**        | `MATCH (n:Label) RETURN n;`                                      |
+| **Leer con filtro**   | `MATCH (n:Label {prop: val}) RETURN n;`                          |
+| **Crear relación**    | `MATCH (a),(b) WHERE a.id=… AND b.id=… CREATE (a)-[:TIPO]->(b);` |
+| **Actualizar nodo**   | `MATCH (n:Label {id:…}) SET n.prop = nuevo_val;`                 |
+| **Eliminar nodo**     | `MATCH (n:Label {id:…}) DETACH DELETE n;`                        |
+| **Eliminar relación** | `MATCH ()-[r:TIPO]->() DELETE r;`                                |
 
 ---
 
@@ -326,18 +312,26 @@ CREATE (:Label {property: row.column})
 
 ---
 
-## Neo4j (Cypher)
+## MongoDB (Shell)
 
-| Categoría             | Comando                                                          |
-| --------------------- | ---------------------------------------------------------------- |
-| **Conectar**          | `neo4j console` o a través de Neo4j Browser                      |
-| **Crear nodo**        | `CREATE (n:Label {prop1: val1, prop2: val2});`                   |
-| **Leer nodos**        | `MATCH (n:Label) RETURN n;`                                      |
-| **Leer con filtro**   | `MATCH (n:Label {prop: val}) RETURN n;`                          |
-| **Crear relación**    | `MATCH (a),(b) WHERE a.id=… AND b.id=… CREATE (a)-[:TIPO]->(b);` |
-| **Actualizar nodo**   | `MATCH (n:Label {id:…}) SET n.prop = nuevo_val;`                 |
-| **Eliminar nodo**     | `MATCH (n:Label {id:…}) DETACH DELETE n;`                        |
-| **Eliminar relación** | `MATCH ()-[r:TIPO]->() DELETE r;`                                |
+| Categoría              | Comando y descripción                                                              |         |
+| ---------------------- | ---------------------------------------------------------------------------------- | ------- |
+| **Conectar**           | `mongo` — lanza el shell de MongoDB                                                |         |
+| **Mostrar bases**      | `show dbs`                                                                         |         |
+| **Usar base**          | `use <db>`                                                                         |         |
+| **Crear colección**    | `db.createCollection("<colección>")`                                               |         |
+| **Insertar documento** | `db.<colección>.insertOne({ campo: valor, … })`                                    |         |
+| **Insertar varios**    | `db.<colección>.insertMany([{…}, {…}, …])`                                         |         |
+| **Buscar**             | `db.<colección>.find()`<br>`db.<colección>.find({ filtro })`                       |         |
+| **Proyección**         | `db.<colección>.find({}, { campo1: 1, campo2: 0 })`                                |         |
+| **Modificar**          | `db.<colección>.updateOne({ filtro }, { $set: { campo: valor } })`<br>`updateMany` |         |
+| **Reemplazar**         | `db.<colección>.replaceOne({ filtro }, { documento completo })`                    |         |
+| **Eliminar**           | `db.<colección>.deleteOne({ filtro })`<br>`deleteMany({ filtro })`                 |         |
+| **Crear índice**       | \`db.\<colección>.createIndex({ campo: 1                                           | ‑1 })\` |
+| **Listar índices**     | `db.<colección>.getIndexes()`                                                      |         |
+| **Aggregation**        | `db.<colección>.aggregate([ { $stage1 }, { $stage2 }, … ])`                        |         |
+
+
 
 ---
 
