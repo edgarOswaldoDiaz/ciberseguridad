@@ -276,6 +276,115 @@ http {
 > * **Actualizaciones (A06)**: incorporar un CI/CD que corra `npm audit` y escanee vulnerabilidades de imágenes Docker, OS, etc.
 > * **Monitoreo (A09)**: conectar Winston a un SIEM o servicio de alerta (Elastic, Splunk, Datadog).
 
+
+#### docker-compose.yml 
+
+1. **neo4j**: base de datos gráfica
+2. **app**: tu servidor Node.js (+ Neo4j driver)
+3. **nginx**: proxy inverso con TLS terminación
+
+```yaml
+version: '3.8'
+
+services:
+  neo4j:
+    image: neo4j:5.2
+    container_name: myapp_neo4j
+    env_file:
+      - .env
+    environment:
+      # Sobre-escribe sólo si no está en .env:
+      NEO4J_AUTH: "${NEO4J_USER}/${NEO4J_PASSWORD}"
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+    ports:
+      - "7687:7687"   # Bolt
+      - "7474:7474"   # HTTP
+    networks:
+      - myapp_net
+
+  app:
+    build: .
+    container_name: myapp_node
+    env_file:
+      - .env
+    depends_on:
+      - neo4j
+    ports:
+      - "3000:3000"
+    networks:
+      - myapp_net
+
+  nginx:
+    image: nginx:latest
+    container_name: myapp_nginx
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./certs:/etc/ssl:ro
+    networks:
+      - myapp_net
+
+volumes:
+  neo4j_data:
+  neo4j_logs:
+
+networks:
+  myapp_net:
+    driver: bridge
+```
+
+---
+
+### ¿Cómo funciona?
+
+* **env\_file**
+  Carga tu `.env` (puerto, credenciales Neo4j, JWT\_SECRET, etc.) sin incluirlo en el repositorio.
+
+* **neo4j**
+
+  * Expone Bolt (`7687`) y HTTP (`7474`) para administración y conexión desde la app.
+  * Guarda datos y logs en volúmenes persistentes.
+
+* **app**
+
+  * Se construye con tu `Dockerfile` (que debería exponer el puerto 3000 y copiar `server.js`, `package.json`, etc.).
+  * `depends_on: neo4j` asegura que la base de datos intente arrancar primero.
+
+* **nginx**
+
+  * Monta tu `nginx.conf` y los certificados TLS (en `./certs/your.crt` y `your.key`).
+  * Redirige HTTP → HTTPS y hace proxy a `app:3000`.
+
+---
+
+### Pasos para arrancar
+
+Raíz del proyecto:
+
+   * `Dockerfile` para tu aplicación Node.js
+   * `.env` con tus variables
+   * `nginx.conf` (como en el ejemplo previo)
+   * Certificados TLS en `./certs/`
+
+Ejecuta en terminal:
+
+   ```bash
+   docker-compose up --build -d
+   ```
+
+Comprueba:
+
+   * `http://tu-dominio.com` redirige a HTTPS.
+   * Tu app Node.js responde en `https://tu-dominio.com`.
+   * Neo4j accesible en `bolt://localhost:7687` y UI en `http://localhost:7474`.
+
+
 ____________________
 
 > By CISO oswaldo.diaz 
