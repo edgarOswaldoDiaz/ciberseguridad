@@ -76,7 +76,7 @@ __________________
 
 - [Ética en ciberseguridad](assets/etica_ciberseguridad.md)
 - [Labotatorio de ciberseguridad para incubación de proyectos](assets/laboratorio_ciberseguridad.md)
-- Comandos [Linux](assets/comandos_linux.md) | [Podman](assets/comandos_podman.md) | [Docker](assets/comandos_docker.md) | [Python](assets/comandos_python.md) | [Node.JS](assets/nodejs.md) | [HTML](assets/comandos_html.md) | [CSS](assets/comandos_css.md) | [React.JS](assets/comandos_js_react.md)
+- Comandos [Linux](assets/comandos_linux.md) | [Podman](assets/comandos_podman.md) | [Docker](assets/comandos_docker.md) | [Python](assets/comandos_python.md) | [Node.JS](assets/nodejs.md) | [HTML](assets/comandos_html.md) | [CSS](assets/comandos_css.md) | [React.JS](assets/comandos_js_react.md) | [Angular.JS](assets/comandos_js_angular.md)
 - [OWASP Top Ten Web](assets/owasp_top_ten.md)
 - [OWASP ZAP](assets/owasp_zap.md)
 - [OWASP ASV Standar](assets/OWASP_Application_Security_Verification_Standard_5.0.0_sp.md)
