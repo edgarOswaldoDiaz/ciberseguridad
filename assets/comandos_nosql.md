@@ -293,8 +293,6 @@ nodetool snapshot -t respaldo1 mi_keyspace
 sstableloader -d nodo1,nodo2 /ruta/al/snapshot
 ```
 
----
-
 ________________________
 
 > By CISO oswaldo.diaz
