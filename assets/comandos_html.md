@@ -1,4 +1,4 @@
-# HTML 5
+# HTML (HyperText Markup Language)
 
 ## Estructura básica del documento
 
