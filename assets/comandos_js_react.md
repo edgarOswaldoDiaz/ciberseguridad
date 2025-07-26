@@ -268,11 +268,6 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
   </Routes>
 </BrowserRouter>
 ```
-
----
-
-> **Tip rápido:** usar módulos CSS (`.module.css`) o librerías como Styled‑Components / Emotion para estilos en componentes.
-
 ________________________
 
 > By CISO oswaldo.diaz 
