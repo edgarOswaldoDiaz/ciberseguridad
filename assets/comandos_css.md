@@ -1,6 +1,6 @@
 # CSS (Cascading Style Sheets)
 
-## 1. Selectores básicos
+## Selectores básicos
 
 ```css
 /* Etiqueta */
@@ -28,7 +28,7 @@ h2 + p { ... }
 h2 ~ p { ... }
 ```
 
-## 2. Pseudo‑clases y pseudo‑elementos
+## Pseudo‑clases y pseudo‑elementos
 
 ```css
 /* Pseudo‑clases */
@@ -54,7 +54,7 @@ img::after       { content: ""; display: block; }
 }
 ```
 
-## 4. Modelo de caja (Box Model)
+## Modelo de caja (Box Model)
 
 ```css
 /* Dimensiones */
@@ -73,7 +73,7 @@ box-sizing: content-box; /* default */
 box-sizing: border-box;
 ```
 
-## 5. Tipografía y texto
+## Tipografía y texto
 
 ```css
 font-family: Arial, sans-serif;
@@ -87,7 +87,7 @@ letter-spacing: 0.05em;
 word-spacing: 0.1em;
 ```
 
-## 6. Colores y fondos
+## Colores y fondos
 
 ```css
 /* Colores */
@@ -105,7 +105,7 @@ background-size: cover;
 background-position: center;
 ```
 
-## 7. Layout (Flexbox y Grid)
+## Layout (Flexbox y Grid)
 
 ### Flexbox
 
@@ -137,7 +137,7 @@ background-position: center;
 }
 ```
 
-## 8. Posicionamiento
+## Posicionamiento
 
 ```css
 position: static; /* default */
@@ -151,7 +151,7 @@ right: 1rem; bottom: 5%;
 z-index: 100;
 ```
 
-## 9. Transformaciones, transiciones y animaciones
+## Transformaciones, transiciones y animaciones
 
 ```css
 /* Transform */
@@ -173,7 +173,7 @@ transition-duration: 250ms;
 }
 ```
 
-## 10. Filtros y efectos
+## Filtros y efectos
 
 ```css
 filter: blur(4px) brightness(0.8) contrast(120%);
@@ -181,7 +181,7 @@ mix-blend-mode: multiply;
 opacity: 0.6;
 ```
 
-## 11. Variables CSS (Custom Properties)
+## Variables CSS (Custom Properties)
 
 ```css
 :root {
@@ -194,7 +194,7 @@ opacity: 0.6;
 }
 ```
 
-## 12. Unidades y funciones comunes
+## Unidades y funciones comunes
 
 ```css
 /* Unidades */
@@ -206,7 +206,7 @@ min(), max(), clamp();
 url(), rgb(), hsl(), attr(), var()
 ```
 
-## 13. Media Queries
+## Media Queries
 
 ```css
 @media (min-width: 320px) and (max-width: 767px) {
