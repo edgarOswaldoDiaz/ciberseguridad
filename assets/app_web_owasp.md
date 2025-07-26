@@ -277,7 +277,7 @@ http {
 > * **Monitoreo (A09)**: conectar Winston a un SIEM o servicio de alerta (Elastic, Splunk, Datadog).
 
 
-#### docker-compose.yml 
+## docker-compose.yml 
 
 1. **neo4j**: base de datos gráfica
 2. **app**: tu servidor Node.js (+ Neo4j driver)
