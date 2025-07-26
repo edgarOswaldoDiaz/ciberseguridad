@@ -1,4 +1,4 @@
-# Django** (entorno de desarrollo en Python)
+# Django (entorno de desarrollo en Python)
 
 ---
 
