@@ -78,7 +78,7 @@ __________________
 - [Labotatorio de ciberseguridad para incubación de proyectos](assets/laboratorio_ciberseguridad.md)
 - Comandos base [Linux](assets/comandos_linux.md) | [Podman](assets/comandos_podman.md) | [Docker](assets/comandos_docker.md) | [Python](assets/comandos_python.md)
 - Comandos front-end [HTML](assets/comandos_html.md) | [CSS](assets/comandos_css.md) | [React.JS](assets/comandos_js_react.md) | [Angular.JS](assets/comandos_js_angular.md) | [Vue.JS](assets/comandos_js_vue.md) | [Node.JS](assets/nodejs.md) | [jQuery](assets/comandos_js_jquery.md)
-- Comandos back-end [Django](assets/comandos_django.md) | [Flask](assets/comandos_flask.md) | 
+- Comandos back-end [Django](assets/comandos_django.md) | [Flask](assets/comandos_flask.md) | [PHP](assets/comandos_php.md)
 - [OWASP Top Ten Web](assets/owasp_top_ten.md)
 - [OWASP ZAP](assets/owasp_zap.md)
 - [OWASP ASV Standar](assets/OWASP_Application_Security_Verification_Standard_5.0.0_sp.md)
