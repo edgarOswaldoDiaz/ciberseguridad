@@ -16,7 +16,7 @@
 
 ---
 
-## 🔧 **1. Comandos Generales**
+## **1. Comandos Generales**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -39,7 +39,7 @@
 
 ---
 
-## 🧱 **2. Nodos y Relaciones**
+## **2. Nodos y Relaciones**
 
 ### Crear nodos
 
@@ -61,7 +61,7 @@ CREATE (n1:Label1 {prop: 'val1'})-[:RELATION]->(n2:Label2 {prop: 'val2'})
 
 ---
 
-## 🔍 **3. Búsqueda (MATCH)**
+## **3. Búsqueda (MATCH)**
 
 ### Buscar nodos
 
@@ -86,7 +86,7 @@ RETURN n
 
 ---
 
-## 🔁 **4. MERGE (Crear si no existe)**
+## **4. MERGE (Crear si no existe)**
 
 ```cypher
 MERGE (n:Label {property: 'value'})
@@ -96,7 +96,7 @@ ON MATCH SET n.lastSeen = timestamp()
 
 ---
 
-## 🧹 **5. Actualizar / Eliminar**
+## **5. Actualizar / Eliminar**
 
 ### Actualizar propiedades
 
@@ -135,7 +135,7 @@ REMOVE n:Label
 
 ---
 
-## 🔗 **6. Relaciones**
+## **6. Relaciones**
 
 ### Crear relación
 
@@ -153,7 +153,7 @@ DELETE r
 
 ---
 
-## 📊 **7. Funciones Comunes**
+## **7. Funciones Comunes**
 
 | Función | Descripción |
 |--------|-------------|
@@ -170,7 +170,7 @@ DELETE r
 
 ---
 
-## 🧠 **8. Patrones Comunes**
+## **8. Patrones Comunes**
 
 ### Encontrar amigos de amigos
 
@@ -189,7 +189,7 @@ RETURN path
 
 ---
 
-## 🛠️ **9. Índices y Constraints**
+## **9. Índices y Constraints**
 
 ### Crear índice
 
@@ -212,7 +212,7 @@ DROP CONSTRAINT constraint_name
 
 ---
 
-## 🧪 **10. Perfilado y Explicación**
+## **10. Perfilado y Explicación**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -226,7 +226,7 @@ PROFILE MATCH (n:Label) RETURN count(n)
 
 ---
 
-## 📁 **11. Importar Datos**
+## **11. Importar Datos**
 
 ### Desde CSV
 
@@ -237,7 +237,7 @@ CREATE (:Label {property: row.column})
 
 ---
 
-## 🧾 **12. Comandos del Shell / Administración**
+## **12. Comandos del Shell / Administración**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -248,10 +248,6 @@ CREATE (:Label {property: row.column})
 | `:schema` | Muestra esquema de índices/constraints |
 | `:queries` | Muestra consultas activas |
 | `:sysinfo` | Información del sistema |
-
----
-
-¿Quieres que te lo exporte en formato PDF o Markdown para imprimir? También puedo ayudarte a crear una versión visual.
 
 
 ---
@@ -278,13 +274,10 @@ CREATE (:Label {property: row.column})
 | **SMEMBERS**          | `SMEMBERS set`                               |
 | **PUBLISH/SUBSCRIBE** | `PUBLISH canal mensaje`<br>`SUBSCRIBE canal` |
 
----
-
-Aquí tienes un “Cheat Sheet” de los comandos más utilizados en Redis, organizado por categorías. Cada comando incluye una breve descripción de su función.
 
 ---
 
-## 🔑 Gestión de claves (Keys)
+## Gestión de claves (Keys)
 
 | Comando              | Descripción                                        |
 | -------------------- | -------------------------------------------------- |
@@ -298,7 +291,7 @@ Aquí tienes un “Cheat Sheet” de los comandos más utilizados en Redis, orga
 
 ---
 
-## 📄 Strings
+## Strings
 
 | Comando                  | Descripción                         |
 | ------------------------ | ----------------------------------- |
@@ -315,7 +308,7 @@ Aquí tienes un “Cheat Sheet” de los comandos más utilizados en Redis, orga
 
 ---
 
-## 📋 Hashes
+## Hashes
 
 | Comando                   | Descripción                         |
 | ------------------------- | ----------------------------------- |
@@ -333,7 +326,7 @@ Aquí tienes un “Cheat Sheet” de los comandos más utilizados en Redis, orga
 
 ---
 
-## 📚 Listas
+## Listas
 
 | Comando                     | Descripción                         |
 | --------------------------- | ----------------------------------- |
@@ -350,7 +343,7 @@ Aquí tienes un “Cheat Sheet” de los comandos más utilizados en Redis, orga
 
 ---
 
-## 🎯 Conjuntos (Sets)
+## Conjuntos (Sets)
 
 | Comando                      | Descripción                          |
 | ---------------------------- | ------------------------------------ |
@@ -367,7 +360,7 @@ Aquí tienes un “Cheat Sheet” de los comandos más utilizados en Redis, orga
 
 ---
 
-## 🏹 Sorted Sets (ZSets)
+## Sorted Sets (ZSets)
 
 | Comando                                                       | Descripción                                |                              |
 | ------------------------------------------------------------- | ------------------------------------------ | ---------------------------- |
@@ -383,7 +376,7 @@ Aquí tienes un “Cheat Sheet” de los comandos más utilizados en Redis, orga
 
 ---
 
-## 📢 Pub/Sub
+## Pub/Sub
 
 | Comando                          | Descripción                      |
 | -------------------------------- | -------------------------------- |
@@ -395,7 +388,7 @@ Aquí tienes un “Cheat Sheet” de los comandos más utilizados en Redis, orga
 
 ---
 
-## 🔄 Transacciones
+## Transacciones
 
 | Comando             | Descripción                                  |
 | ------------------- | -------------------------------------------- |
@@ -407,7 +400,7 @@ Aquí tienes un “Cheat Sheet” de los comandos más utilizados en Redis, orga
 
 ---
 
-## 📜 Scripting (Lua)
+## Scripting (Lua)
 
 | Comando                                       | Descripción                        |
 | --------------------------------------------- | ---------------------------------- |
@@ -419,7 +412,7 @@ Aquí tienes un “Cheat Sheet” de los comandos más utilizados en Redis, orga
 
 ---
 
-## 🖥️ Administración del Servidor
+## Administración del Servidor
 
 | Comando                      | Descripción                                  |
 | ---------------------------- | -------------------------------------------- |
@@ -438,7 +431,7 @@ Aquí tienes un “Cheat Sheet” de los comandos más utilizados en Redis, orga
 
 ---
 
-## 🔧 Conexión y seguridad
+## Conexión y seguridad
 
 | Comando         | Descripción                               |
 | --------------- | ----------------------------------------- |
@@ -448,7 +441,7 @@ Aquí tienes un “Cheat Sheet” de los comandos más utilizados en Redis, orga
 
 ---
 
-## 🌐 Geoespacial
+## Geoespacial
 
 | Comando                                                                           | Descripción                     |                 |
 | --------------------------------------------------------------------------------- | ------------------------------- | --------------- |
@@ -460,7 +453,7 @@ Aquí tienes un “Cheat Sheet” de los comandos más utilizados en Redis, orga
 
 ---
 
-## 📈 HyperLogLog
+## HyperLogLog
 
 | Comando                                   | Descripción                         |
 | ----------------------------------------- | ----------------------------------- |
@@ -470,7 +463,7 @@ Aquí tienes un “Cheat Sheet” de los comandos más utilizados en Redis, orga
 
 ---
 
-## 🆕 Streams
+## Streams
 
 | Comando                                             | Descripción                |
 | --------------------------------------------------- | -------------------------- |
@@ -485,7 +478,7 @@ Aquí tienes un “Cheat Sheet” de los comandos más utilizados en Redis, orga
 
 ---
 
-## 🔗 Cluster
+## Cluster
 
 | Comando                | Descripción                   |
 | ---------------------- | ----------------------------- |
@@ -496,9 +489,6 @@ Aquí tienes un “Cheat Sheet” de los comandos más utilizados en Redis, orga
 | `CLUSTER FAILOVER`     | Forzar failover               |
 
 ---
-
-*Este resumen cubre la mayoría de comandos esenciales en Redis. Para detalles adicionales o casos de uso avanzados, consulta la [documentación oficial de Redis](https://redis.io/commands).*
-
 
 ## Cassandra (CQL)
 
@@ -515,10 +505,6 @@ Aquí tienes un “Cheat Sheet” de los comandos más utilizados en Redis, orga
 | **Alterar tabla**   | `ALTER TABLE tabla ADD nuevo_campo tipo;`                                                  |
 | **Borrar tabla**    | `DROP TABLE tabla;`                                                                        |
 | **Borrar keyspace** | `DROP KEYSPACE ks;`                                                                        |
-
----
-
-Aquí tienes un cheat sheet con los comandos más comunes de Cassandra (CQL) agrupados por categoría:
 
 ---
 
@@ -702,12 +688,6 @@ SELECT * FROM ...;
 | &nbsp;&nbsp; `COPY mi_tabla TO 'out.csv';`  
 | &nbsp;&nbsp; `COPY mi_tabla FROM 'in.csv';` |
 
----
-
-Este cheat sheet cubre los comandos esenciales para trabajar con Cassandra en CQL y herramientas asociadas. ¡Espero que te sea útil!
-````
-
-
 
 ## CouchDB (HTTP API / curl)
 
@@ -723,11 +703,7 @@ Este cheat sheet cubre los comandos esenciales para trabajar con Cassandra en CQ
 
 ---
 
-¡Claro! A continuación, te presento una **"Cheat Sheet" (hoja de trucos)** con los comandos más utilizados en **Apache CouchDB**, un sistema de base de datos NoSQL basado en documentos JSON.
-
----
-
-## 📘 **Cheat Sheet de Apache CouchDB**
+## **Cheat Sheet de Apache CouchDB**
 
 ### 🔧 **1. Instalación y Configuración Básica**
 
@@ -740,7 +716,7 @@ Este cheat sheet cubre los comandos esenciales para trabajar con Cassandra en CQ
 
 ---
 
-### 📁 **2. Manejo de Bases de Datos**
+### **2. Manejo de Bases de Datos**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -752,7 +728,7 @@ Este cheat sheet cubre los comandos esenciales para trabajar con Cassandra en CQ
 
 ---
 
-### 📄 **3. Documentos**
+### **3. Documentos**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -765,7 +741,7 @@ Este cheat sheet cubre los comandos esenciales para trabajar con Cassandra en CQ
 
 ---
 
-### 🔁 **4. Revisiones y Conflicto de Documentos**
+### **4. Revisiones y Conflicto de Documentos**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -775,7 +751,7 @@ Este cheat sheet cubre los comandos esenciales para trabajar con Cassandra en CQ
 
 ---
 
-### 🔍 **5. Consultas y Vistas**
+### **5. Consultas y Vistas**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -786,7 +762,7 @@ Este cheat sheet cubre los comandos esenciales para trabajar con Cassandra en CQ
 
 ---
 
-### 🔄 **6. Replicación**
+### **6. Replicación**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -805,7 +781,7 @@ Ejemplo de replicación:
 
 ---
 
-### 🛠️ **7. Funciones de Administración**
+### **7. Funciones de Administración**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -817,7 +793,7 @@ Ejemplo de replicación:
 
 ---
 
-### 🧪 **8. Autenticación y Seguridad**
+### **8. Autenticación y Seguridad**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -829,7 +805,7 @@ Ejemplo de replicación:
 
 ---
 
-### 🧰 **9. Útil para Desarrolladores**
+### **9. Útil para Desarrolladores**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -839,7 +815,7 @@ Ejemplo de replicación:
 
 ---
 
-### 📌 **Ejemplo Práctico con cURL**
+### **Ejemplo Práctico con cURL**
 
 Crear un documento:
 ```bash
@@ -854,10 +830,6 @@ curl -X POST http://admin:password@127.0.0.1:5984/mydb/_find \
      -H "Content-Type: application/json" \
      -d '{"selector": {"name": "John"}}'
 ```
-
----
-
-¿Quieres que también te proporcione una versión imprimible en PDF o Markdown?
 
 ## MongoDB (Shell)
 
@@ -878,11 +850,9 @@ curl -X POST http://admin:password@127.0.0.1:5984/mydb/_find \
 | **Listar índices**     | `db.<colección>.getIndexes()`                                                      |         |
 | **Aggregation**        | `db.<colección>.aggregate([ { $stage1 }, { $stage2 }, … ])`                        |         |
 
-¡Claro! Aquí tienes un **"Cheat Sheet" (Hoja de trucos)** con los comandos más utilizados en **MongoDB**, un sistema de base de datos NoSQL orientado a documentos.
-
 ---
 
-## 📘 **MongoDB Cheat Sheet**
+## **MongoDB Cheat Sheet**
 
 ### 🔧 **Conexión y administración**
 
@@ -899,7 +869,7 @@ curl -X POST http://admin:password@127.0.0.1:5984/mydb/_find \
 
 ---
 
-### 🗃️ **Bases de datos**
+### **Bases de datos**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -910,7 +880,7 @@ curl -X POST http://admin:password@127.0.0.1:5984/mydb/_find \
 
 ---
 
-### 📁 **Colecciones**
+### **Colecciones**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -920,16 +890,16 @@ curl -X POST http://admin:password@127.0.0.1:5984/mydb/_find \
 
 ---
 
-### 📝 **Operaciones CRUD**
+### **Operaciones CRUD**
 
-#### ✅ **Insertar documentos**
+#### **Insertar documentos**
 
 | Comando | Descripción |
 |--------|-------------|
 | `db.<collection>.insertOne({doc})` | Insertar un documento |
 | `db.<collection>.insertMany([{doc1}, {doc2}])` | Insertar varios documentos |
 
-#### 🔍 **Buscar documentos**
+#### **Buscar documentos**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -940,7 +910,7 @@ curl -X POST http://admin:password@127.0.0.1:5984/mydb/_find \
 | `db.<collection>.find({}).limit(5)` | Limitar resultados |
 | `db.<collection>.find().sort({campo: 1})` | Ordenar (1 = asc, -1 = desc) |
 
-#### 🛠️ **Actualizar documentos**
+#### **Actualizar documentos**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -948,7 +918,7 @@ curl -X POST http://admin:password@127.0.0.1:5984/mydb/_find \
 | `db.<collection>.updateMany({filtro}, {$set: {campo: valor}})` | Actualizar varios documentos |
 | `db.<collection>.replaceOne({filtro}, {nuevoDoc})` | Reemplazar un documento |
 
-#### ❌ **Eliminar documentos**
+#### **Eliminar documentos**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -957,7 +927,7 @@ curl -X POST http://admin:password@127.0.0.1:5984/mydb/_find \
 
 ---
 
-### 🔍 **Operadores de consulta**
+### **Operadores de consulta**
 
 | Operador | Descripción |
 |---------|-------------|
@@ -972,7 +942,7 @@ curl -X POST http://admin:password@127.0.0.1:5984/mydb/_find \
 
 ---
 
-### 🧠 **Operadores de actualización**
+### **Operadores de actualización**
 
 | Operador | Descripción |
 |---------|-------------|
@@ -985,7 +955,7 @@ curl -X POST http://admin:password@127.0.0.1:5984/mydb/_find \
 
 ---
 
-### 📊 **Agregación (Pipeline)**
+### **Agregación (Pipeline)**
 
 | Etapa | Descripción |
 |-------|-------------|
@@ -1009,7 +979,7 @@ db.ventas.aggregate([
 
 ---
 
-### 👤 **Usuarios y seguridad**
+### **Usuarios y seguridad**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -1020,17 +990,13 @@ db.ventas.aggregate([
 
 ---
 
-### 📦 **Índices**
+### **Índices**
 
 | Comando | Descripción |
 |--------|-------------|
 | `db.<collection>.createIndex({campo: 1})` | Crear índice (1: asc, -1: desc) |
 | `db.<collection>.getIndexes()` | Listar índices |
 | `db.<collection>.dropIndex("nombre_índice")` | Eliminar índice |
-
----
-
-¿Quieres que te lo exporte como PDF o en formato imprimible? También puedo ayudarte a crear una versión visual o agrupada por categorías.
 
 ---
 
