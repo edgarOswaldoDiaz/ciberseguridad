@@ -41,7 +41,7 @@ p::first-line    { ... }
 img::after       { content: ""; display: block; }
 ```
 
-## 3. At‑rules
+## At‑rules
 
 ```css
 @import url("estilos.css");
