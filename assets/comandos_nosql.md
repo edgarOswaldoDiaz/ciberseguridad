@@ -16,7 +16,7 @@
 
 ---
 
-## **1. Comandos Generales**
+## ** Comandos Generales**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -31,7 +31,7 @@
 | `REMOVE` | Elimina propiedades o etiquetas |
 | `WITH` | Encadena partes de una consulta |
 | `UNWIND` | Desenvuelve listas en filas individuales |
-| `LIMIT` | Limita el número de resultados |
+| `LIMIT` | Limita el número de resul tados |
 | `SKIP` | Omite un número de resultados |
 | `ORDER BY` | Ordena los resultados |
 | `DISTINCT` | Elimina duplicados |
@@ -39,7 +39,7 @@
 
 ---
 
-## **2. Nodos y Relaciones**
+## ** Nodos y Relaciones**
 
 ### Crear nodos
 
@@ -61,7 +61,7 @@ CREATE (n1:Label1 {prop: 'val1'})-[:RELATION]->(n2:Label2 {prop: 'val2'})
 
 ---
 
-## **3. Búsqueda (MATCH)**
+## ** Búsqueda (MATCH)**
 
 ### Buscar nodos
 
@@ -86,7 +86,7 @@ RETURN n
 
 ---
 
-## **4. MERGE (Crear si no existe)**
+## ** MERGE (Crear si no existe)**
 
 ```cypher
 MERGE (n:Label {property: 'value'})
@@ -96,7 +96,7 @@ ON MATCH SET n.lastSeen = timestamp()
 
 ---
 
-## **5. Actualizar / Eliminar**
+## ** Actualizar / Eliminar**
 
 ### Actualizar propiedades
 
@@ -135,7 +135,7 @@ REMOVE n:Label
 
 ---
 
-## **6. Relaciones**
+## ** Relaciones**
 
 ### Crear relación
 
@@ -153,7 +153,7 @@ DELETE r
 
 ---
 
-## **7. Funciones Comunes**
+## ** Funciones Comunes**
 
 | Función | Descripción |
 |--------|-------------|
@@ -170,7 +170,7 @@ DELETE r
 
 ---
 
-## **8. Patrones Comunes**
+## ** Patrones Comunes**
 
 ### Encontrar amigos de amigos
 
@@ -189,7 +189,7 @@ RETURN path
 
 ---
 
-## **9. Índices y Constraints**
+## ** Índices y Constraints**
 
 ### Crear índice
 
@@ -212,7 +212,7 @@ DROP CONSTRAINT constraint_name
 
 ---
 
-## **10. Perfilado y Explicación**
+## ** Perfilado y Explicación**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -226,7 +226,7 @@ PROFILE MATCH (n:Label) RETURN count(n)
 
 ---
 
-## **11. Importar Datos**
+## ** Importar Datos**
 
 ### Desde CSV
 
@@ -237,7 +237,7 @@ CREATE (:Label {property: row.column})
 
 ---
 
-## **12. Comandos del Shell / Administración**
+## ** Comandos del Shell / Administración**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -508,7 +508,7 @@ CREATE (:Label {property: row.column})
 
 ---
 
-## 1. Gestión de Keyspaces
+## Gestión de Keyspaces
 
 | Comando                                                                 | Descripción                                     | Ejemplo   |
 | ----------------------------------------------------------------------- | ----------------------------------------------- | --------- |
@@ -530,8 +530,9 @@ DROP KEYSPACE mi_keyspace;
 
 ---
 
-## 2. Gestión de Tablas (Column Families)
+## Gestión de Tablas (Column Families)
 
+````|
 | Comando | Descripción | Ejemplo |
 |---|---|---|
 | `CREATE TABLE` | Crea una tabla con sus columnas y claves. | ```sql  
@@ -560,7 +561,7 @@ DROP TABLE mi_keyspace.usuarios;
 
 ---
 
-## 3. Operaciones CRUD
+## Operaciones CRUD
 
 | Comando | Descripción | Ejemplo |
 |---|---|---|
@@ -592,7 +593,7 @@ WHERE id = ...;
 
 ---
 
-## 4. Índices y Materialized Views
+## Índices y Materialized Views
 
 | Comando | Descripción | Ejemplo |
 |---|---|---|
@@ -615,7 +616,7 @@ DROP MATERIALIZED VIEW mi_keyspace.usuarios_por_edad;
 
 ---
 
-## 5. Gestión de Usuarios y Permisos
+## Gestión de Usuarios y Permisos
 
 | Comando | Descripción | Ejemplo |
 |---|---|---|
@@ -637,7 +638,7 @@ REVOKE SELECT ON KEYSPACE mi_keyspace FROM analista;
 
 ---
 
-## 6. Consultas Avanzadas
+## Consultas Avanzadas
 
 | Comando | Descripción | Ejemplo |
 |---|---|---|
@@ -663,7 +664,7 @@ SELECT * FROM ...;
 
 ---
 
-## 7. Mantenimiento de Cluster
+## Mantenimiento de Cluster
 
 | Comando (cqlsh) | Descripción |
 |---|---|
@@ -676,7 +677,7 @@ SELECT * FROM ...;
 
 ---
 
-## 8. Utilidades de cqlsh
+## Utilidades de cqlsh
 
 | Comando | Descripción |
 |---|---|
@@ -703,7 +704,7 @@ SELECT * FROM ...;
 
 ---
 
-## **Cheat Sheet de Apache CouchDB**
+## ** Cheat Sheet de Apache CouchDB**
 
 ### 🔧 **1. Instalación y Configuración Básica**
 
@@ -716,7 +717,7 @@ SELECT * FROM ...;
 
 ---
 
-### **2. Manejo de Bases de Datos**
+### ** Manejo de Bases de Datos**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -728,7 +729,7 @@ SELECT * FROM ...;
 
 ---
 
-### **3. Documentos**
+### ** Documentos**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -741,7 +742,7 @@ SELECT * FROM ...;
 
 ---
 
-### **4. Revisiones y Conflicto de Documentos**
+### ** Revisiones y Conflicto de Documentos**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -751,7 +752,7 @@ SELECT * FROM ...;
 
 ---
 
-### **5. Consultas y Vistas**
+### ** Consultas y Vistas**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -762,7 +763,7 @@ SELECT * FROM ...;
 
 ---
 
-### **6. Replicación**
+### ** Replicación**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -781,7 +782,7 @@ Ejemplo de replicación:
 
 ---
 
-### **7. Funciones de Administración**
+### ** Funciones de Administración**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -793,7 +794,7 @@ Ejemplo de replicación:
 
 ---
 
-### **8. Autenticación y Seguridad**
+### ** Autenticación y Seguridad**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -805,7 +806,7 @@ Ejemplo de replicación:
 
 ---
 
-### **9. Útil para Desarrolladores**
+### ** Útil para Desarrolladores**
 
 | Comando | Descripción |
 |--------|-------------|
@@ -815,7 +816,7 @@ Ejemplo de replicación:
 
 ---
 
-### **Ejemplo Práctico con cURL**
+### ** Ejemplo Práctico con cURL**
 
 Crear un documento:
 ```bash
@@ -852,9 +853,8 @@ curl -X POST http://admin:password@127.0.0.1:5984/mydb/_find \
 
 ---
 
-## **MongoDB Cheat Sheet**
 
-### 🔧 **Conexión y administración**
+### **Conexión y administración**
 
 | Comando | Descripción |
 |--------|-------------|
