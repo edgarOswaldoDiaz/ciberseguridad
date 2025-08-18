@@ -1,4 +1,4 @@
-# Cheat Sheet** Docker & Docker Compose 
+# Cheat Sheet Docker & Docker Compose 
 
 ---
 
