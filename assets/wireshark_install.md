@@ -158,9 +158,9 @@ Supongamos que quieres capturar y analizar peticiones HTTP a un servidor web loc
 
 ---
 
-# 📝 Wireshark Cheat Sheet
+# Wireshark Cheat Sheet
 
-## 🔹 Comandos básicos en terminal (Linux)
+## Comandos básicos en terminal (Linux)
 
 * **Capturar tráfico en interfaz específica:**
 
@@ -196,7 +196,7 @@ Supongamos que quieres capturar y analizar peticiones HTTP a un servidor web loc
 
 ---
 
-## 🔹 Filtros de captura (aplicados **antes** de capturar)
+## Filtros de captura (aplicados **antes** de capturar)
 
 (Sintaxis tipo `tcpdump`)
 
@@ -216,42 +216,42 @@ Supongamos que quieres capturar y analizar peticiones HTTP a un servidor web loc
 
 ---
 
-## 🔹 Filtros de visualización (aplicados **después** de capturar)
+## Filtros de visualización (aplicados **después** de capturar)
 
 (Sintaxis propia de Wireshark)
 
-### 🔸 Protocolo
+### Protocolo
 
 * `http` → Solo tráfico HTTP
 * `dns` → Consultas DNS
 * `icmp` → Pings y mensajes ICMP
 
-### 🔸 IP
+### IP
 
 * `ip.addr == 192.168.1.5` → Cualquier tráfico de esa IP
 * `ip.src == 10.0.0.1` → IP origen
 * `ip.dst == 8.8.8.8` → IP destino
 * `ip.addr == 192.168.1.5 && tcp.port == 443`
 
-### 🔸 Puertos
+### Puertos
 
 * `tcp.port == 80`
 * `udp.port == 53`
 
-### 🔸 Contenido
+### Contenido
 
 * `http.request` → Solo peticiones HTTP
 * `http.response.code == 200` → Respuestas HTTP 200 OK
 * `frame contains "password"` → Paquetes que contienen la palabra "password"
 
-### 🔸 Combinaciones
+### Combinaciones
 
 * `ip.src == 192.168.1.5 && tcp.port == 443`
 * `(http || dns) && ip.addr == 192.168.1.5`
 
 ---
 
-## 🔹 Atajos útiles en interfaz Wireshark
+## Atajos útiles en interfaz Wireshark
 
 * **Ctrl + E** → Iniciar/detener captura
 * **Ctrl + K** → Aplicar filtro
@@ -261,7 +261,7 @@ Supongamos que quieres capturar y analizar peticiones HTTP a un servidor web loc
 
 ---
 
-## 🔹 Estadísticas rápidas
+## Estadísticas rápidas
 
 * **Estadísticas → Protocol Hierarchy** → Uso de protocolos
 * **Estadísticas → Conversations** → Conversaciones por IP
@@ -269,189 +269,151 @@ Supongamos que quieres capturar y analizar peticiones HTTP a un servidor web loc
 
 ---
 
-👉 Este Cheat Sheet cubre lo esencial para capturar, filtrar y analizar tráfico.
-
-¿Quieres que lo prepare en **PDF bonito tipo póster (one-page)** para imprimir o prefieres que te lo organice en **Markdown/tablas** para consulta rápida en digital?
-
-
-Aquí tienes una **descripción detallada en español** de cada uno de los comandos y utilidades que acompañan a **Wireshark** (CLI y Extcap). Estas herramientas permiten capturar, procesar, convertir y analizar tráfico de red y archivos `.pcap`.
-
----
-
-# 📘 Comandos de Wireshark y utilidades
-
-### 🔹 `androiddump`
-
+### `androiddump` 
 Extcap que permite capturar tráfico desde dispositivos Android conectados mediante **ADB (Android Debug Bridge)**.
 Requiere tener instalado el **SDK de Android**. Muy útil para analizar tráfico en apps móviles.
 
 ---
-
-### 🔹 `capinfos`
-
+### `capinfos`
 Muestra información detallada de archivos de captura (`.pcap`, `.pcapng`).
 Ejemplo de datos: número de paquetes, tamaño del archivo, duración de la captura, timestamps, hashes MD5/SHA, etc.
 Se usa para obtener estadísticas rápidas sin abrir Wireshark.
 
 ---
 
-### 🔹 `captype`
-
+### `captype`
 Identifica y muestra el **tipo de archivo de captura** (formato soportado por Wireshark).
 Ejemplo: pcap, pcapng, etc. Útil cuando no se conoce el origen de un archivo.
 
 ---
 
-### 🔹 `ciscodump`
-
+### `ciscodump`
 Extcap que permite capturar tráfico directamente desde un dispositivo **Cisco** remoto (IOS, IOS-XE, ASA, EPC) mediante **SSH**.
 Muy usado por administradores de red para depuración remota.
 
 ---
 
-### 🔹 `dumpcap`
-
+### `dumpcap`
 Herramienta ligera dedicada únicamente a **capturar tráfico** de red y guardarlo en un archivo.
 Wireshark y TShark la usan internamente. Soporta privilegios elevados y rotación de archivos para capturas largas.
 
 ---
 
-### 🔹 `editcap`
-
+### `editcap`
 Permite **editar y/o convertir archivos de captura**.
 Funciones: eliminar paquetes, cortar rangos de tiempo, extraer subconjuntos, cambiar formato (pcap ↔ pcapng), anonimizar datos.
 
 ---
 
-### 🔹 `etwdump`
-
+### `etwdump`
 Extcap que habilita la captura desde **Event Tracing for Windows (ETW)**, una infraestructura de logging de bajo nivel de Windows.
 Se usa para correlacionar eventos del sistema operativo con tráfico de red.
 
 ---
 
-### 🔹 `extcap`
-
+### `extcap`
 Interfaz que permite integrar **herramientas externas** como si fueran interfaces nativas en Wireshark.
 Ejemplos: androiddump, ciscodump, wifidump, etwdump.
 
 ---
 
-### 🔹 `falcodump`
-
+### `falcodump`
 Extcap que conecta con **Falco**, un motor de seguridad basado en eBPF/Sysdig, y vuelca los logs como si fueran paquetes capturados.
 Ideal para análisis de eventos de seguridad en tiempo real.
 
 ---
 
-### 🔹 `idl2wrs`
-
+### `idl2wrs`
 Generador que convierte archivos **CORBA IDL (Interface Definition Language)** en plugins de Wireshark, para decodificar protocolos CORBA personalizados.
 
 ---
 
-### 🔹 `mergecap`
-
+### `mergecap`
 Combina dos o más archivos de captura en uno solo.
 Se asegura de que los paquetes queden ordenados cronológicamente si es necesario.
 Ejemplo: unir capturas de varias interfaces.
 
 ---
 
-### 🔹 `mmdbresolve`
-
+### `mmdbresolve`
 Lee direcciones **IPv4 e IPv6** y muestra información de **geolocalización IP** usando bases MaxMind (GeoLite2/GeoIP2).
 Ejemplo: `echo 8.8.8.8 | mmdbresolve`
 
 ---
 
-### 🔹 `randpkt`
-
+### `randpkt`
 Generador de **paquetes de red aleatorios** con diferentes protocolos.
 Muy útil para pruebas de robustez en analizadores de tráfico.
 
 ---
 
-### 🔹 `randpktdump`
-
+### `randpktdump`
 Extcap que usa `randpkt` para generar **capturas aleatorias** en formato PCAP, simulando tráfico ficticio.
 
 ---
 
-### 🔹 `rawshark`
-
+### `rawshark`
 Versión en línea de comandos que procesa paquetes en crudo desde archivos o pipes.
 Muestra información en texto plano (sin GUI), útil para scripting y automatización.
 
 ---
 
-### 🔹 `reordercap`
-
+### `reordercap`
 Reordena un archivo de captura según las **marcas de tiempo** de los paquetes.
 Útil cuando los paquetes se grabaron fuera de orden (ej. varias fuentes de captura).
 
 ---
 
-### 🔹 `sshdig`
-
+### `sshdig`
 Extcap que captura **llamadas al sistema** desde un host remoto a través de SSH (usando un binario de captura remoto).
 Enfocado en análisis de seguridad y debugging.
 
 ---
 
-### 🔹 `sshdump`
-
+### `sshdump`
 Similar a `ciscodump`, permite capturar tráfico desde un **host remoto vía SSH**.
 Soporta sistemas genéricos (no solo Cisco). Muy usado para auditoría.
 
 ---
 
-### 🔹 `stratoshark`
-
+### `stratoshark`
 Analizador de **llamadas al sistema y registros de eventos**, orientado a correlacionar procesos del sistema con el tráfico capturado.
 
 ---
 
-### 🔹 `text2pcap`
-
+### `text2pcap`
 Convierte un **hexdump ASCII** (copiado de logs, correos, debugging) en un archivo `.pcap` válido.
 Útil para reconstruir tráfico a partir de registros textuales.
 
 ---
 
-### 🔹 `tshark`
-
+### `tshark`
 Versión en línea de comandos de Wireshark.
 Permite **capturar y analizar tráfico** sin interfaz gráfica.
 Muy flexible: filtros, salida en JSON/CSV, integración con scripts.
 
 ---
 
-### 🔹 `udpdump`
-
+###  `udpdump`
 Extcap que implementa un **receptor UDP**, utilizado para recibir tráfico exportado por dispositivos de red (ej. Aruba routers) y guardarlo en formato PCAP.
 
 ---
 
-### 🔹 `wifidump`
-
+### `wifidump`
 Extcap que habilita la captura de **tráfico Wi-Fi** desde un host remoto mediante SSH.
 Útil para auditorías inalámbricas distribuidas.
 
 ---
 
-### 🔹 `wireshark-filter`
-
+### `wireshark-filter`
 Referencia completa de la **sintaxis de filtros de visualización**.
 Ejemplo: `ip.addr == 192.168.1.1 && tcp.port == 443`
 
 ---
 
-### 🔹 `wireshark`
-
+### `wireshark`
 La herramienta principal con interfaz gráfica.
 Permite **capturar, analizar, filtrar, decodificar y visualizar** tráfico de red en tiempo real o desde archivos.
-
 
 __________________________
 
