@@ -407,32 +407,6 @@ Extcap que habilita la captura de **tráfico Wi-Fi** desde un host remoto median
 
 ## Ejemplo 
 
----
-
-## Requisitos previos
-
-1. Tener instalado **Wireshark** y su versión de línea de comandos **tshark**.
-
-   * En Linux:
-
-     ```bash
-     sudo apt install wireshark
-     ```
-   * En macOS con brew:
-
-     ```bash
-     brew install wireshark
-     ```
-   * En Windows, tshark se incluye con la instalación estándar de Wireshark.
-
-2. Saber el nombre de la interfaz de red que usarás (ejemplo: `eth0`, `wlan0`, `en0`).
-   Listar interfaces disponibles:
-
-   ```bash
-   tshark -D
-   ```
-
----
 
 ## Paso 1. Resolver la IP del dominio
 
