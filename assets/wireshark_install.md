@@ -403,6 +403,126 @@ Extcap que implementa un **receptor UDP**, utilizado para recibir tráfico expor
 Extcap que habilita la captura de **tráfico Wi-Fi** desde un host remoto mediante SSH.
 Útil para auditorías inalámbricas distribuidas.
 
+
+
+## Ejemplo 
+
+---
+
+## Requisitos previos
+
+1. Tener instalado **Wireshark** y su versión de línea de comandos **tshark**.
+
+   * En Linux:
+
+     ```bash
+     sudo apt install wireshark
+     ```
+   * En macOS con brew:
+
+     ```bash
+     brew install wireshark
+     ```
+   * En Windows, tshark se incluye con la instalación estándar de Wireshark.
+
+2. Saber el nombre de la interfaz de red que usarás (ejemplo: `eth0`, `wlan0`, `en0`).
+   Listar interfaces disponibles:
+
+   ```bash
+   tshark -D
+   ```
+
+---
+
+## Paso 1. Resolver la IP del dominio
+
+Antes de filtrar tráfico, obtenemos la IP pública de `www.inegi.org.mx`:
+
+```bash
+nslookup www.inegi.org.mx
+```
+
+Ejemplo de salida:
+
+```
+Non-authoritative answer:
+Name:    www.inegi.org.mx
+Address: 187.141.67.17
+```
+
+Nota: Guardamos esta IP: `187.141.67.17` (puede variar).
+
+---
+
+##  Paso 2. Capturar tráfico con filtro
+
+Ahora capturamos tráfico hacia/desde esa IP.
+
+Ejemplo en Linux/macOS:
+
+```bash
+sudo tshark -i wlan0 host 187.141.67.17 -w inegi_capture.pcap
+```
+
+* `-i wlan0` → interfaz de red (ajústala según tu equipo).
+* `host 187.141.67.17` → filtro BPF para capturar solo tráfico hacia ese host.
+* `-w inegi_capture.pcap` → guarda la captura en un archivo para análisis posterior en Wireshark GUI.
+
+---
+
+## Paso 3. Ver tráfico en tiempo real
+
+Si no quieres guardar, sino ver directamente en consola:
+
+```bash
+sudo tshark -i wlan0 -f "host 187.141.67.17"
+```
+
+Ejemplo de salida (resumida):
+
+```
+1   0.000000 192.168.1.20 → 187.141.67.17 TCP 74 50412 → 443 [SYN] Seq=0 Win=65535 Len=0 MSS=1460
+2   0.123456 187.141.67.17 → 192.168.1.20 TCP 74 443 → 50412 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1460
+3   0.123789 192.168.1.20 → 187.141.67.17 TCP 66 50412 → 443 [ACK] Seq=1 Ack=1 Win=65535 Len=0
+4   0.234567 192.168.1.20 → 187.141.67.17 TLSv1.3 517 Client Hello
+...
+```
+
+---
+
+## Paso 4. Filtrar por protocolo (ejemplo HTTPS)
+
+Ya que `www.inegi.org.mx` usa HTTPS (puerto 443), podemos ver solo paquetes de TLS:
+
+```bash
+sudo tshark -i wlan0 -f "host 187.141.67.17 and port 443"
+```
+
+O dentro de la captura:
+
+```bash
+tshark -r inegi_capture.pcap -Y "tls"
+```
+
+Esto muestra únicamente tráfico TLS (no DNS ni TCP crudo).
+
+---
+
+## Paso 5. Capturar y analizar consultas DNS al dominio
+
+Si queremos ver cómo se resuelve el dominio antes de la conexión:
+
+```bash
+sudo tshark -i wlan0 -f "port 53" -Y "dns.qry.name == \"www.inegi.org.mx\""
+```
+
+Ejemplo de salida:
+
+```
+10   1.123456 192.168.1.20 → 8.8.8.8 DNS 78 Standard query 0x1234 A www.inegi.org.mx
+11   1.234567 8.8.8.8 → 192.168.1.20 DNS 94 Standard query response 0x1234 A 187.141.67.17
+```
+
 __________________________
 
 Referencia
