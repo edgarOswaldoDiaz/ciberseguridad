@@ -403,18 +403,6 @@ Extcap que implementa un **receptor UDP**, utilizado para recibir tráfico expor
 Extcap que habilita la captura de **tráfico Wi-Fi** desde un host remoto mediante SSH.
 Útil para auditorías inalámbricas distribuidas.
 
----
-
-### `wireshark-filter`
-Referencia completa de la **sintaxis de filtros de visualización**.
-Ejemplo: `ip.addr == 192.168.1.1 && tcp.port == 443`
-
----
-
-### `wireshark`
-La herramienta principal con interfaz gráfica.
-Permite **capturar, analizar, filtrar, decodificar y visualizar** tráfico de red en tiempo real o desde archivos.
-
 __________________________
 
 Referencia
