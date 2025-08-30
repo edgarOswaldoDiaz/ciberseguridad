@@ -133,4 +133,6 @@
 
 ___________________________
 
+> American National Standards Institute. (1986). Coded Character Set – 7-bit American Standard Code for Information Interchange (ASCII) (ANSI X3.4-1986). Washington, DC: ANSI.
+
 > By CISO oswaldo.diaz
