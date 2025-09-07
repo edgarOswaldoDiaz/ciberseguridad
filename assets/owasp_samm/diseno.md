@@ -10,4 +10,6 @@ El diseño se refiere a los procesos y actividades relacionados con la forma en 
 
 __________________
 
+> https://owaspsamm.org/model/
+
 > By CISO oswaldo.diaz
