@@ -74,5 +74,6 @@ Proveer formación continua, guías y apoyo a todos los participantes del ciclo 
 3. **Pilotos y ajustes:** Implementa en un grupo pequeño (un par de squads) y ajusta procesos antes del despliegue global.
 
 ________________
+> https://owaspsamm.org/model/
 
 > By CISO oswaldo.diaz
