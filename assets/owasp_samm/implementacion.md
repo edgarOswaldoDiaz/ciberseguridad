@@ -28,4 +28,6 @@ Las actividades dentro de la función de implementación tienen el mayor impacto
   * Ejemplo: después de resolver una vulnerabilidad, automatizar una build que ejecute pruebas de seguridad para asegurarse de que el mismo defecto no reaparezca en futuras versiones.
 ________________
 
+> https://owaspsamm.org/model/
+
 > By CISO oswaldo.diaz 
