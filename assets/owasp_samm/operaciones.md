@@ -9,5 +9,6 @@ La función de negocio de operaciones abarca las actividades necesarias para gar
 | **Gestión operativa**          | Mantenimiento diario de la seguridad en producción: parcheo programado, monitoreo continuo, backups y DRP, control de acceso y gestión de cambios.        | Cada primer martes de mes se aplican parches en servidores; pruebas automáticas en staging; monitoreo de sistemas 48 h post-despliegue; reviews trimestrales de accesos para revocar permisos obsoletos. |
 
 _______________________
+> https://owaspsamm.org/model/
 
 > By CISO oswaldo.diaz
