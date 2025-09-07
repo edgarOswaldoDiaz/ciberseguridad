@@ -84,6 +84,3 @@ __________________
 - OWASP SAMM | [Gobernanza](assets/owasp_samm/gobernanza.md) | [Diseño](assets/owasp_samm/diseno.md) | [Implementación](assets/owasp_samm/implementacion.md) | [Verificación](assets/owasp_samm/verificacion.md) | [Operacion](assets/owasp_samm/operaciones.md) | [Ejemplo de empresa](assets/owasp_samm/ejemplo_empresa.md)
 ________________________
 > By CISO oswaldo.diaz
-
-> By CISO Oswaldo.Díaz
-
