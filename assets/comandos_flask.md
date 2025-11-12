@@ -364,7 +364,7 @@ from admin import admin_bp
 app.register_blueprint(admin_bp)
 ```
 
-## 🔍 **Validación y Formularios**
+## **Validación y Formularios**
 
 ```python
 from flask_wtf import FlaskForm
